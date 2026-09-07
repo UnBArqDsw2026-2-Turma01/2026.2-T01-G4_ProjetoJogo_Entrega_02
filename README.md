@@ -2,7 +2,7 @@
 
 Repositório da **Entrega 02** do Grupo 04 da disciplina **FGA0208, Arquitetura e Desenho de Software**, Turma 01, ministrada pela professora Milene Serrano na Universidade de Brasília durante o semestre 2026.2.
 
-**[Acessar a documentação publicada](https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_02/)** | [Visão do projeto](docs/Projeto/Projeto.md) | [Atas de reunião](docs/Atas/Gerais.md) | [Participações](docs/Base/1.2.ParticipacoesBase.md) | [Site da disciplina](https://sites.google.com/view/unb-fcte-arqdsw)
+**[Acessar a documentação publicada](https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_02/)** | [Visão do projeto](docs/Projeto/Projeto.md) | [Atas de reunião](docs/Atas/Gerais.md) | [Participações](docs/Base/1.2.ParticipacoesModelagem.md) | [Site da disciplina](https://sites.google.com/view/unb-fcte-arqdsw)
 
 ## Sobre o projeto
 
