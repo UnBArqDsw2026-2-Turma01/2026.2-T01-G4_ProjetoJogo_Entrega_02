@@ -1,13 +1,32 @@
 <!-- docs/_sidebar.md -->
 
-- [Home](/docs)
-- [Projetos](/docs/Projeto/Projeto.md)
+- [Início](/)
 
-- **Base**
-  - [1. Desenho de Software (Modelagem)](/docs/Base/1.Modelagem.md)
+- [Projeto](/Projeto/Projeto.md)
+
+- Guias
+  - [Artefato Padrão](/Guias/ArtefatoPadrao.md)
+  - [Ata Padrão](/Guias/AtaPadrao.md)
+
+- Modelagem
   - Relatórios
-      - [1.1.1. SubEquipe_01](/docs/Base/Relatórios/1.1.1.SubEquipe_01.md)
-      - [1.1.2. SubEquipe_02](/docs/Base/Relatórios/1.1.2.SubEquipe_02.md)
-      - [1.1.3. SubEquipe_03](/docs/Base/Relatórios/1.1.3.SubEquipe_03.md)
-  - [1.2. Participações - Modelagem](/docs/Base/1.2.ParticipacoesModelagem.md)
-  - [1.3. Iniciativas Extras - Modelagem](/docs/Base/1.3.IniciativasExtras.md)
+    - H · SubEquipe 01
+      - [1. Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_01/ModelagemEstatica.md)
+      - [2. Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_01/ModelagemDinamica.md)
+      - [3. IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
+    - C · SubEquipe 02
+      - [1. Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md)
+      - [2. Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemDinamica.md)
+      - [3. IA Generativa](/Base/Relatórios/SubEquipe_02/IAGenerativa.md)
+    - O · SubEquipe 03
+      - [1. Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_03/ModelagemEstatica.md)
+      - [2. Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_03/ModelagemDinamica.md)
+      - [3. IA Generativa](/Base/Relatórios/SubEquipe_03/IAGenerativa.md)
+
+  - [Participações](/Base/1.2.ParticipacoesModelagem.md)
+
+- Atas de Reunião
+  - [Reuniões Gerais](/Atas/Gerais.md)
+  - [Subgrupo 01](/Atas/SubEquipe_01.md)
+  - [Subgrupo 02](/Atas/SubEquipe_02.md)
+  - [Subgrupo 03](/Atas/SubEquipe_03.md)
