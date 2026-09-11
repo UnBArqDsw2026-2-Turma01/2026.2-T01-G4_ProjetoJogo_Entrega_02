@@ -1,4 +1,4 @@
-# Ata 02 — Planejamento da Modelagem UML do Subgrupo 01
+# Ata 01 — Planejamento da Modelagem UML do Subgrupo 01
 
 ## Identificação
 

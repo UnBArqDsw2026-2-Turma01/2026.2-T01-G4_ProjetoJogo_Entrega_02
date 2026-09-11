@@ -1,7 +1,7 @@
 name: Atividade geral do grupo
 description: Planejar uma tarefa transversal, de governança, apresentação ou consolidação
 title: "[Geral] "
-labels: ["entrega-01"]
+labels: ["entrega-02"]
 assignees: []
 body:
   - type: markdown
@@ -120,5 +120,5 @@ body:
     attributes:
       label: Código de Conduta
       options:
-        - label: Li e concordo em seguir o [Código de Conduta](https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-_G4_ProjetoJogo_Entrega_01/blob/main/CODE_OF_CONDUCT.md)
+        - label: Li e concordo em seguir o [Código de Conduta](https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/blob/main/CODE_OF_CONDUCT.md)
           required: true

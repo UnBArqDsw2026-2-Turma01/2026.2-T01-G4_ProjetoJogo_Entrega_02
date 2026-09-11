@@ -9,7 +9,7 @@
 **Código da Disciplina:** FGA0208: Arquitetura e Desenho de Software<br>
 **Turma:** 01 · **Período:** 2026.2<br>
 **Número do Grupo:** 04<br>
-**Entrega:** 01
+**Entrega:** 02
 
 ## Sobre
 
