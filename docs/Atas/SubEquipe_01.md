@@ -28,7 +28,7 @@ Toda reunião é registrada em uma ata própria, seguindo o modelo definido em [
 
 | Ata | Data | Assunto | Redator | Link |
 |:---:|:----:|---------|---------|:----:|
-|     |      |         |         |      |
+| 01 | 11/09/2026 | Planejamento da Modelagem UML do Subgrupo 01 | Yogi Nam de Souza Barbosa | [Ata 01](AtaSub01_01.md) |
 
 <p align="center">Tabela 2: Registro de reuniões.</p>
 
