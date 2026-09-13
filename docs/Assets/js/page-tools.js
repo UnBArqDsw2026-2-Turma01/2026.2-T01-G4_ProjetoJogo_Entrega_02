@@ -1,0 +1,221 @@
+/* Navegação pelo _sidebar.md e visualização de imagens com PhotoSwipe 5.4.4. */
+(function () {
+  'use strict';
+
+  var viewer = null;
+
+  function renderRelatedPages(content) {
+    var previous = content.querySelector('.related-pages');
+    if (previous) previous.remove();
+
+    var current = normalizeSidebarRoute(window.location.hash);
+    var sidebarLinks = Array.from(document.querySelectorAll('.sidebar-nav a[href]'))
+      .filter(function (link) { return !link.closest('.app-sub-sidebar'); });
+    var active = sidebarLinks.find(function (link) {
+      return normalizeSidebarRoute(link.getAttribute('href')) === current;
+    });
+    var related = [];
+    var subgroup = current.match(/^(\/Base\/Relatórios\/SubEquipe_\d+)\//);
+
+    if (subgroup) {
+      related = sidebarLinks.filter(function (link) {
+        return normalizeSidebarRoute(link.getAttribute('href')).startsWith(subgroup[1] + '/');
+      });
+    } else if (active) {
+      // Nas demais seções, usa o grupo mais próximo com outra página.
+      var group = active.closest('li');
+      while (group) {
+        related = sidebarLinks.filter(function (link) { return group.contains(link); });
+        if (related.some(function (link) {
+          return normalizeSidebarRoute(link.getAttribute('href')) !== current;
+        })) break;
+        group = group.parentElement.closest('li');
+      }
+    }
+
+    // Mantém elos adicionais escritos em páginas que ainda usam o rodapé manual.
+    var manual = Array.from(content.children).filter(function (element) {
+      return element.tagName === 'P' && /^Ver também\s*:/i.test(element.textContent.trim());
+    });
+    manual.forEach(function (paragraph) {
+      related = related.concat(Array.from(paragraph.querySelectorAll('a[href]')));
+    });
+
+    var seen = new Set([current]);
+    related = related.filter(function (link) {
+      var route = normalizeSidebarRoute(link.getAttribute('href'));
+      if (seen.has(route)) return false;
+      seen.add(route);
+      return true;
+    });
+    if (!related.length) return;
+
+    var nav = document.createElement('nav');
+    nav.className = 'related-pages';
+    nav.setAttribute('aria-label', 'Páginas relacionadas');
+    var title = document.createElement('p');
+    title.className = 'related-pages-title';
+    title.textContent = 'Ver também';
+    nav.appendChild(title);
+
+    var list = document.createElement('ul');
+    related.forEach(function (source) {
+      var item = document.createElement('li');
+      var link = document.createElement('a');
+      link.href = source.getAttribute('href');
+      link.textContent = source.textContent.trim();
+      if (source.target) link.target = source.target;
+      if (source.rel) link.rel = source.rel;
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+    nav.appendChild(list);
+    manual.forEach(function (paragraph) { paragraph.remove(); });
+    content.appendChild(nav);
+  }
+
+  function prepareImage(image) {
+    if (!image.isConnected || !image.naturalWidth || !image.naturalHeight) return;
+    var source = image.currentSrc || image.src;
+    var link = image.closest('a');
+
+    // Imagens que levam a outra página continuam funcionando como links.
+    if (link && link.href !== source) return;
+    if (!link) {
+      link = document.createElement('a');
+      link.href = source;
+      image.replaceWith(link);
+      link.appendChild(image);
+    }
+    link.classList.add('image-zoom-trigger');
+    link.setAttribute('aria-haspopup', 'dialog');
+    link.setAttribute('aria-label', 'Ampliar imagem: ' + (image.alt || 'imagem da página'));
+    link.title = 'Ampliar imagem';
+  }
+
+  function prepareImages(content) {
+    if (typeof PhotoSwipe !== 'function') return;
+    content.querySelectorAll('img:not(.emoji):not([data-no-zoom])').forEach(function (image) {
+      if (image.complete) prepareImage(image);
+      else image.addEventListener('load', function () { prepareImage(image); }, { once: true });
+    });
+  }
+
+  function openImage(image, trigger) {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var instance = new PhotoSwipe({
+      dataSource: [{
+        src: image.currentSrc || image.src,
+        width: image.naturalWidth,
+        height: image.naturalHeight,
+        alt: image.alt,
+        element: trigger
+      }],
+      index: 0,
+      mainClass: 'document-image-viewer',
+      showHideAnimationType: 'none',
+      zoomAnimationDuration: reduceMotion ? 0 : 180,
+      padding: { top: 72, bottom: 24, left: 16, right: 16 },
+      initialZoomLevel: 'fit',
+      secondaryZoomLevel: function (level) { return Math.max(1, level.initial * 2); },
+      maxZoomLevel: 4,
+      wheelToZoom: true,
+      pinchToClose: false,
+      closeOnVerticalDrag: false,
+      counter: false,
+      arrowPrev: false,
+      arrowNext: false,
+      zoom: false,
+      closeTitle: 'Fechar (Esc)',
+      errorMsg: 'Não foi possível carregar a imagem.'
+    });
+
+    instance.on('uiRegister', function () {
+      [
+        { name: 'zoom-out', title: 'Reduzir zoom', text: '−', order: 7, factor: 1 / 1.5 },
+        { name: 'zoom-in', title: 'Ampliar zoom', text: '+', order: 8, factor: 1.5 },
+        { name: 'fit', title: 'Ajustar à tela', text: 'Ajustar', order: 9 }
+      ].forEach(function (control) {
+        instance.ui.registerElement({
+          name: control.name,
+          title: control.title,
+          html: control.text,
+          order: control.order,
+          isButton: true,
+          onClick: function () {
+            var slide = instance.currSlide;
+            var level = control.factor
+              ? slide.currZoomLevel * control.factor : slide.zoomLevels.initial;
+            level = Math.max(slide.zoomLevels.initial, Math.min(slide.zoomLevels.max, level));
+            instance.zoomTo(level, undefined, reduceMotion ? 0 : 180);
+          },
+          onInit: function (button) {
+            instance.on('zoomPanUpdate', function () {
+              var slide = instance.currSlide;
+              if (!slide) return;
+              button.disabled = control.factor > 1
+                ? slide.currZoomLevel >= slide.zoomLevels.max - 0.001
+                : control.factor < 1 && slide.currZoomLevel <= slide.zoomLevels.initial + 0.001;
+            });
+          }
+        });
+      });
+    });
+
+    instance.on('afterInit', function () {
+      instance.element.setAttribute('role', 'dialog');
+      instance.element.setAttribute('aria-modal', 'true');
+      instance.element.setAttribute('aria-label', 'Visualização ampliada da imagem');
+    });
+    instance.on('keydown', function (event) {
+      var key = event.originalEvent;
+      if (key.key !== 'Tab') return;
+      var buttons = Array.from(instance.element.querySelectorAll('button:not(:disabled)'))
+        .filter(function (button) { return button.getClientRects().length; });
+      var first = buttons[0];
+      var last = buttons[buttons.length - 1];
+      var active = document.activeElement;
+      var target = key.shiftKey && (active === first || active === instance.element)
+        ? last : !key.shiftKey && active === last ? first : null;
+      if (target) {
+        key.preventDefault();
+        event.preventDefault();
+        target.focus();
+      }
+    });
+    instance.on('destroy', function () {
+      viewer = null;
+      document.documentElement.classList.remove('image-viewer-open');
+    });
+
+    trigger.focus({ preventScroll: true });
+    document.documentElement.classList.add('image-viewer-open');
+    viewer = instance;
+    instance.init();
+  }
+
+  document.addEventListener('click', function (event) {
+    if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey ||
+        event.shiftKey || event.altKey || viewer || typeof PhotoSwipe !== 'function') return;
+    var trigger = event.target.closest('.markdown-section .image-zoom-trigger');
+    if (!trigger) return;
+    var image = trigger.querySelector('img');
+    if (!image || !image.naturalWidth) return;
+    event.preventDefault();
+    event.stopPropagation();
+    openImage(image, trigger);
+  }, true);
+
+  window.addEventListener('hashchange', function () {
+    if (viewer) viewer.destroy();
+  });
+
+  window.$docsify.plugins = [].concat(window.$docsify.plugins || [], function (hook) {
+    hook.doneEach(function () {
+      var content = document.querySelector('.markdown-section');
+      if (!content) return;
+      renderRelatedPages(content);
+      prepareImages(content);
+    });
+  });
+}());

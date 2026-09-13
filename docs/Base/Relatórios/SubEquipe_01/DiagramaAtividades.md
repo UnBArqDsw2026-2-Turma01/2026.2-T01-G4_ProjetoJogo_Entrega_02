@@ -69,12 +69,12 @@ UML DIAGRAMS. **UML Activity Diagrams**. [Referência de notação](https://www.
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|:----:|-----------|-----------|---------|
 | 1.0 | 13/09/2026 | Inserção do diagrama de atividades. | Yogi Nam de Souza Barbosa | - |
+| 1.1 | 13/09/2026 | Atualização da navegação entre os artefatos. | Yogi Nam de Souza Barbosa | - |
+| 1.2 | 13/09/2026 | Adoção do rodapé de navegação automática. | Yogi Nam de Souza Barbosa | - |
 
 </div>
 
 <p align="center">Tabela 3: Histórico de versão.</p>
-
-Ver também: [Modelagem Dinâmica](ModelagemDinamica.md) · [Diagrama de Componentes](DiagramaComponentes.md) · [Requisitos Funcionais](RequisitosFuncionais.md)
 
 [mapa]: https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_01/#/Base/Relat%C3%B3rios/SubEquipe_03/MapaMental.md
 [bpmn]: https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_01/#/Base/Relat%C3%B3rios/SubEquipe_03/BPMN.md

@@ -1,0 +1,74 @@
+.markdown-section .related-pages {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border);
+}
+
+.markdown-section .related-pages-title {
+  margin: 0 0 .65rem;
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.markdown-section .related-pages ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.markdown-section .related-pages li { margin: 0; }
+.markdown-section .related-pages li::marker { content: ''; }
+.markdown-section .related-pages a { display: inline-block; padding: .25rem 0; }
+
+@media (max-width: 768px) {
+  .markdown-section .related-pages { padding-bottom: 32px; }
+  .markdown-section .related-pages ul { flex-direction: column; gap: .25rem; }
+  .markdown-section .related-pages a {
+    box-sizing: border-box;
+    min-height: 44px;
+    padding: .6rem 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+.markdown-section .image-zoom-trigger img { cursor: zoom-in; }
+.markdown-section .image-zoom-trigger:focus-visible img {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+html.image-viewer-open { overflow: hidden; }
+
+.document-image-viewer {
+  --pswp-bg: #121a21;
+  --pswp-placeholder-bg: #fff;
+}
+
+.document-image-viewer .pswp__top-bar {
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: #121a21;
+}
+
+.document-image-viewer .pswp__button {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border: 1px solid #a8b8c5;
+  color: #fff;
+  background: #20313e;
+  opacity: 1;
+  font: 26px/1 system-ui, sans-serif;
+}
+
+.document-image-viewer .pswp__button:hover { background: #135b99; }
+.document-image-viewer .pswp__button:disabled { opacity: .4; cursor: default; }
+.document-image-viewer .pswp__button:focus-visible { outline: 3px solid #e7ba60; outline-offset: 2px; }
+.document-image-viewer .pswp__button--fit { width: auto; padding: 0 12px; font-size: 15px; }
+.document-image-viewer .pswp__button--close { margin-left: 8px; }
+.document-image-viewer .pswp__button--close .pswp__icn { top: 7px; left: 7px; }

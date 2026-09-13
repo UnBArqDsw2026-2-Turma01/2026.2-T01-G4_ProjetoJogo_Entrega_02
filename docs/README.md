@@ -54,7 +54,7 @@ Cada subgrupo é responsável por seu próprio relatório, contendo a entrega m�
 
 <p align="center">Tabela 2: Integrantes do Subgrupo 01.</p>
 
-Artefatos: [Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_01/ModelagemEstatica.md) · [Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_01/ModelagemDinamica.md) · [IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
+Artefatos: [Requisitos Funcionais do MVP](/Base/Relatórios/SubEquipe_01/RequisitosFuncionais.md) · [Diagrama de Componentes](/Base/Relatórios/SubEquipe_01/DiagramaComponentes.md) · [Diagrama de Atividades](/Base/Relatórios/SubEquipe_01/DiagramaAtividades.md) · [IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
 
 ### Subgrupo 02
 
@@ -95,6 +95,8 @@ Artefatos: [Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_03
 
 A barra lateral oferece pesquisa textual em todas as páginas da documentação.
 
+O rodapé **Ver também** acompanha a organização da barra lateral. Clique nas imagens para ampliá-las na própria página; use os botões de zoom, a roda do mouse ou a pinça no celular e arraste para mover a imagem.
+
 ## Informações Complementares
 
 A documentação é publicada com [Docsify](https://docsify.js.org/) a partir da pasta `docs/`. Para executá-la localmente:
@@ -104,3 +106,12 @@ npx docsify-cli serve docs
 ```
 
 O site fica disponível em `http://localhost:3000`.
+
+## Histórico de Versão
+
+| Versão | Data | Descrição | Autor(es) | Revisor |
+|:------:|:----:|-----------|-----------|---------|
+| 1.0 | 13/09/2026 | Atualização dos links dos artefatos do Subgrupo 01. | Yogi Nam de Souza Barbosa | - |
+| 1.1 | 13/09/2026 | Navegação automática entre páginas e visualizador de imagens com zoom. | Yogi Nam de Souza Barbosa | - |
+
+<p align="center">Tabela 6: Histórico de versão.</p>

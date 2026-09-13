@@ -86,9 +86,9 @@ UML DIAGRAMS. **UML Component Diagrams**. [Referência de notação](https://www
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|:----:|-----------|-----------|---------|
 | 1.0 | 12/09/2026 | Inserção do diagrama de componentes. | Yogi Nam de Souza Barbosa | - |
+| 1.1 | 13/09/2026 | Atualização da navegação entre os artefatos. | Yogi Nam de Souza Barbosa | - |
+| 1.2 | 13/09/2026 | Adoção do rodapé de navegação automática. | Yogi Nam de Souza Barbosa | - |
 
 </div>
 
 <p align="center">Tabela 4: Histórico de versão.</p>
-
-Ver também: [Diagrama de Atividades](DiagramaAtividades.md) · [Requisitos Funcionais](RequisitosFuncionais.md) · [Modelagem Estática](ModelagemEstatica.md)

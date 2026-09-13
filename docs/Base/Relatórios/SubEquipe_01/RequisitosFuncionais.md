@@ -6,7 +6,7 @@ Requisitos funcionais do MVP do **G4_ProjetoJogo**, baseados nos artefatos do Su
 
 ## Objetivo
 
-Definir a base funcional dos diagramas estáticos e dinâmicos do Subgrupo 03.
+Definir a base funcional dos diagramas estáticos e dinâmicos do Subgrupo 01.
 
 ## Metodologia
 
@@ -78,13 +78,13 @@ SUBGRUPO 03. **NFR Framework**. 2026. [Usabilidade e retorno ao jogador][nfr].
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|:----:|-----------|-----------|---------|
-| 1.0 | 12/09/2026 | Levantamento de requisitos | Cibelly, Gabriel e Yogi | - |
+| 1.0 | 12/09/2026 | Levantamento de requisitos | Cibelly Lourenço Ferreira, Gabriel Andrade Magioli e Yogi Nam de Souza Barbosa | - |
+| 1.1 | 13/09/2026 | Correção do subgrupo no objetivo e atualização da navegação. | Yogi Nam de Souza Barbosa | - |
+| 1.2 | 13/09/2026 | Adoção do rodapé de navegação automática. | Yogi Nam de Souza Barbosa | - |
 
 </div>
 
 <p align="center">Tabela 3: Histórico de versão.</p>
-
-Ver também: [Diagrama de Atividades](DiagramaAtividades.md) · [Diagrama de Componentes](DiagramaComponentes.md) · [Modelagem Estática](ModelagemEstatica.md)
 
 [mapa]: https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_01/#/Base/Relat%C3%B3rios/SubEquipe_03/MapaMental.md
 [sub0302]: https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_01/#/Atas/AtaSub03_02.md

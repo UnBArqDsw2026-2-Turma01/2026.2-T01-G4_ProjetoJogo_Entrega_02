@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css">
+  <link rel="stylesheet" href="Assets/vendor/photoswipe/photoswipe.css">
+  <link rel="stylesheet" href="Assets/css/page-tools.css">
 
   <script>
     (function () {
@@ -819,7 +821,7 @@
         var text = selectedText;
         if (!text) {
           var readableContent = content.cloneNode(true);
-          var excluded = readableContent.querySelectorAll('.breadcrumbs, .page-toc, script, style');
+          var excluded = readableContent.querySelectorAll('.breadcrumbs, .page-toc, .related-pages, script, style');
           Array.prototype.forEach.call(excluded, function (element) { element.remove(); });
           text = readableContent.textContent.replace(/\s+/g, ' ').trim();
         }
@@ -846,6 +848,8 @@
       syncBackToTop();
     })();
   </script>
+  <script src="Assets/vendor/photoswipe/photoswipe.umd.min.js"></script>
+  <script src="Assets/js/page-tools.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
