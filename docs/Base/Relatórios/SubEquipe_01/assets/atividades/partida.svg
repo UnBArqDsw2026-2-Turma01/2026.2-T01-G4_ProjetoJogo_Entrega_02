@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1490" viewBox="0 0 1400 1490" role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Jogar uma partida</title>
+<desc id="descricao">Fluxo geral da partida com exploração, combinação e combate como ações de alto nível. Uma região interrompível delimita a sessão ativa. O evento Sair solicitado pode interromper qualquer ação dessa região. Saída e derrota encerram as ações e retornam à tela inicial; vitória retorna à exploração.</desc>
+<metadata>Versão 1.1; 13/09/2026; responsável: Yogi Nam de Souza Barbosa. UML 2.5.1, seções 15.6 e 16.10; slides de Modelagem UML Dinâmica, páginas 17 a 19; https://www.uml-diagrams.org/activity-diagrams.html</metadata>
+<defs><marker id="seta" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#222" stroke-width="1.8"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#161616;text-anchor:middle} .flow{fill:none;stroke:#222;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round} .node{fill:#fff;stroke:#222;stroke-width:1.8} .action{font-size:20px} .owner{font-size:16px} .rf{font-size:15px;fill:#444} .guard{font-size:17px;paint-order:stroke;stroke:#fff;stroke-width:7;stroke-linejoin:round} .title{font-size:23px;font-weight:600}</style>
+<rect width="1400" height="1490" fill="white"/>
+<rect x="20" y="20" width="1360" height="1450" rx="14" class="node"/>
+<text x="40" y="55" class="title" style="text-anchor:start">act Jogar uma partida</text>
+<rect id="partida_ativa" data-kind="interruptible-region" x="36" y="335" width="1004" height="1085" rx="20" fill="none" stroke="#222" stroke-width="1.8" stroke-dasharray="10 7"/>
+<text x="54" y="364" class="owner" style="text-anchor:start">Partida em andamento</text>
+<path id="e1" data-kind="control-flow" data-interrupts="" data-source="inicio" data-target="nova" data-guard="" class="flow" d="M 580 102.0 L 580 119.0" marker-end="url(#seta)"/>
+<path id="e2" data-kind="control-flow" data-interrupts="" data-source="nova" data-target="inicializar" data-guard="" class="flow" d="M 580 197.0 L 580 222.0" marker-end="url(#seta)"/>
+<path id="e3" data-kind="control-flow" data-interrupts="" data-source="inicializar" data-target="repetir" data-guard="" class="flow" d="M 580 310.0 L 580 372.0" marker-end="url(#seta)"/>
+<path id="e4" data-kind="control-flow" data-interrupts="" data-source="repetir" data-target="escolher" data-guard="" class="flow" d="M 580 408.0 L 580 428.0" marker-end="url(#seta)"/>
+<path id="e5" data-kind="control-flow" data-interrupts="" data-source="escolher" data-target="comando" data-guard="" class="flow" d="M 580 522.0 L 580 551.0" marker-end="url(#seta)"/>
+<path id="e6" data-kind="control-flow" data-interrupts="" data-source="comando" data-target="explorar" data-guard="[mover ou coletar]" class="flow" d="M 548.0 575 L 210 575 L 210 643.0" marker-end="url(#seta)"/>
+<path id="e7" data-kind="control-flow" data-interrupts="" data-source="comando" data-target="alquimia" data-guard="[combinar]" class="flow" d="M 564.0 587.0 L 500 620 L 500 657.0" marker-end="url(#seta)"/>
+<path id="e8" data-kind="control-flow" data-interrupts="" data-source="comando" data-target="consultar" data-guard="[consultar]" class="flow" d="M 612.0 575 L 800 575 L 800 651.0" marker-end="url(#seta)"/>
+<path id="e9" data-kind="control-flow" data-interrupts="" data-source="explorar" data-target="encontro" data-guard="" class="flow" d="M 210 761.0 L 210 826.0" marker-end="url(#seta)"/>
+<path id="e10" data-kind="control-flow" data-interrupts="" data-source="encontro" data-target="combate" data-guard="[movimento válido e
+inimigo ativo encontrado]" class="flow" d="M 210 874.0 L 210 915.0" marker-end="url(#seta)"/>
+<path id="e11" data-kind="control-flow" data-interrupts="" data-source="encontro" data-target="retorno_explorar" data-guard="[else]" class="flow" d="M 178.0 850 L 67 850 L 67 1240 L 192.0 1240" marker-end="url(#seta)"/>
+<path id="e12" data-kind="control-flow" data-interrupts="" data-source="combate" data-target="resultado" data-guard="" class="flow" d="M 210 1005.0 L 210 1036.0" marker-end="url(#seta)"/>
+<path id="e13" data-kind="control-flow" data-interrupts="" data-source="resultado" data-target="vitoria" data-guard="[vitória]" class="flow" d="M 210 1084.0 L 210 1107.0" marker-end="url(#seta)"/>
+<path id="e14" data-kind="control-flow" data-interrupts="" data-source="resultado" data-target="derrota" data-guard="[derrota]" class="flow" d="M 242.0 1060 L 572 1060 Q 580 1047 588 1060 L 692 1060 Q 700 1047 708 1060 L 865 1060 L 865 1110.0" marker-end="url(#seta)"/>
+<path id="e15" data-kind="control-flow" data-interrupts="" data-source="vitoria" data-target="retorno_explorar" data-guard="" class="flow" d="M 210 1193.0 L 210 1222.0" marker-end="url(#seta)"/>
+<path id="e16" data-kind="control-flow" data-interrupts="" data-source="retorno_explorar" data-target="retorno" data-guard="" class="flow" d="M 228.0 1240 L 562.0 1240" marker-end="url(#seta)"/>
+<path id="e17" data-kind="control-flow" data-interrupts="" data-source="alquimia" data-target="retorno" data-guard="" class="flow" d="M 500 747.0 L 500 797 L 580 797 L 580 1222.0" marker-end="url(#seta)"/>
+<path id="e18" data-kind="control-flow" data-interrupts="" data-source="consultar" data-target="retorno" data-guard="" class="flow" d="M 800 753.0 L 800 787 L 700 787 L 700 1240 L 598.0 1240" marker-end="url(#seta)"/>
+<path id="e19" data-kind="control-flow" data-interrupts="" data-source="retorno" data-target="feedback" data-guard="" class="flow" d="M 580 1258.0 L 580 1287.0" marker-end="url(#seta)"/>
+<path id="e20" data-kind="control-flow" data-interrupts="" data-source="feedback" data-target="repetir" data-guard="" class="flow" d="M 580 1373.0 L 580 1390 L 48 1390 L 48 390 L 562.0 390" marker-end="url(#seta)"/>
+<path id="e21" data-kind="interrupting-flow" data-interrupts="partida_ativa" data-source="sair" data-target="encerrar" data-guard="" class="flow" d="M 975.0 395 L 995 395 L 1022 395 L 1048 383 L 1032 407 L 1058 395 L 1210 395 L 1210 1222.0" marker-end="url(#seta)"/>
+<path id="e22" data-kind="interrupting-flow" data-interrupts="partida_ativa" data-source="derrota" data-target="encerrar" data-guard="" class="flow" d="M 865 1190.0 L 865 1240 L 1022 1240 L 1048 1228 L 1032 1252 L 1058 1240 L 1192.0 1240" marker-end="url(#seta)"/>
+<path id="e23" data-kind="control-flow" data-interrupts="" data-source="encerrar" data-target="limpar" data-guard="" class="flow" d="M 1210 1258.0 L 1210 1294.0" marker-end="url(#seta)"/>
+<path id="e24" data-kind="control-flow" data-interrupts="" data-source="limpar" data-target="fim" data-guard="" class="flow" d="M 1210 1406.0 L 1210 1431.0" marker-end="url(#seta)"/>
+<g id="inicio" data-kind="initial" data-region="" data-requirements="" data-call="">
+<circle cx="580" cy="92" r="10" fill="#222"/>
+</g>
+<g id="nova" data-kind="action" data-region="" data-requirements="" data-call="">
+<rect x="440.0" y="119.0" width="280" height="78" rx="16" class="node"/>
+<text x="580" y="152.5" class="owner">(Jogador)</text>
+<text x="580" y="175.5" class="action">Solicitar nova partida</text>
+</g>
+<g id="inicializar" data-kind="action" data-region="" data-requirements="RF01" data-call="">
+<rect x="415.0" y="222.0" width="330" height="88" rx="16" class="node"/>
+<text x="580" y="249.0" class="action">Inicializar área, PV,</text>
+<text x="580" y="272.0" class="action">inventário e Livro</text>
+<text x="580" y="295.0" class="rf">RF01</text>
+</g>
+<g id="repetir" data-kind="merge" data-region="partida_ativa" data-requirements="" data-call="">
+<polygon points="580,372.0 598.0,390 580,408.0 562.0,390" class="node"/>
+</g>
+<g id="escolher" data-kind="action" data-region="partida_ativa" data-requirements="" data-call="">
+<rect x="440.0" y="428.0" width="280" height="94" rx="16" class="node"/>
+<text x="580" y="458.0" class="owner">(Jogador)</text>
+<text x="580" y="481.0" class="action">Escolher ação</text>
+<text x="580" y="504.0" class="action">na exploração</text>
+</g>
+<g id="comando" data-kind="decision" data-region="partida_ativa" data-requirements="" data-call="">
+<polygon points="580,551.0 612.0,575 580,599.0 548.0,575" class="node"/>
+</g>
+<g id="explorar" data-kind="action" data-region="partida_ativa" data-requirements="RF02 RF03" data-call="">
+<rect x="87.5" y="643.0" width="245" height="118" rx="16" class="node"/>
+<text x="210" y="673.5" class="action">Validar e executar</text>
+<text x="210" y="696.5" class="action">movimento ou coleta</text>
+<text x="210" y="719.5" class="action">(só se permitido)</text>
+<text x="210" y="742.5" class="rf">RF02, RF03</text>
+</g>
+<g id="alquimia" data-kind="action" data-region="partida_ativa" data-requirements="RF05 RF06" data-call="">
+<rect x="375.0" y="657.0" width="250" height="90" rx="16" class="node"/>
+<text x="500" y="696.5" class="action">Combinar elementos</text>
+<text x="500" y="719.5" class="rf">RF05, RF06</text>
+</g>
+<g id="consultar" data-kind="action" data-region="partida_ativa" data-requirements="RF04 RF07" data-call="">
+<rect x="657.5" y="651.0" width="285" height="102" rx="16" class="node"/>
+<text x="800" y="685.0" class="action">Exibir inventário</text>
+<text x="800" y="708.0" class="action">ou Livro do Aventureiro</text>
+<text x="800" y="731.0" class="rf">RF04, RF07</text>
+</g>
+<g id="encontro" data-kind="decision" data-region="partida_ativa" data-requirements="" data-call="">
+<polygon points="210,826.0 242.0,850 210,874.0 178.0,850" class="node"/>
+</g>
+<g id="combate" data-kind="action" data-region="partida_ativa" data-requirements="RF08 RF09 RF10 RF11" data-call="">
+<rect x="87.5" y="915.0" width="245" height="90" rx="16" class="node"/>
+<text x="210" y="954.5" class="action">Resolver combate</text>
+<text x="210" y="977.5" class="rf">RF08, RF09, RF10, RF11</text>
+</g>
+<g id="resultado" data-kind="decision" data-region="partida_ativa" data-requirements="" data-call="">
+<polygon points="210,1036.0 242.0,1060 210,1084.0 178.0,1060" class="node"/>
+</g>
+<g id="vitoria" data-kind="action" data-region="partida_ativa" data-requirements="RF11" data-call="">
+<rect x="87.5" y="1107.0" width="245" height="86" rx="16" class="node"/>
+<text x="210" y="1133.0" class="action">Retirar inimigo da área;</text>
+<text x="210" y="1156.0" class="action">manter PV restantes</text>
+<text x="210" y="1179.0" class="rf">RF11</text>
+</g>
+<g id="retorno_explorar" data-kind="merge" data-region="partida_ativa" data-requirements="" data-call="">
+<polygon points="210,1222.0 228.0,1240 210,1258.0 192.0,1240" class="node"/>
+</g>
+<g id="retorno" data-kind="merge" data-region="partida_ativa" data-requirements="" data-call="">
+<polygon points="580,1222.0 598.0,1240 580,1258.0 562.0,1240" class="node"/>
+</g>
+<g id="feedback" data-kind="action" data-region="partida_ativa" data-requirements="RF12" data-call="">
+<rect x="425.0" y="1287.0" width="310" height="86" rx="16" class="node"/>
+<text x="580" y="1313.0" class="action">Exibir resultado</text>
+<text x="580" y="1336.0" class="action">e retomar exploração</text>
+<text x="580" y="1359.0" class="rf">RF12</text>
+</g>
+<g id="derrota" data-kind="action" data-region="partida_ativa" data-requirements="RF11" data-call="">
+<rect x="735.0" y="1110.0" width="260" height="80" rx="16" class="node"/>
+<text x="865" y="1144.5" class="action">Exibir derrota</text>
+<text x="865" y="1167.5" class="rf">RF11</text>
+</g>
+<g id="sair" data-kind="accept" data-region="partida_ativa" data-requirements="RF13" data-call="">
+<path d="M 735.0 356.0 H 975.0 V 434.0 H 735.0 L 757.0 395 Z" class="node"/>
+<text x="855" y="389.5" class="action">Sair solicitado</text>
+<text x="855" y="412.5" class="rf">RF13</text>
+</g>
+<g id="encerrar" data-kind="merge" data-region="" data-requirements="" data-call="">
+<polygon points="1210,1222.0 1228.0,1240 1210,1258.0 1192.0,1240" class="node"/>
+</g>
+<g id="limpar" data-kind="action" data-region="" data-requirements="RF01 RF11 RF13" data-call="">
+<rect x="1050.0" y="1294.0" width="320" height="112" rx="16" class="node"/>
+<text x="1210" y="1321.5" class="action">Encerrar ações e descartar</text>
+<text x="1210" y="1344.5" class="action">a sessão; voltar à tela inicial</text>
+<text x="1210" y="1367.5" class="action">(opção Nova partida)</text>
+<text x="1210" y="1390.5" class="rf">RF01, RF11, RF13</text>
+</g>
+<g id="fim" data-kind="final" data-region="" data-requirements="" data-call="">
+<circle cx="1210" cy="1445" r="14" class="node"/><circle cx="1210" cy="1445" r="9" fill="#222"/>
+</g>
+<text x="310" y="555" class="guard">[mover ou coletar]</text>
+<text x="490" y="643" class="guard">[combinar]</text>
+<text x="802" y="626" class="guard">[consultar]</text>
+<text x="354" y="875" class="guard">[movimento válido e</text>
+<text x="354" y="897" class="guard">inimigo ativo encontrado]</text>
+<text x="110" y="829" class="guard">[else]</text>
+<text x="270" y="1097" class="guard">[vitória]</text>
+<text x="472" y="1040" class="guard">[derrota]</text>
+</svg>
