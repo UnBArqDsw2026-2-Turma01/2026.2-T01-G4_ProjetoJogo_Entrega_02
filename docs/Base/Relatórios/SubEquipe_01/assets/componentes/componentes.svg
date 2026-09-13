@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1320" viewBox="0 0 1400 1320" role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Diagrama de componentes do G4_ProjetoJogo</title>
+<desc id="descricao">Estrutura interna do jogo com oito componentes, portas e interfaces fornecidas e requeridas ligadas por conectores de montagem. Interface do Jogador usa Controle da Partida. Controle da Partida usa Exploração, Combate, Alquimia, Inventário, Livro e Catálogo. Exploração, Combate e Alquimia usam Inventário. Alquimia registra descobertas no Livro. O Controle da Partida e os cinco módulos de domínio compartilham a interface do Catálogo.</desc>
+<metadata>Versão 1.2; 13/09/2026; responsável: Yogi Nam de Souza Barbosa. Revisão a partir do diagrama de atividades. Notação: UML 2.5.1, componentes e portas simples. Referência visual: https://www.uml-diagrams.org/component-diagrams.html</metadata>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#161616} .linha{fill:none;stroke:#222;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round} .caixa{fill:white;stroke:#222;stroke-width:1.8} .nome{font-size:19px;font-weight:600;text-anchor:middle} .contrato{font-size:17px;text-anchor:middle} .legenda{font-size:16px}</style>
+<rect width="1400" height="1320" fill="white"/>
+
+<rect x="24" y="24" width="1352" height="1210" class="caixa"/>
+<polyline class="linha" points="24,79 1376,79" />
+<text x="700" y="60" class="nome">«component» G4_ProjetoJogo</text>
+<g aria-hidden="true"><rect x="1340" y="38" width="20" height="25" class="caixa"/><rect x="1335" y="43" width="11" height="5" class="caixa"/><rect x="1335" y="53" width="11" height="5" class="caixa"/></g>
+<g id="C01" data-kind="component-part"><rect x="75" y="110" width="230" height="110" class="caixa"/>
+<g aria-hidden="true"><rect x="273" y="122" width="20" height="25" class="caixa"/><rect x="268" y="127" width="11" height="5" class="caixa"/><rect x="268" y="137" width="11" height="5" class="caixa"/></g>
+<text x="190.0" y="175.0" class="nome">:Interface do Jogador</text>
+</g>
+<g id="C02" data-kind="component-part"><rect x="75" y="430" width="230" height="300" class="caixa"/>
+<g aria-hidden="true"><rect x="273" y="442" width="20" height="25" class="caixa"/><rect x="268" y="447" width="11" height="5" class="caixa"/><rect x="268" y="457" width="11" height="5" class="caixa"/></g>
+<text x="190.0" y="590.0" class="nome">:Controle da Partida</text>
+</g>
+<g id="C03" data-kind="component-part"><rect x="520" y="300" width="240" height="120" class="caixa"/>
+<g aria-hidden="true"><rect x="728" y="312" width="20" height="25" class="caixa"/><rect x="723" y="317" width="11" height="5" class="caixa"/><rect x="723" y="327" width="11" height="5" class="caixa"/></g>
+<text x="640.0" y="370.0" class="nome">:Exploração</text>
+</g>
+<g id="C07" data-kind="component-part"><rect x="520" y="520" width="240" height="120" class="caixa"/>
+<g aria-hidden="true"><rect x="728" y="532" width="20" height="25" class="caixa"/><rect x="723" y="537" width="11" height="5" class="caixa"/><rect x="723" y="547" width="11" height="5" class="caixa"/></g>
+<text x="640.0" y="590.0" class="nome">:Combate em Turnos</text>
+</g>
+<g id="C05" data-kind="component-part"><rect x="520" y="740" width="240" height="120" class="caixa"/>
+<g aria-hidden="true"><rect x="728" y="752" width="20" height="25" class="caixa"/><rect x="723" y="757" width="11" height="5" class="caixa"/><rect x="723" y="767" width="11" height="5" class="caixa"/></g>
+<text x="640.0" y="810.0" class="nome">:Alquimia</text>
+</g>
+<g id="C04" data-kind="component-part"><rect x="1020" y="260" width="260" height="200" class="caixa"/>
+<g aria-hidden="true"><rect x="1248" y="272" width="20" height="25" class="caixa"/><rect x="1243" y="277" width="11" height="5" class="caixa"/><rect x="1243" y="287" width="11" height="5" class="caixa"/></g>
+<text x="1150.0" y="370.0" class="nome">:Inventário</text>
+</g>
+<g id="C06" data-kind="component-part"><rect x="1020" y="740" width="260" height="120" class="caixa"/>
+<g aria-hidden="true"><rect x="1248" y="752" width="20" height="25" class="caixa"/><rect x="1243" y="757" width="11" height="5" class="caixa"/><rect x="1243" y="767" width="11" height="5" class="caixa"/></g>
+<text x="1150.0" y="810.0" class="nome">:Livro do Aventureiro</text>
+</g>
+<g id="C08" data-kind="component-part"><rect x="830" y="1090" width="320" height="110" class="caixa"/>
+<g aria-hidden="true"><rect x="1118" y="1102" width="20" height="25" class="caixa"/><rect x="1113" y="1107" width="11" height="5" class="caixa"/><rect x="1113" y="1117" width="11" height="5" class="caixa"/></g>
+<text x="990.0" y="1155.0" class="nome">:Catálogo do Jogo</text>
+</g>
+<g id="a01" data-kind="assembly" data-consumer="C01" data-provider="C02" data-interface="IPartida">
+<polyline class="linha" points="190,220 190,315" />
+<polyline class="linha" points="190,339 190,430" />
+<g transform="translate(190 330) rotate(90)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="120" y="336" class="contrato">IPartida</text>
+</g>
+<g id="a02" data-kind="assembly" data-consumer="C02" data-provider="C03" data-interface="IExploracao">
+<polyline class="linha" points="305,470 385,470 385,360 435,360" />
+<polyline class="linha" points="459,360 520,360" />
+<g transform="translate(450 360) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="450" y="338" class="contrato">IExploracao</text>
+</g>
+<g id="a03" data-kind="assembly" data-consumer="C02" data-provider="C07" data-interface="ICombate">
+<polyline class="linha" points="305,570 435,570" />
+<polyline class="linha" points="459,570 520,570" />
+<g transform="translate(450 570) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="450" y="548" class="contrato">ICombate</text>
+</g>
+<g id="a04" data-kind="assembly" data-consumer="C02" data-provider="C05" data-interface="IAlquimia">
+<polyline class="linha" points="305,680 385,680 385,800 435,800" />
+<polyline class="linha" points="459,800 520,800" />
+<g transform="translate(450 800) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="450" y="778" class="contrato">IAlquimia</text>
+</g>
+<g id="a05" data-kind="assembly" data-consumer="C02" data-provider="C04" data-interface="IInventario">
+<polyline class="linha" points="270,430 270,235 675,235" />
+<polyline class="linha" points="699,235 1150,235 1150,260" />
+<g transform="translate(690 235) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="690" y="213" class="contrato">IInventario</text>
+</g>
+<g id="a06" data-kind="assembly" data-consumer="C02" data-provider="C06" data-interface="ILivro">
+<polyline class="linha" points="270,730 270,940 925,940" />
+<polyline class="linha" points="949,940 1150,940 1150,860" />
+<g transform="translate(940 940) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="940" y="918" class="contrato">ILivro</text>
+</g>
+<g id="a07" data-kind="assembly" data-consumer="C03" data-provider="C04" data-interface="IInventario">
+<polyline class="linha" points="760,340 875,340" />
+<polyline class="linha" points="899,340 1020,340" />
+<g transform="translate(890 340) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="890" y="318" class="contrato">IInventario</text>
+</g>
+<g id="a08" data-kind="assembly" data-consumer="C07" data-provider="C04" data-interface="IInventario">
+<polyline class="linha" points="760,550 840,550 840,400 915,400" />
+<polyline class="linha" points="939,400 1020,400" />
+<g transform="translate(930 400) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="930" y="378" class="contrato">IInventario</text>
+</g>
+<g id="a09" data-kind="assembly" data-consumer="C05" data-provider="C04" data-interface="IInventario">
+<polyline class="linha" points="760,770 900,770 900,495 1015,495" />
+<polyline class="linha" points="1039,495 1100,495 1100,460" />
+<g transform="translate(1030 495) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="1030" y="473" class="contrato">IInventario</text>
+</g>
+<g id="a10" data-kind="assembly" data-consumer="C05" data-provider="C06" data-interface="ILivro">
+<polyline class="linha" points="760,820 915,820" />
+<polyline class="linha" points="939,820 1020,820" />
+<g transform="translate(930 820) rotate(0)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<text x="930" y="798" class="contrato">ILivro</text>
+</g>
+<g id="a11" data-kind="assembly" data-consumer="C02 C03 C04 C05 C06 C07" data-provider="C08" data-interface="ICatalogo">
+<polyline class="linha" points="180,730 180,1000 805,1000" />
+<polyline class="linha" points="760,400 805,400" />
+<path d="M 805 400 V 541 C 817 541 817 559 805 559 V 761 C 817 761 817 779 805 779 V 811 C 817 811 817 829 805 829 V 931 C 817 931 817 949 805 949 V 1000" class="linha"/>
+<polyline class="linha" points="760,620 805,620" />
+<path d="M 650 860 V 931 C 662 931 662 949 650 949 V 990" class="linha"/>
+<polyline class="linha" points="650,990 805,990" />
+<polyline class="linha" points="1280,420 1330,420 1330,1000 805,1000" />
+<polyline class="linha" points="1280,800 1330,800" />
+<polyline class="linha" points="970,1000 970,1030" />
+<g transform="translate(970 1045) rotate(90)" data-kind="assembly-interface"><circle cx="0" cy="0" r="9" class="caixa"/><path d="M 0 -15 A 15 15 0 0 0 0 15" class="linha"/></g>
+<polyline class="linha" points="970,1054 970,1090" />
+<text x="1040" y="1051" class="contrato">ICatalogo</text>
+<circle cx="805" cy="620" r="3.2" fill="#222"/>
+<circle cx="805" cy="990" r="3.2" fill="#222"/>
+<circle cx="805" cy="1000" r="3.2" fill="#222"/>
+<circle cx="1330" cy="800" r="3.2" fill="#222"/>
+<circle cx="970" cy="1000" r="3.2" fill="#222"/>
+</g>
+<rect x="174" y="724" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="184" y="214" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="184" y="424" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="264" y="424" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="264" y="724" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="299" y="464" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="299" y="564" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="299" y="674" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="514" y="354" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="514" y="564" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="514" y="794" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="644" y="854" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="754" y="334" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="754" y="394" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="754" y="544" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="754" y="614" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="754" y="764" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="754" y="814" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="964" y="1084" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="1014" y="334" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="1014" y="394" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="1014" y="814" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="1094" y="454" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="1144" y="254" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="1144" y="854" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="1274" y="414" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="1274" y="794" width="12" height="12" class="caixa" data-kind="port"/>
+<rect x="42" y="1270" width="12" height="12" class="caixa"/>
+<text x="66" y="1282" class="legenda">Porta</text>
+<polyline class="linha" points="176,1276 198,1276" />
+<circle cx="207" cy="1276" r="9" class="caixa"/>
+<text x="225" y="1282" class="legenda">Interface fornecida</text>
+<polyline class="linha" points="425,1276 450,1276" />
+<path d="M 465 1261 A 15 15 0 0 0 465 1291" class="linha"/>
+<text x="482" y="1282" class="legenda">Interface requerida</text>
+<text x="740" y="1282" class="legenda">Junção com ponto: contrato compartilhado. Arco: linhas sem conexão.</text>
+</svg>
