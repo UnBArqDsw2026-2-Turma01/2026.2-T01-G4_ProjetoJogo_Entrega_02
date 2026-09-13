@@ -1,14 +1,14 @@
-name: Artefato de subequipe
-description: Planejar e acompanhar um artefato, relatório ou iniciativa de uma subequipe
+name: Artefato de subgrupo
+description: Criar ou evoluir um artefato de modelagem da Entrega 02
 title: "[SubEquipe_XX] "
 labels: ["entrega-02"]
 assignees: []
+
 body:
   - type: markdown
     attributes:
       value: |
-        Use uma issue por artefato ou unidade de trabalho. Substitua `XX` no título e adicione as labels da subequipe e do foco correspondentes.
-        Estruture a tarefa para que decisões, evidências, commits e pull requests possam ser rastreados até o artefato entregue.
+        Use uma issue por artefato. Mantenha o escopo pequeno e verificável e relacione o PR que concluir a atividade.
 
   - type: dropdown
     id: subequipe
@@ -22,29 +22,16 @@ body:
       required: true
 
   - type: dropdown
-    id: foco
-    attributes:
-      label: Foco ou categoria
-      options:
-        - "FOCO_01: Artefato generalista ou NFR Framework"
-        - "FOCO_02: Engenharia Reversa ou BPMN"
-        - "FOCO_03: IA Generativa"
-        - Iniciativa extra
-        - Outro
-    validations:
-      required: true
-
-  - type: dropdown
     id: artefato
     attributes:
-      label: Artefato principal
+      label: Artefato
       options:
-        - Rich Picture
-        - Mapa Mental
-        - NFR Framework e SIG
-        - Engenharia Reversa e BPMN
-        - Ponto de vista sobre IA Generativa
-        - Iniciativa extra
+        - Diagrama de Classes
+        - Diagrama de Componentes
+        - Diagrama de Pacotes
+        - Diagrama de Sequência
+        - Diagrama de Atividades
+        - Diagrama de Estados
         - Outro
     validations:
       required: true
@@ -52,40 +39,20 @@ body:
   - type: input
     id: responsaveis
     attributes:
-      label: Responsáveis
-      description: Informe os usuários do GitHub responsáveis pela atividade.
-      placeholder: "@usuario1, @usuario2"
-    validations:
-      required: true
-
-  - type: textarea
-    id: contexto
-    attributes:
-      label: Contexto
-      description: Explique a necessidade da atividade, o estado atual e sua relação com a entrega.
-      placeholder: |
-        A entrega exige...
-        Atualmente o artefato...
-        Esta atividade é necessária porque...
+      label: Responsável(is)
+      placeholder: "@usuario"
     validations:
       required: true
 
   - type: textarea
     id: objetivo
     attributes:
-      label: Objetivo e resultado esperado
-      description: Descreva o resultado verificável que deve existir ao concluir a issue.
-    validations:
-      required: true
-
-  - type: textarea
-    id: arquivos
-    attributes:
-      label: Arquivos e páginas envolvidos
-      description: Liste caminhos do repositório e links relevantes.
+      label: Objetivo e escopo
+      description: Diga o que o artefato deve representar e quais requisitos, fluxos ou partes do sistema estão no escopo.
       placeholder: |
-        - docs/Base/Relatórios/SubEquipe_XX/Artefato.md
-        - docs/_sidebar.md
+        Representar...
+        Escopo principal: ...
+        Fora do escopo: ...
     validations:
       required: true
 
@@ -93,70 +60,37 @@ body:
     id: tarefas
     attributes:
       label: Tarefas
-      description: Crie uma lista de etapas objetivas e mantenha os itens atualizados.
       placeholder: |
-        - [ ] Produzir ou revisar o artefato
-        - [ ] Preservar evidências e arquivos-fonte
-        - [ ] Documentar metodologia e decisões
-        - [ ] Publicar e validar no Docsify
+        - [ ] Selecionar os requisitos/fluxos que serão modelados
+        - [ ] Elaborar o diagrama conforme a notação UML
+        - [ ] Adicionar fonte editável e versão renderizada ao repositório
+        - [ ] Documentar decisões relevantes
+        - [ ] Validar a renderização e abrir o PR
     validations:
       required: true
 
   - type: textarea
-    id: evidencias
+    id: referencias
     attributes:
-      label: Evidências, ferramentas e referências
-      description: Registre gravações, capturas, dados, ferramentas, literatura ou outras fontes previstas.
+      label: Referências e dependências
+      description: Relacione atas, requisitos, outros diagramas ou materiais da disciplina quando aplicável.
+      placeholder: |
+        - Ata/decisão de origem:
+        - Requisitos relacionados:
+        - Artefatos relacionados:
+        - Dependências:
     validations:
       required: false
-
-  - type: textarea
-    id: rastreabilidade
-    attributes:
-      label: Rastreabilidade e dependências
-      description: Relacione atas, decisões, issues, artefatos anteriores e dependências desta atividade.
-      placeholder: |
-        - Decisão ou ata de origem:
-        - Artefatos relacionados:
-        - Issues dependentes ou relacionadas:
-        - Ordem de execução, quando relevante:
-    validations:
-      required: true
 
   - type: textarea
     id: criterios
     attributes:
       label: Critérios de aceitação
-      description: Defina condições objetivas para considerar o trabalho aceito.
       placeholder: |
-        - [ ] O artefato atende à notação ou técnica escolhida
-        - [ ] A metodologia justifica as decisões tomadas
-        - [ ] As evidências e referências são acessíveis
-        - [ ] A página renderiza corretamente no Docsify
+        - [ ] O diagrama está coerente com a notação UML adotada
+        - [ ] O conteúdo representa o escopo definido na issue
+        - [ ] A fonte editável e a versão final estão no repositório
+        - [ ] O artefato está referenciado na documentação da Entrega 02
+        - [ ] O PR relacionado foi revisado
     validations:
       required: true
-
-  - type: checkboxes
-    id: definicao-pronto
-    attributes:
-      label: Definição de pronto
-      description: Atualize estes itens ao longo da atividade.
-      options:
-        - label: Alterações limitadas ao escopo da issue
-        - label: Página sem campos vazios ou textos de exemplo
-        - label: Figuras e tabelas com legenda e fonte adequada
-        - label: Arquivos de evidência e arquivos-fonte preservados
-        - label: Links internos e mídias testados no Docsify
-        - label: Histórico de versão atualizado somente com responsáveis humanos
-        - label: Índices e docs/_sidebar.md atualizados quando aplicável
-        - label: Contribuição de cada responsável comprovada por commits
-        - label: Contribuições registradas em docs/Base/1.2.ParticipacoesBase.md
-        - label: Pull request relacionado à issue e revisado
-
-  - type: checkboxes
-    id: conduta
-    attributes:
-      label: Código de Conduta
-      options:
-        - label: Li e concordo em seguir o [Código de Conduta](https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/blob/main/CODE_OF_CONDUCT.md)
-          required: true
