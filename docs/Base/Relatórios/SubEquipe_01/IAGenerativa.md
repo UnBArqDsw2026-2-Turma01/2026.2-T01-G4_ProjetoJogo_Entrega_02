@@ -16,7 +16,7 @@ Registrar, com senso crítico, como cada membro utilizou IA Generativa no trabal
 
 | Nome do Membro | Lições Aprendidas | Uso da IA Generativa (senso crítico) |
 |----------------|-------------------|--------------------------------------|
-|                |                   |                                      |
+|        Gabriel Andrade Magioli        |         Aprendi de forma teórica e prática sobre a confecção de diagramas estaticos e dinamicos, principalmente se tratando de diagrama de pacotes e de estado e como podem enriquecer uma documentação, contribuindo com planejamento, além de reforçar conhecimentos previos de DDD e Hexagonal e como aplicar na diagramação          |                 A IA Generativa foi utilizada para aprofundar os textos escritos previamente e fazer revisões do conteúdo encontrado na internet para deixar mais resumido para fazer os diagramas no Draw.io                     |
 
 <p align="center">Tabela 1: Pontos de vista dos integrantes sobre o uso de IA Generativa.</p>
 
@@ -30,7 +30,7 @@ Registrar, com senso crítico, como cada membro utilizou IA Generativa no trabal
 
 | Nome | % de Contribuição |
 |------|-------------------|
-|      |                   |
+|   Gabriel Andrade Magioli   |          33%         |
 
 <p align="center">Tabela 2: Contribuição dos integrantes.</p>
 
@@ -38,7 +38,7 @@ Registrar, com senso crítico, como cada membro utilizou IA Generativa no trabal
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-|        |      |           |           |         |
+|    1.0    |   12/09/2026   |      Inclusão de lições aprendidas e uso de IA     |     Gabriel Andrade Magioli      |         |
 
 <p align="center">Tabela 3: Histórico de versão.</p>
 
