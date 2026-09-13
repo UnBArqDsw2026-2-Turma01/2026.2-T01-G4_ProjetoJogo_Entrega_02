@@ -106,12 +106,3 @@ npx docsify-cli serve docs
 ```
 
 O site fica disponível em `http://localhost:3000`.
-
-## Histórico de Versão
-
-| Versão | Data | Descrição | Autor(es) | Revisor |
-|:------:|:----:|-----------|-----------|---------|
-| 1.0 | 13/09/2026 | Atualização dos links dos artefatos do Subgrupo 01. | Yogi Nam de Souza Barbosa | - |
-| 1.1 | 13/09/2026 | Navegação automática entre páginas e visualizador de imagens com zoom. | Yogi Nam de Souza Barbosa | - |
-
-<p align="center">Tabela 6: Histórico de versão.</p>
