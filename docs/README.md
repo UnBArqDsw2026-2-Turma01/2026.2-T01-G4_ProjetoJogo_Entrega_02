@@ -9,7 +9,7 @@
 **Código da Disciplina:** FGA0208: Arquitetura e Desenho de Software<br>
 **Turma:** 01 · **Período:** 2026.2<br>
 **Número do Grupo:** 04<br>
-**Entrega:** 01
+**Entrega:** 02
 
 ## Sobre
 
@@ -54,7 +54,7 @@ Cada subgrupo é responsável por seu próprio relatório, contendo a entrega m�
 
 <p align="center">Tabela 2: Integrantes do Subgrupo 01.</p>
 
-Artefatos: [Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_01/ModelagemEstatica.md) · [Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_01/ModelagemDinamica.md) · [IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
+Artefatos: [Diagrama de Componentes](/Base/Relatórios/SubEquipe_01/DiagramaComponentes.md) · [Diagrama de Atividades](/Base/Relatórios/SubEquipe_01/DiagramaAtividades.md) · [IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
 
 ### Subgrupo 02
 
@@ -94,6 +94,8 @@ Artefatos: [Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_03
 <p align="center">Tabela 5: Navegação da documentação.</p>
 
 A barra lateral oferece pesquisa textual em todas as páginas da documentação.
+
+O rodapé **Ver também** acompanha a organização da barra lateral. Clique nas imagens para ampliá-las na própria página; use os botões de zoom, a roda do mouse ou a pinça no celular e arraste para mover a imagem.
 
 ## Informações Complementares
 

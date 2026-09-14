@@ -1,0 +1,39 @@
+Requisitos funcionais do MVP
+Levantados a partir do mapa mental e dos fluxos BPMN já modelados, agrupados por
+módulo para manter rastreabilidade com os artefatos anteriores.
+Exploração do mundo (ref.: BPMN de exploração)
+● RF01 — O sistema deve permitir movimentação livre do jogador pelo mundo.
+● RF02 — O sistema deve classificar as áreas do mundo em três tipos: segura, não
+segura de mundo aberto e não segura de mundo não aberto.
+Save (ref.: BPMN de exploração)
+● RF03 — O sistema deve permitir salvar e sair do jogo em todas as áreas do jogo.
+Combate (ref.: BPMN de combate)
+● RF04 — O sistema deve gerar eventos de combate aleatório em áreas não seguras.
+● RF05 — O sistema deve permitir ao jogador misturar elementos químicos durante o
+combate por turnos.
+● RF06 — O sistema deve calcular dano com base na fraqueza elemental do inimigo
+em relação ao efeito aplicado.
+● RF07 — O sistema deve alternar turnos entre jogador e inimigo até a resolução do
+combate.
+Sistema de magia
+● RF08 — O sistema deve ter um histórico de magias, armazenando as combinações
+já descobertas.
+● RF09 — O sistema deve restringir as combinações possíveis aos elementos já
+coletados pelo jogador.
+Livros e progressão (ref.: BPMN do livro colecionável)
+● RF10 — O sistema deve permitir a coleta de livros espalhados pelo mundo.
+● RF11 — O sistema deve registrar os livros coletados no diário do aventureiro,
+evitando duplicidade de registro.
+● RF12 — O sistema deve apresentar parte do enredo e/ou novas combinações de
+elementos ao registrar um livro inédito.
+Personagens (ref.: ramo "Personagens" do mapa mental)
+● RF13 — O sistema deve definir inimigos com fraquezas elementares específicas.
+● RF14 — O sistema deve permitir a interação do jogador com NPCs para compra de
+itens.
+● RF15 — O sistema deve permitir a interação do jogador com NPCs para início de
+sidequests.
+● RF16 — O sistema deve definir estatísticas de jogador.
+● RF17 — O sistema deve definir estatísticas de cada inimigo.
+Funcionalidades gerais
+● RF18 — O sistema deve possuir um inventário de elementos adquiridos.
+● RF19 — O sistema deve possuir um inventário de itens do jogador.

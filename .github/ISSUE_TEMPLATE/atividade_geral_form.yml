@@ -1,0 +1,70 @@
+name: Atividade geral
+description: Planejar uma tarefa transversal, de integração, governança ou entrega
+title: "[Geral] "
+labels: ["entrega-02"]
+assignees: []
+
+body:
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      options:
+        - Integração e documentação
+        - Apresentação ou vídeo
+        - Reunião e organização
+        - Rastreabilidade
+        - Configuração do repositório
+        - Implementação
+        - Outro
+    validations:
+      required: true
+
+  - type: input
+    id: responsaveis
+    attributes:
+      label: Responsável(is)
+      placeholder: "@usuario1, @usuario2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Descreva o resultado concreto que deve existir quando a issue for concluída.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tarefas
+    attributes:
+      label: Tarefas
+      placeholder: |
+        - [ ] Primeira etapa verificável
+        - [ ] Segunda etapa verificável
+        - [ ] Revisar e validar o resultado
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências e referências
+      placeholder: |
+        - Ata/decisão de origem:
+        - Depende de:
+        - Issues/PRs relacionados:
+    validations:
+      required: false
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceitação
+      placeholder: |
+        - [ ] Resultado esperado foi produzido
+        - [ ] Evidências ou referências necessárias foram registradas
+        - [ ] Não existem pendências críticas dentro do escopo
+    validations:
+      required: true

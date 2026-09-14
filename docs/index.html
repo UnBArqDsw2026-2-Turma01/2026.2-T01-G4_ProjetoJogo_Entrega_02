@@ -11,7 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css">
+  <link rel="stylesheet" href="Assets/vendor/photoswipe/photoswipe.css">
+  <link rel="stylesheet" href="Assets/css/page-tools.css">
+  <link rel="stylesheet" href="Assets/css/sidebar.css">
 
   <script>
     (function () {
@@ -296,145 +298,6 @@
       border-left-color: var(--section-accent);
     }
 
-    /* ---------- sidebar ---------- */
-    .sidebar {
-      background: var(--sidebar-bg-deep);
-      border-right: 3px solid var(--accent);
-      padding-top: 30px;
-    }
-    .sidebar > h1 { margin-bottom: 1.2rem; }
-    .sidebar > h1 a {
-      color: #ffffff;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-weight: 700;
-      text-shadow: 3px 3px 0 #020a12;
-    }
-    .sidebar > h1::after {
-      content: "H  C  O  Na  Cl";
-      display: block;
-      margin-top: 8px;
-      color: #bfe2ff;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: .18em;
-    }
-    .sidebar-toggle { background-color: var(--sidebar-bg-deep); }
-    .sidebar-toggle span { background-color: var(--sidebar-text); }
-    .sidebar .sidebar-nav { padding: 0 14px 90px 16px; line-height: 1.45; }
-    .sidebar ul { margin: 0; padding: 0; }
-
-    .sidebar ul li a,
-    .sidebar ul li > p {
-      color: var(--sidebar-text);
-      display: block;
-      margin: 2px 0;
-      padding: 6px 8px;
-      border-left: 3px solid transparent;
-      border-radius: 0;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.4;
-      text-decoration: none;
-      white-space: normal;
-      overflow: visible;
-      overflow-wrap: break-word;
-      text-overflow: clip;
-      font-family: "Courier New", "Lucida Console", monospace;
-    }
-    .sidebar ul li a:hover,
-    .sidebar ul li > p:hover {
-      background: var(--sidebar-bg);
-      color: #ffffff;
-      text-decoration: none;
-    }
-    .sidebar ul li.active > a {
-      background: var(--accent);
-      color: #ffffff;
-      font-weight: 700;
-      border-left: 6px solid #ffffff;
-    }
-    /* group headers */
-    .sidebar-nav li:not(.file) {
-      color: #ffffff !important;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-weight: 700;
-      opacity: 1;
-    }
-    .sidebar .sidebar-nav li > p {
-      color: #ffffff !important;
-      background: transparent !important;
-      border-left-color: transparent;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: .01em;
-      opacity: 1;
-    }
-    .sidebar-nav li:not(.file) > p,
-    .sidebar-nav li:not(.file) > a {
-      color: #ffffff !important;
-      background: transparent !important;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-size: 14px;
-      font-weight: 700;
-      opacity: 1;
-    }
-    /* nested levels */
-    .sidebar ul li ul {
-      padding-left: 10px;
-      margin-left: 4px;
-      border-left: 0;
-    }
-
-    .sidebar .sidebar-nav li.active > a,
-    .sidebar .sidebar-nav a.active,
-    .sidebar .sidebar-nav a.route-active,
-    .sidebar .sidebar-nav a[aria-current="page"] {
-      color: #ffffff !important;
-      background: var(--accent) !important;
-      border-left: 6px solid #ffffff;
-      font-weight: 700;
-    }
-
-    /* caret colors (plugin draws the chevron via ::before) */
-    .sidebar-nav ul:not(.app-sub-sidebar) > li:not(.file)::before {
-      border-right-color: rgba(255,255,255,.55);
-      border-bottom-color: rgba(255,255,255,.55);
-    }
-    .sidebar-nav ul:not(.app-sub-sidebar) > li.open::before {
-      border-right-color: var(--sidebar-text);
-      border-bottom-color: var(--sidebar-text);
-    }
-
-    /* ---------- search ---------- */
-    .sidebar .search {
-      margin: 0 16px 18px;
-      padding: 0;
-      border-bottom: 0;
-    }
-    .sidebar .search input {
-      box-sizing: border-box;
-      width: 100%;
-      padding: 9px 10px;
-      color: #20272d;
-      background: #f7f8f9;
-      border: 2px solid #8e979f;
-      border-radius: 0;
-      box-shadow: 3px 3px 0 #090b0d;
-      font-family: "Courier New", "Lucida Console", monospace;
-    }
-    .sidebar .search input::placeholder { color: #68717a; }
-    .sidebar .search .results-panel { margin-top: 10px; }
-    .sidebar .search .matching-post {
-      border-bottom: 1px solid #4b5359;
-      color: var(--sidebar-text);
-    }
-    .sidebar .search .search-keyword {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
     /* ---------- theme toggle ---------- */
     #theme-toggle {
       position: fixed;
@@ -581,7 +444,10 @@
     function getDirectSidebarLabel(item) {
       for (var i = 0; i < item.children.length; i += 1) {
         var child = item.children[i];
-        if (child.tagName === 'A' || child.tagName === 'P') {
+        if (child.classList.contains('sidebar-group-row')) {
+          child = child.querySelector('a, .sidebar-disclosure');
+        }
+        if (child && (child.tagName === 'A' || child.tagName === 'P' || child.tagName === 'BUTTON')) {
           return {
             text: child.textContent.trim(),
             href: child.tagName === 'A' ? child.getAttribute('href') : null
@@ -729,7 +595,7 @@
     window.$docsify = {
       loadSidebar: true,
       name: 'G4 - Projeto Jogo',
-      repo: 'https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-_G4_ProjetoJogo_Entrega_01',
+      repo: 'https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02',
       auto2top: true,
       relativePath: true,
       search: {
@@ -744,7 +610,6 @@
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       subMaxLevel: 0,
-      sidebarDisplayLevel: 6,
       plugins: [
         function (hook, vm) {
           hook.doneEach(function () {
@@ -819,7 +684,7 @@
         var text = selectedText;
         if (!text) {
           var readableContent = content.cloneNode(true);
-          var excluded = readableContent.querySelectorAll('.breadcrumbs, .page-toc, script, style');
+          var excluded = readableContent.querySelectorAll('.breadcrumbs, .page-toc, .related-pages, .diagram-carousel-controls, .diagram-carousel-status, [hidden], script, style');
           Array.prototype.forEach.call(excluded, function (element) { element.remove(); });
           text = readableContent.textContent.replace(/\s+/g, ' ').trim();
         }
@@ -846,8 +711,10 @@
       syncBackToTop();
     })();
   </script>
+  <script src="Assets/vendor/photoswipe/photoswipe.umd.min.js"></script>
+  <script src="Assets/js/sidebar.js"></script>
+  <script src="Assets/js/page-tools.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>

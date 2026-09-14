@@ -1,0 +1,96 @@
+name: Artefato de subgrupo
+description: Criar ou evoluir um artefato de modelagem da Entrega 02
+title: "[SubEquipe_XX] "
+labels: ["entrega-02"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use uma issue por artefato. Mantenha o escopo pequeno e verificável e relacione o PR que concluir a atividade.
+
+  - type: dropdown
+    id: subequipe
+    attributes:
+      label: Subequipe
+      options:
+        - SubEquipe_01
+        - SubEquipe_02
+        - SubEquipe_03
+    validations:
+      required: true
+
+  - type: dropdown
+    id: artefato
+    attributes:
+      label: Artefato
+      options:
+        - Diagrama de Classes
+        - Diagrama de Componentes
+        - Diagrama de Pacotes
+        - Diagrama de Sequência
+        - Diagrama de Atividades
+        - Diagrama de Estados
+        - Outro
+    validations:
+      required: true
+
+  - type: input
+    id: responsaveis
+    attributes:
+      label: Responsável(is)
+      placeholder: "@usuario"
+    validations:
+      required: true
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo e escopo
+      description: Diga o que o artefato deve representar e quais requisitos, fluxos ou partes do sistema estão no escopo.
+      placeholder: |
+        Representar...
+        Escopo principal: ...
+        Fora do escopo: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: tarefas
+    attributes:
+      label: Tarefas
+      placeholder: |
+        - [ ] Selecionar os requisitos/fluxos que serão modelados
+        - [ ] Elaborar o diagrama conforme a notação UML
+        - [ ] Adicionar fonte editável e versão renderizada ao repositório
+        - [ ] Documentar decisões relevantes
+        - [ ] Validar a renderização e abrir o PR
+    validations:
+      required: true
+
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referências e dependências
+      description: Relacione atas, requisitos, outros diagramas ou materiais da disciplina quando aplicável.
+      placeholder: |
+        - Ata/decisão de origem:
+        - Requisitos relacionados:
+        - Artefatos relacionados:
+        - Dependências:
+    validations:
+      required: false
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceitação
+      placeholder: |
+        - [ ] O diagrama está coerente com a notação UML adotada
+        - [ ] O conteúdo representa o escopo definido na issue
+        - [ ] A fonte editável e a versão final estão no repositório
+        - [ ] O artefato está referenciado na documentação da Entrega 02
+        - [ ] O PR relacionado foi revisado
+    validations:
+      required: true

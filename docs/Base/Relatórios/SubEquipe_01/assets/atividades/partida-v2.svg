@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1790" viewBox="0 0 1600 1790" role="img" aria-labelledby="title desc"><title id="title">Jogar uma partida, V2</title><desc id="desc">Modelagem UML 2.5.1 do G4_ProjetoJogo, versão 2, com base nos requisitos do Subgrupo 03.</desc><metadata>{&quot;version&quot;: &quot;2.0&quot;, &quot;date&quot;: &quot;2026-09-14&quot;, &quot;author&quot;: &quot;Yogi Nam de Souza Barbosa&quot;, &quot;nodes&quot;: {&quot;inicio&quot;: {&quot;kind&quot;: &quot;initial&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 170.0, &quot;y&quot;: 170.0, &quot;w&quot;: 20, &quot;h&quot;: 20, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogador&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;iniciar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Iniciar ou continuar\npartida&quot;, &quot;x&quot;: 57.5, &quot;y&quot;: 227.5, &quot;w&quot;: 245, &quot;h&quot;: 75, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogador&quot;, &quot;requirements&quot;: &quot;RF21&quot;}, &quot;preparar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Preparar sessão&quot;, &quot;x&quot;: 620.0, &quot;y&quot;: 227.5, &quot;w&quot;: 260, &quot;h&quot;: 75, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF21&quot;}, &quot;sessao&quot;: {&quot;kind&quot;: &quot;merge&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 730.0, &quot;y&quot;: 412.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;modo&quot;: {&quot;kind&quot;: &quot;decision&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 730.0, &quot;y&quot;: 482.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;b-in&quot;: {&quot;kind&quot;: &quot;connector&quot;, &quot;label&quot;: &quot;B&quot;, &quot;x&quot;: 952.0, &quot;y&quot;: 317.0, &quot;w&quot;: 36, &quot;h&quot;: 36, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;c-out&quot;: {&quot;kind&quot;: &quot;connector&quot;, &quot;label&quot;: &quot;C&quot;, &quot;x&quot;: 1042.0, &quot;y&quot;: 482.0, &quot;w&quot;: 36, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;a-in&quot;: {&quot;kind&quot;: &quot;connector&quot;, &quot;label&quot;: &quot;A&quot;, &quot;x&quot;: 162.0, &quot;y&quot;: 457.0, &quot;w&quot;: 36, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogador&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;repetir&quot;: {&quot;kind&quot;: &quot;merge&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 160.0, &quot;y&quot;: 537.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogador&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;escolher&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Escolher ação\nde exploração&quot;, &quot;x&quot;: 57.5, &quot;y&quot;: 617.5, &quot;w&quot;: 245, &quot;h&quot;: 75, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogador&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;validar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Validar ação&quot;, &quot;x&quot;: 635.0, &quot;y&quot;: 622.5, &quot;w&quot;: 230, &quot;h&quot;: 65, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;valida&quot;: {&quot;kind&quot;: &quot;decision&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 730.0, &quot;y&quot;: 727.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;recusar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Informar motivo\nda recusa&quot;, &quot;x&quot;: 382.5, &quot;y&quot;: 710.0, &quot;w&quot;: 215, &quot;h&quot;: 70, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;comando&quot;: {&quot;kind&quot;: &quot;decision&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 730.0, &quot;y&quot;: 827.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;mover&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Mover\nprotagonista&quot;, &quot;x&quot;: 390.0, &quot;y&quot;: 932.5, &quot;w&quot;: 180, &quot;h&quot;: 75, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF01 RF02 RF04&quot;}, &quot;coletar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Coletar\nobjeto do mundo&quot;, &quot;x&quot;: 600.0, &quot;y&quot;: 932.5, &quot;w&quot;: 180, &quot;h&quot;: 75, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF10 RF11 RF12 RF18 RF20&quot;}, &quot;npc&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Interagir\ncom NPC&quot;, &quot;x&quot;: 810.0, &quot;y&quot;: 932.5, &quot;w&quot;: 180, &quot;h&quot;: 75, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF14 RF15 RF19&quot;}, &quot;consultar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Consultar\ninventário ou diário&quot;, &quot;x&quot;: 1007.5, &quot;y&quot;: 932.5, &quot;w&quot;: 205, &quot;h&quot;: 75, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF08 RF11 RF18 RF19&quot;}, &quot;acoes&quot;: {&quot;kind&quot;: &quot;merge&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 730.0, &quot;y&quot;: 1072.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;encontro&quot;: {&quot;kind&quot;: &quot;decision&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 730.0, &quot;y&quot;: 1162.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;c-in&quot;: {&quot;kind&quot;: &quot;connector&quot;, &quot;label&quot;: &quot;C&quot;, &quot;x&quot;: 1032.0, &quot;y&quot;: 1062.0, &quot;w&quot;: 36, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;entrar-combate&quot;: {&quot;kind&quot;: &quot;merge&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 1030.0, &quot;y&quot;: 1162.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;combater&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Resolver combate\npor turnos&quot;, &quot;x&quot;: 930.0, &quot;y&quot;: 1232.5, &quot;w&quot;: 240, &quot;h&quot;: 75, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF05 RF06 RF07 RF09 RF13 RF16 RF17 RF22&quot;}, &quot;resultado&quot;: {&quot;kind&quot;: &quot;decision&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 1030.0, &quot;y&quot;: 1362.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;retorno&quot;: {&quot;kind&quot;: &quot;merge&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 730.0, &quot;y&quot;: 1342.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;apresentar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Apresentar resultado&quot;, &quot;x&quot;: 627.5, &quot;y&quot;: 1417.5, &quot;w&quot;: 245, &quot;h&quot;: 65, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;a-out&quot;: {&quot;kind&quot;: &quot;connector&quot;, &quot;label&quot;: &quot;A&quot;, &quot;x&quot;: 482.0, &quot;y&quot;: 1432.0, &quot;w&quot;: 36, &quot;h&quot;: 36, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;sair&quot;: {&quot;kind&quot;: &quot;accept&quot;, &quot;label&quot;: &quot;Sair solicitado&quot;, &quot;x&quot;: 955.0, &quot;y&quot;: 567.5, &quot;w&quot;: 230, &quot;h&quot;: 65, &quot;region&quot;: true, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF03&quot;}, &quot;capturar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Capturar progresso&quot;, &quot;x&quot;: 1300.0, &quot;y&quot;: 567.5, &quot;w&quot;: 240, &quot;h&quot;: 65, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF03&quot;}, &quot;salvar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Salvar progresso&quot;, &quot;x&quot;: 1300.0, &quot;y&quot;: 702.5, &quot;w&quot;: 240, &quot;h&quot;: 65, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;RF03&quot;}, &quot;gravou&quot;: {&quot;kind&quot;: &quot;decision&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 1400.0, &quot;y&quot;: 822.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;falha&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Informar falha\nno salvamento&quot;, &quot;x&quot;: 1300.0, &quot;y&quot;: 927.5, &quot;w&quot;: 240, &quot;h&quot;: 75, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;retomar&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Retomar sessão\nem memória&quot;, &quot;x&quot;: 1300.0, &quot;y&quot;: 1062.5, &quot;w&quot;: 240, &quot;h&quot;: 75, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;b-out&quot;: {&quot;kind&quot;: &quot;connector&quot;, &quot;label&quot;: &quot;B&quot;, &quot;x&quot;: 1402.0, &quot;y&quot;: 1187.0, &quot;w&quot;: 36, &quot;h&quot;: 36, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;derrota&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Exibir derrota&quot;, &quot;x&quot;: 1310.0, &quot;y&quot;: 1402.5, &quot;w&quot;: 220, &quot;h&quot;: 65, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;encerrar&quot;: {&quot;kind&quot;: &quot;merge&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 1400.0, &quot;y&quot;: 1557.0, &quot;w&quot;: 40, &quot;h&quot;: 36, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;menu&quot;: {&quot;kind&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Retornar ao menu&quot;, &quot;x&quot;: 1300.0, &quot;y&quot;: 1627.5, &quot;w&quot;: 240, &quot;h&quot;: 65, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}, &quot;fim&quot;: {&quot;kind&quot;: &quot;final&quot;, &quot;label&quot;: &quot;&quot;, &quot;x&quot;: 1404.0, &quot;y&quot;: 1714.0, &quot;w&quot;: 32, &quot;h&quot;: 32, &quot;region&quot;: false, &quot;partition&quot;: &quot;Jogo&quot;, &quot;requirements&quot;: &quot;&quot;}}, &quot;flows&quot;: [{&quot;id&quot;: &quot;flow-1&quot;, &quot;source&quot;: &quot;inicio&quot;, &quot;target&quot;: &quot;iniciar&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-2&quot;, &quot;source&quot;: &quot;iniciar&quot;, &quot;target&quot;: &quot;preparar&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-3&quot;, &quot;source&quot;: &quot;preparar&quot;, &quot;target&quot;: &quot;sessao&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-4&quot;, &quot;source&quot;: &quot;b-in&quot;, &quot;target&quot;: &quot;sessao&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-5&quot;, &quot;source&quot;: &quot;sessao&quot;, &quot;target&quot;: &quot;modo&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-6&quot;, &quot;source&quot;: &quot;modo&quot;, &quot;target&quot;: &quot;repetir&quot;, &quot;guard&quot;: &quot;exploração&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-7&quot;, &quot;source&quot;: &quot;modo&quot;, &quot;target&quot;: &quot;c-out&quot;, &quot;guard&quot;: &quot;combate salvo&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-8&quot;, &quot;source&quot;: &quot;a-in&quot;, &quot;target&quot;: &quot;repetir&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-9&quot;, &quot;source&quot;: &quot;repetir&quot;, &quot;target&quot;: &quot;escolher&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-10&quot;, &quot;source&quot;: &quot;escolher&quot;, &quot;target&quot;: &quot;validar&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-11&quot;, &quot;source&quot;: &quot;validar&quot;, &quot;target&quot;: &quot;valida&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-12&quot;, &quot;source&quot;: &quot;valida&quot;, &quot;target&quot;: &quot;recusar&quot;, &quot;guard&quot;: &quot;inválida&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-13&quot;, &quot;source&quot;: &quot;recusar&quot;, &quot;target&quot;: &quot;retorno&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-14&quot;, &quot;source&quot;: &quot;valida&quot;, &quot;target&quot;: &quot;comando&quot;, &quot;guard&quot;: &quot;permitida&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-15&quot;, &quot;source&quot;: &quot;comando&quot;, &quot;target&quot;: &quot;mover&quot;, &quot;guard&quot;: &quot;mover&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-16&quot;, &quot;source&quot;: &quot;comando&quot;, &quot;target&quot;: &quot;coletar&quot;, &quot;guard&quot;: &quot;coletar&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-17&quot;, &quot;source&quot;: &quot;comando&quot;, &quot;target&quot;: &quot;npc&quot;, &quot;guard&quot;: &quot;NPC&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-18&quot;, &quot;source&quot;: &quot;comando&quot;, &quot;target&quot;: &quot;consultar&quot;, &quot;guard&quot;: &quot;consultar&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-19&quot;, &quot;source&quot;: &quot;mover&quot;, &quot;target&quot;: &quot;acoes&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-20&quot;, &quot;source&quot;: &quot;coletar&quot;, &quot;target&quot;: &quot;acoes&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-21&quot;, &quot;source&quot;: &quot;npc&quot;, &quot;target&quot;: &quot;acoes&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-22&quot;, &quot;source&quot;: &quot;consultar&quot;, &quot;target&quot;: &quot;acoes&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-23&quot;, &quot;source&quot;: &quot;acoes&quot;, &quot;target&quot;: &quot;encontro&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-24&quot;, &quot;source&quot;: &quot;encontro&quot;, &quot;target&quot;: &quot;retorno&quot;, &quot;guard&quot;: &quot;else&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-25&quot;, &quot;source&quot;: &quot;encontro&quot;, &quot;target&quot;: &quot;entrar-combate&quot;, &quot;guard&quot;: &quot;movimento em área não segura\ncom encontro sorteado&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-26&quot;, &quot;source&quot;: &quot;c-in&quot;, &quot;target&quot;: &quot;entrar-combate&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-27&quot;, &quot;source&quot;: &quot;entrar-combate&quot;, &quot;target&quot;: &quot;combater&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-28&quot;, &quot;source&quot;: &quot;combater&quot;, &quot;target&quot;: &quot;resultado&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-29&quot;, &quot;source&quot;: &quot;resultado&quot;, &quot;target&quot;: &quot;retorno&quot;, &quot;guard&quot;: &quot;vitória&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-30&quot;, &quot;source&quot;: &quot;retorno&quot;, &quot;target&quot;: &quot;apresentar&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-31&quot;, &quot;source&quot;: &quot;apresentar&quot;, &quot;target&quot;: &quot;a-out&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-32&quot;, &quot;source&quot;: &quot;sair&quot;, &quot;target&quot;: &quot;capturar&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;interrupting-flow&quot;}, {&quot;id&quot;: &quot;flow-33&quot;, &quot;source&quot;: &quot;capturar&quot;, &quot;target&quot;: &quot;salvar&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-34&quot;, &quot;source&quot;: &quot;salvar&quot;, &quot;target&quot;: &quot;gravou&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-35&quot;, &quot;source&quot;: &quot;gravou&quot;, &quot;target&quot;: &quot;falha&quot;, &quot;guard&quot;: &quot;falha&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-36&quot;, &quot;source&quot;: &quot;falha&quot;, &quot;target&quot;: &quot;retomar&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-37&quot;, &quot;source&quot;: &quot;retomar&quot;, &quot;target&quot;: &quot;b-out&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-38&quot;, &quot;source&quot;: &quot;gravou&quot;, &quot;target&quot;: &quot;encerrar&quot;, &quot;guard&quot;: &quot;sucesso&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-39&quot;, &quot;source&quot;: &quot;resultado&quot;, &quot;target&quot;: &quot;derrota&quot;, &quot;guard&quot;: &quot;derrota&quot;, &quot;kind&quot;: &quot;interrupting-flow&quot;}, {&quot;id&quot;: &quot;flow-40&quot;, &quot;source&quot;: &quot;derrota&quot;, &quot;target&quot;: &quot;encerrar&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-41&quot;, &quot;source&quot;: &quot;encerrar&quot;, &quot;target&quot;: &quot;menu&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}, {&quot;id&quot;: &quot;flow-42&quot;, &quot;source&quot;: &quot;menu&quot;, &quot;target&quot;: &quot;fim&quot;, &quot;guard&quot;: &quot;&quot;, &quot;kind&quot;: &quot;control-flow&quot;}], &quot;ports&quot;: {}, &quot;contracts&quot;: []}</metadata><defs><marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="9" markerHeight="8" orient="auto-start-reverse"><path d="M 1 1 L 11 5 L 1 9" fill="none" stroke="#252525" stroke-width="1.5"/></marker></defs><rect width="100%" height="100%" fill="white"/><g font-family="Arial, Helvetica, sans-serif" fill="#202020">
+<rect id="graphic-1" x="20" y="20" width="1560" height="1750" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="45" y="50" text-anchor="start" font-size="23" font-weight="700">
+<tspan x="45" y="57.82">act Jogar uma partida</tspan>
+</text>
+<polyline id="graphic-3" points="20,90 1580,90" fill="none" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-4" points="330,90 330,1770" fill="none" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-5" points="20,130 1580,130" fill="none" stroke="#252525" stroke-width="1.8"/>
+<text x="175" y="110" text-anchor="middle" font-size="21" font-weight="700">
+<tspan x="175" y="117.14">(Jogador)</tspan>
+</text>
+<text x="955" y="110" text-anchor="middle" font-size="21" font-weight="700">
+<tspan x="955" y="117.14">Jogo</tspan>
+</text>
+<rect id="partida-ativa" x="45" y="395" width="1185" height="1120" rx="22" fill="white" stroke="#252525" stroke-width="1.8" stroke-dasharray="11 7"/>
+<polyline id="graphic-8" points="330,395 330,1515" fill="none" stroke="#252525" stroke-width="1.8"/>
+<text x="62" y="419" text-anchor="start" font-size="17" font-weight="400">
+<tspan x="62" y="424.78">Partida em andamento</tspan>
+</text>
+<circle id="inicio" cx="180" cy="180" r="10" fill="#252525" stroke="#252525" stroke-width="1.8"/>
+<rect id="iniciar" x="57.5" y="227.5" width="245" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="180.0" y="265.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="180.0" y="259.3">Iniciar ou continuar</tspan>
+<tspan x="180.0" y="284.3">partida</tspan>
+</text>
+<rect id="preparar" x="620.0" y="227.5" width="260" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="750.0" y="265.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="750.0" y="271.8">Preparar sessão</tspan>
+</text>
+<polygon id="sessao" points="750,412 770,430 750,448 730,430" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polygon id="modo" points="750,482 770,500 750,518 730,500" fill="white" stroke="#252525" stroke-width="1.8"/>
+<circle id="b-in" cx="970" cy="335" r="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="970" y="335" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="970" y="341.12">B</tspan>
+</text>
+<circle id="c-out" cx="1060" cy="500" r="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1060" y="500" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="1060" y="506.12">C</tspan>
+</text>
+<circle id="a-in" cx="180" cy="475" r="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="180" y="475" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="180" y="481.12">A</tspan>
+</text>
+<polygon id="repetir" points="180,537 200,555 180,573 160,555" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="escolher" x="57.5" y="617.5" width="245" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="180.0" y="655.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="180.0" y="649.3">Escolher ação</tspan>
+<tspan x="180.0" y="674.3">de exploração</tspan>
+</text>
+<rect id="validar" x="635.0" y="622.5" width="230" height="65" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="750.0" y="655.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="750.0" y="661.8">Validar ação</tspan>
+</text>
+<polygon id="valida" points="750,727 770,745 750,763 730,745" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="recusar" x="382.5" y="710.0" width="215" height="70" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="490.0" y="745.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="490.0" y="739.3">Informar motivo</tspan>
+<tspan x="490.0" y="764.3">da recusa</tspan>
+</text>
+<polygon id="comando" points="750,827 770,845 750,863 730,845" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="mover" x="390.0" y="932.5" width="180" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="480.0" y="970.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="480.0" y="964.3">Mover</tspan>
+<tspan x="480.0" y="989.3">protagonista</tspan>
+</text>
+<rect id="coletar" x="600.0" y="932.5" width="180" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="690.0" y="970.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="690.0" y="964.3">Coletar</tspan>
+<tspan x="690.0" y="989.3">objeto do mundo</tspan>
+</text>
+<rect id="npc" x="810.0" y="932.5" width="180" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="900.0" y="970.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="900.0" y="964.3">Interagir</tspan>
+<tspan x="900.0" y="989.3">com NPC</tspan>
+</text>
+<rect id="consultar" x="1007.5" y="932.5" width="205" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1110.0" y="970.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1110.0" y="964.3">Consultar</tspan>
+<tspan x="1110.0" y="989.3">inventário ou diário</tspan>
+</text>
+<polygon id="acoes" points="750,1072 770,1090 750,1108 730,1090" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polygon id="encontro" points="750,1162 770,1180 750,1198 730,1180" fill="white" stroke="#252525" stroke-width="1.8"/>
+<circle id="c-in" cx="1050" cy="1080" r="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1050" y="1080" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="1050" y="1086.12">C</tspan>
+</text>
+<polygon id="entrar-combate" points="1050,1162 1070,1180 1050,1198 1030,1180" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="combater" x="930.0" y="1232.5" width="240" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1050.0" y="1270.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1050.0" y="1264.3">Resolver combate</tspan>
+<tspan x="1050.0" y="1289.3">por turnos</tspan>
+</text>
+<polygon id="resultado" points="1050,1362 1070,1380 1050,1398 1030,1380" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polygon id="retorno" points="750,1342 770,1360 750,1378 730,1360" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="apresentar" x="627.5" y="1417.5" width="245" height="65" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="750.0" y="1450.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="750.0" y="1456.8">Apresentar resultado</tspan>
+</text>
+<circle id="a-out" cx="500" cy="1450" r="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="500" y="1450" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="500" y="1456.12">A</tspan>
+</text>
+<polyline id="graphic-10" points="955.0,567.5 1185.0,567.5 1185.0,632.5 955.0,632.5 975.0,600 955.0,567.5" fill="none" stroke="#252525" stroke-width="1.8"/>
+<text x="1076" y="600" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1076" y="606.8">Sair solicitado</tspan>
+</text>
+<rect id="capturar" x="1300.0" y="567.5" width="240" height="65" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1420.0" y="600.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1420.0" y="606.8">Capturar progresso</tspan>
+</text>
+<rect id="salvar" x="1300.0" y="702.5" width="240" height="65" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1420.0" y="735.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1420.0" y="741.8">Salvar progresso</tspan>
+</text>
+<polygon id="gravou" points="1420,822 1440,840 1420,858 1400,840" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="falha" x="1300.0" y="927.5" width="240" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1420.0" y="965.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1420.0" y="959.3">Informar falha</tspan>
+<tspan x="1420.0" y="984.3">no salvamento</tspan>
+</text>
+<rect id="retomar" x="1300.0" y="1062.5" width="240" height="75" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1420.0" y="1100.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1420.0" y="1094.3">Retomar sessão</tspan>
+<tspan x="1420.0" y="1119.3">em memória</tspan>
+</text>
+<circle id="b-out" cx="1420" cy="1205" r="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1420" y="1205" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="1420" y="1211.12">B</tspan>
+</text>
+<rect id="derrota" x="1310.0" y="1402.5" width="220" height="65" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1420.0" y="1435.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1420.0" y="1441.8">Exibir derrota</tspan>
+</text>
+<polygon id="encerrar" points="1420,1557 1440,1575 1420,1593 1400,1575" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="menu" x="1300.0" y="1627.5" width="240" height="65" rx="18" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1420.0" y="1660.0" text-anchor="middle" font-size="20" font-weight="400">
+<tspan x="1420.0" y="1666.8">Retornar ao menu</tspan>
+</text>
+<circle id="fim" cx="1420" cy="1730" r="16" fill="white" stroke="#252525" stroke-width="1.8"/>
+<circle id="graphic-12" cx="1420" cy="1730" r="9" fill="#252525" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-13" points="1070,195 1437,195 1455,213 1455,310 1070,310 1070,195" fill="none" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-14" points="1437,195 1437,213 1455,213" fill="none" stroke="#252525" stroke-width="1.8"/>
+<text x="1262.5" y="252.5" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="1262.5" y="236.12">Nova partida inicia o progresso.</tspan>
+<tspan x="1262.5" y="258.62">Continuar recupera a exploração</tspan>
+<tspan x="1262.5" y="281.12">ou o combate salvo.</tspan>
+</text>
+<polyline id="graphic-16" points="1070,252 880,265" fill="none" stroke="#252525" stroke-width="1.8" stroke-dasharray="7 5"/>
+<polyline id="graphic-17" points="1290,395 1542,395 1560,413 1560,520 1290,520 1290,395" fill="none" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-18" points="1542,395 1542,413 1560,413" fill="none" stroke="#252525" stroke-width="1.8"/>
+<text x="1425.0" y="457.5" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="1425.0" y="441.12">Salvar considera a última</tspan>
+<tspan x="1425.0" y="463.62">ação concluída, incluindo</tspan>
+<tspan x="1425.0" y="486.12">o turno do combate.</tspan>
+</text>
+<polyline id="graphic-20" points="1420,520 1420,567" fill="none" stroke="#252525" stroke-width="1.8" stroke-dasharray="7 5"/>
+<polyline id="flow-1" points="180,190 180,227.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="inicio" data-target="iniciar" data-kind="control-flow"/>
+<polyline id="flow-2" points="302.5,265 620,265" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="iniciar" data-target="preparar" data-kind="control-flow"/>
+<polyline id="flow-3" points="750,302.5 750,412" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="preparar" data-target="sessao" data-kind="control-flow"/>
+<polyline id="flow-4" points="952,335 860,335 860,430 770,430" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="b-in" data-target="sessao" data-kind="control-flow"/>
+<polyline id="flow-5" points="750,448 750,482" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="sessao" data-target="modo" data-kind="control-flow"/>
+<polyline id="flow-6" points="730,500 460,500 460,555 200,555" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="modo" data-target="repetir" data-kind="control-flow" data-guard="exploração"/>
+<rect x="506.88" y="471.375" width="126.24000000000001" height="21.25" fill="white"/>
+<text x="570" y="482" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="570" y="487.78">[exploração]</tspan>
+</text>
+<polyline id="flow-7" points="770,500 1042,500" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="modo" data-target="c-out" data-kind="control-flow" data-guard="combate salvo"/>
+<rect x="827.6" y="469.375" width="154.8" height="21.25" fill="white"/>
+<text x="905" y="480" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="905" y="485.78">[combate salvo]</tspan>
+</text>
+<polyline id="flow-8" points="180,493 180,537" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="a-in" data-target="repetir" data-kind="control-flow"/>
+<polyline id="flow-9" points="180,573 180,617.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="repetir" data-target="escolher" data-kind="control-flow"/>
+<polyline id="flow-10" points="302.5,655 635,655" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="escolher" data-target="validar" data-kind="control-flow"/>
+<polyline id="flow-11" points="750,687.5 750,727" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="validar" data-target="valida" data-kind="control-flow"/>
+<polyline id="flow-12" points="730,745 597.5,745" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="valida" data-target="recusar" data-kind="control-flow" data-guard="inválida"/>
+<rect x="609.4" y="711.375" width="107.2" height="21.25" fill="white"/>
+<text x="663" y="722" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="663" y="727.78">[inválida]</tspan>
+</text>
+<polyline id="flow-13" points="382.5,745 365,745 365,1360 730,1360" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="recusar" data-target="retorno" data-kind="control-flow"/>
+<polyline id="flow-14" points="750,763 750,827" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="valida" data-target="comando" data-kind="control-flow" data-guard="permitida"/>
+<rect x="748.64" y="784.375" width="116.72000000000001" height="21.25" fill="white"/>
+<text x="807" y="795" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="807" y="800.78">[permitida]</tspan>
+</text>
+<polyline id="flow-15" points="750,863 480,900 480,932.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="comando" data-target="mover" data-kind="control-flow" data-guard="mover"/>
+<rect x="442.68" y="896.375" width="78.64" height="21.25" fill="white"/>
+<text x="482" y="907" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="482" y="912.78">[mover]</tspan>
+</text>
+<polyline id="flow-16" points="750,863 690,900 690,932.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="comando" data-target="coletar" data-kind="control-flow" data-guard="coletar"/>
+<rect x="615.16" y="896.375" width="97.68" height="21.25" fill="white"/>
+<text x="664" y="907" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="664" y="912.78">[coletar]</tspan>
+</text>
+<polyline id="flow-17" points="750,863 900,900 900,932.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="comando" data-target="npc" data-kind="control-flow" data-guard="NPC"/>
+<rect x="837.2" y="896.375" width="59.6" height="21.25" fill="white"/>
+<text x="867" y="907" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="867" y="912.78">[NPC]</tspan>
+</text>
+<polyline id="flow-18" points="750,863 1110,900 1110,932.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="comando" data-target="consultar" data-kind="control-flow" data-guard="consultar"/>
+<rect x="1021.64" y="896.375" width="116.72000000000001" height="21.25" fill="white"/>
+<text x="1080" y="907" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="1080" y="912.78">[consultar]</tspan>
+</text>
+<polyline id="flow-19" points="480,1007.5 730,1090" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="mover" data-target="acoes" data-kind="control-flow"/>
+<polyline id="flow-20" points="690,1007.5 740,1081" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="coletar" data-target="acoes" data-kind="control-flow"/>
+<polyline id="flow-21" points="900,1007.5 760,1081" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="npc" data-target="acoes" data-kind="control-flow"/>
+<polyline id="flow-22" points="1110,1007.5 770,1090" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="consultar" data-target="acoes" data-kind="control-flow"/>
+<polyline id="flow-23" points="750,1108 750,1162" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="acoes" data-target="encontro" data-kind="control-flow"/>
+<polyline id="flow-24" points="750,1198 750,1342" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="encontro" data-target="retorno" data-kind="control-flow" data-guard="else"/>
+<rect x="752.44" y="1269.375" width="69.12" height="21.25" fill="white"/>
+<text x="787" y="1280" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="787" y="1285.78">[else]</tspan>
+</text>
+<polyline id="flow-25" points="770,1180 1030,1180" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="encontro" data-target="entrar-combate" data-kind="control-flow" data-guard="movimento em área não segura
+com encontro sorteado"/>
+<rect x="754.96" y="1121.75" width="288.08000000000004" height="42.5" fill="white"/>
+<text x="899" y="1143" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="899" y="1138.155">[movimento em área não segura</tspan>
+<tspan x="899" y="1159.405">com encontro sorteado]</tspan>
+</text>
+<polyline id="flow-26" points="1050,1098 1050,1162" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="c-in" data-target="entrar-combate" data-kind="control-flow"/>
+<polyline id="flow-27" points="1050,1198 1050,1232.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="entrar-combate" data-target="combater" data-kind="control-flow"/>
+<polyline id="flow-28" points="1050,1307.5 1050,1362" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="combater" data-target="resultado" data-kind="control-flow"/>
+<polyline id="flow-29" points="1030,1380 885,1380 885,1360 770,1360" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="resultado" data-target="retorno" data-kind="control-flow" data-guard="vitória"/>
+<rect x="891.16" y="1393.375" width="97.68" height="21.25" fill="white"/>
+<text x="940" y="1404" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="940" y="1409.78">[vitória]</tspan>
+</text>
+<polyline id="flow-30" points="750,1378 750,1417.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="retorno" data-target="apresentar" data-kind="control-flow"/>
+<polyline id="flow-31" points="627.5,1450 518,1450" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="apresentar" data-target="a-out" data-kind="control-flow"/>
+<polyline id="flow-32" points="1185,600 1212,600 1225,589 1238,611 1251,600 1300,600" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="sair" data-target="capturar" data-kind="interrupting-flow"/>
+<polyline id="flow-33" points="1420,632.5 1420,702.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="capturar" data-target="salvar" data-kind="control-flow"/>
+<polyline id="flow-34" points="1420,767.5 1420,822" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="salvar" data-target="gravou" data-kind="control-flow"/>
+<polyline id="flow-35" points="1420,858 1420,927.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="gravou" data-target="falha" data-kind="control-flow" data-guard="falha"/>
+<rect x="1430.68" y="884.375" width="78.64" height="21.25" fill="white"/>
+<text x="1470" y="895" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="1470" y="900.78">[falha]</tspan>
+</text>
+<polyline id="flow-36" points="1420,1002.5 1420,1062.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="falha" data-target="retomar" data-kind="control-flow"/>
+<polyline id="flow-37" points="1420,1137.5 1420,1187" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="retomar" data-target="b-out" data-kind="control-flow"/>
+<polyline id="flow-38" points="1440,840 1555,840 1555,1575 1440,1575" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="gravou" data-target="encerrar" data-kind="control-flow" data-guard="sucesso"/>
+<rect x="1455.16" y="803.375" width="97.68" height="21.25" fill="white"/>
+<text x="1504" y="814" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="1504" y="819.78">[sucesso]</tspan>
+</text>
+<polyline id="flow-39" points="1070,1380 1200,1380 1220,1370 1240,1390 1260,1380 1275,1380 1275,1435 1310,1435" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="resultado" data-target="derrota" data-kind="interrupting-flow" data-guard="derrota"/>
+<rect x="1111.16" y="1344.375" width="97.68" height="21.25" fill="white"/>
+<text x="1160" y="1355" text-anchor="middle" font-size="17" font-weight="400">
+<tspan x="1160" y="1360.78">[derrota]</tspan>
+</text>
+<polyline id="flow-40" points="1420,1467.5 1420,1557" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="derrota" data-target="encerrar" data-kind="control-flow"/>
+<polyline id="flow-41" points="1420,1593 1420,1627.5" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="encerrar" data-target="menu" data-kind="control-flow"/>
+<polyline id="flow-42" points="1420,1692.5 1420,1714" fill="none" stroke="#252525" stroke-width="1.8" marker-end="url(#arrow)" data-source="menu" data-target="fim" data-kind="control-flow"/>
+<text x="65" y="1588" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="65" y="1594.12">A: retorno à exploração.   B: retomada após falha.   C: combate salvo.</tspan>
+</text>
+<text x="65" y="1635" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="65" y="1641.12">Círculos com a mesma letra representam a continuidade de uma única aresta.</tspan>
+</text>
+<text x="65" y="1682" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="65" y="1688.12">A combinação de elementos acontece dentro de Resolver combate por turnos.</tspan>
+</text></g></svg>
