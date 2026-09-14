@@ -38,7 +38,8 @@ Registrar, com senso crítico, como cada membro utilizou IA Generativa no trabal
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-| 1.0 | 13/09/2026 | Atualização dos links para os diagramas de componentes e atividades. | Yogi Nam de Souza Barbosa | - |
-| 1.1 | 13/09/2026 | Adoção do rodapé de navegação automática. | Yogi Nam de Souza Barbosa | - |
+|        |      |           |           |         |
 
 <p align="center">Tabela 3: Histórico de versão.</p>
+
+Ver também: [Modelagem Estática na Notação UML](ModelagemEstatica.md) · [Modelagem Dinâmica na Notação UML](ModelagemDinamica.md)
