@@ -684,7 +684,7 @@
         var text = selectedText;
         if (!text) {
           var readableContent = content.cloneNode(true);
-          var excluded = readableContent.querySelectorAll('.breadcrumbs, .page-toc, .related-pages, script, style');
+          var excluded = readableContent.querySelectorAll('.breadcrumbs, .page-toc, .related-pages, .diagram-carousel-controls, .diagram-carousel-status, [hidden], script, style');
           Array.prototype.forEach.call(excluded, function (element) { element.remove(); });
           text = readableContent.textContent.replace(/\s+/g, ' ').trim();
         }

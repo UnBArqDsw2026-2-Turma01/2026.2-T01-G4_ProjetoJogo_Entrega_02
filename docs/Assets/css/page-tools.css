@@ -35,6 +35,51 @@
 }
 
 .markdown-section .image-zoom-trigger img { cursor: zoom-in; }
+
+.markdown-section .diagram-carousel {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+}
+.diagram-carousel-controls,
+.diagram-version-picker { display: flex; align-items: center; gap: .5rem; }
+.diagram-carousel-controls { justify-content: space-between; }
+.diagram-carousel-controls button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: .5rem .85rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.diagram-carousel-controls button[aria-pressed="true"] {
+  background: #0b69d3;
+  border-color: var(--accent);
+  color: #fff;
+}
+.diagram-carousel-controls button:hover:not(:disabled) { border-color: var(--accent); }
+.diagram-carousel-controls button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.diagram-carousel-controls button:disabled { opacity: .4; cursor: default; }
+.markdown-section .diagram-carousel-status { margin: .6rem 0 1rem; font-size: .9rem; }
+.markdown-section .diagram-slide[hidden] { display: none; }
+.markdown-section .diagram-slide figure { margin: 0; }
+.markdown-section .diagram-slide img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  background: #fff;
+}
+.markdown-section .diagram-slide figcaption { margin: .75rem 0; text-align: center; font-size: .9rem; }
+.markdown-section .diagram-slide > p:last-child { margin-bottom: 0; }
+@media (max-width: 768px) {
+  .markdown-section .diagram-carousel { padding: .65rem; }
+}
+
 .markdown-section .image-zoom-trigger:focus-visible img {
   outline: 3px solid var(--gold);
   outline-offset: 4px;

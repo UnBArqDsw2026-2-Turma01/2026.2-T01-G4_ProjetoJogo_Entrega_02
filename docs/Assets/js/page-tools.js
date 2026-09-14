@@ -4,6 +4,81 @@
 
   var viewer = null;
 
+  function prepareCarousels(content) {
+    content.querySelectorAll('.diagram-carousel').forEach(function (carousel, carouselIndex) {
+      if (carousel.dataset.carouselReady) return;
+      var slides = Array.from(carousel.querySelectorAll(':scope > .diagram-slide'));
+      if (slides.length < 2) return;
+      carousel.dataset.carouselReady = 'true';
+      carousel.setAttribute('role', 'region');
+      carousel.setAttribute('aria-roledescription', 'carrossel');
+
+      var controls = document.createElement('div');
+      controls.className = 'diagram-carousel-controls';
+      var picker = document.createElement('div');
+      picker.className = 'diagram-version-picker';
+      picker.setAttribute('role', 'group');
+      picker.setAttribute('aria-label', 'Escolher versão do diagrama');
+      var status = document.createElement('p');
+      status.className = 'diagram-carousel-status';
+      status.setAttribute('role', 'status');
+      status.setAttribute('aria-live', 'polite');
+      status.setAttribute('aria-atomic', 'true');
+      var selected = Math.max(0, slides.findIndex(function (slide) {
+        return slide.dataset.version === carousel.dataset.defaultVersion;
+      }));
+      var buttons = [];
+
+      function change(index) {
+        selected = index;
+        slides.forEach(function (slide, i) {
+          slide.hidden = i !== selected;
+          buttons[i].setAttribute('aria-pressed', String(i === selected));
+        });
+        previous.disabled = selected === 0;
+        next.disabled = selected === slides.length - 1;
+        carousel.dataset.activeVersion = slides[selected].dataset.version;
+        status.textContent = slides[selected].dataset.label;
+      }
+
+      function button(label, text, handler) {
+        var element = document.createElement('button');
+        element.type = 'button';
+        element.textContent = text;
+        element.setAttribute('aria-label', label);
+        element.addEventListener('click', handler);
+        return element;
+      }
+
+      var previous = button('Versão anterior', '←', function () { change(selected - 1); });
+      var next = button('Próxima versão', '→', function () { change(selected + 1); });
+      slides.forEach(function (slide, i) {
+        slide.id = 'diagram-' + carouselIndex + '-version-' + i;
+        slide.setAttribute('role', 'group');
+        slide.setAttribute('aria-label', slide.dataset.label + ', ' + (i + 1) + ' de ' + slides.length);
+        var option = button('Mostrar ' + slide.dataset.label, slide.dataset.version.toUpperCase(), function () { change(i); });
+        option.setAttribute('aria-controls', slide.id);
+        buttons.push(option);
+        picker.appendChild(option);
+      });
+      picker.addEventListener('keydown', function (event) {
+        var index = buttons.indexOf(document.activeElement);
+        if (index < 0) return;
+        if (event.key === 'ArrowLeft') index = Math.max(0, index - 1);
+        else if (event.key === 'ArrowRight') index = Math.min(slides.length - 1, index + 1);
+        else if (event.key === 'Home') index = 0;
+        else if (event.key === 'End') index = slides.length - 1;
+        else return;
+        event.preventDefault();
+        change(index);
+        buttons[index].focus();
+      });
+      controls.append(previous, picker, next);
+      carousel.prepend(controls, status);
+      change(selected);
+    });
+  }
+
   function renderRelatedPages(content) {
     var previous = content.querySelector('.related-pages');
     if (previous) previous.remove();
@@ -214,6 +289,7 @@
     hook.doneEach(function () {
       var content = document.querySelector('.markdown-section');
       if (!content) return;
+      prepareCarousels(content);
       renderRelatedPages(content);
       prepareImages(content);
     });

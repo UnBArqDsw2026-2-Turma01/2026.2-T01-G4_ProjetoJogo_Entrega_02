@@ -107,6 +107,12 @@ body .sidebar {
 }
 .sidebar .sidebar-disclosure { width: 100%; }
 .sidebar .sidebar-label { flex: 1; }
+.sidebar .sidebar-nav .sidebar-static-label {
+  padding: 9px 10px;
+  color: var(--sidebar-text);
+  font: 700 14px/1.45 "Pixelify Sans", "Courier New", monospace;
+}
+.sidebar .sidebar-nav .sidebar-static-label p { margin: 0; }
 .sidebar .sidebar-chevron {
   flex: 0 0 7px;
   width: 7px;
@@ -151,7 +157,12 @@ body .sidebar {
 .sidebar .search .search-keyword { color: #fff; text-decoration: underline; }
 
 @media (max-width: 768px) {
-  body .sidebar { z-index: 60; }
+  /* Os controles ficam fora do <main> do Docsify, que cria sua própria camada. */
+  body.close #theme-toggle,
+  body.close #read-page,
+  body.close #back-to-top { visibility: hidden; }
+  body .sidebar,
+  body.close .sidebar { z-index: 60; }
   body .sidebar-toggle,
   body.close .sidebar-toggle {
     z-index: 70;

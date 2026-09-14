@@ -25,7 +25,10 @@
         var children = Array.from(item.children).find(function (child) {
           return child.tagName === 'UL' && !child.classList.contains('app-sub-sidebar');
         });
-        if (!children) return;
+        if (!children) {
+          if (!item.querySelector('a, button')) item.classList.add('sidebar-static-label');
+          return;
+        }
 
         // O Markdown pode produzir rótulos em <p> ou como texto direto no <li>.
         var labelNodes = Array.from(item.childNodes).filter(function (node) { return node !== children; });
