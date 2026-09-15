@@ -172,7 +172,7 @@ Um diagrama de atividades para o sistema de *crafting* do projeto é particularm
 
 <img src="../../../Assets/diagramaDeAtividade.png" alt="Diagrama de Classe">
 
-<p align="center">Figura 1: Modelo Estático na notação UML. Fonte: COSTA, João Igor (2026).</p>
+<p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: COSTA, João Igor (2026).</p>
 
 ## Referências
 
