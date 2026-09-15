@@ -61,7 +61,7 @@ IBM. **Diagramas de classe**. IBM Documentation, 2021. Disponível em: <https://
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-|  1.0   | 15/09|  Adição da literatura correspondente e dos Diagramas de Classe e Atividade  | [João Igor](github.com/JoaoPC10)          |         |
+|  1.0   | 15/09|  Adição da literatura correspondente e do Diagrama de Classe  | [João Igor](github.com/JoaoPC10)          |         |
 
 <p align="center">Tabela 2: Histórico de versão.</p>
 
