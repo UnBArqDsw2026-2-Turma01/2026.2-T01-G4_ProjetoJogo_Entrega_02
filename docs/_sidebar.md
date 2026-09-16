@@ -13,8 +13,10 @@
     - H · SubEquipe 01
       - 1 . Modelagem Estática na Notação UML
         - [Diagrama de Componentes](/Base/Relatórios/SubEquipe_01/DiagramaComponentes.md)
+        - [Diagrama de Pacotes](/Base/Relatórios/SubEquipe_01/DiagramaPacotes.md)
       - 2 . Modelagem Dinâmica na Notação UML
         - [Diagrama de Atividades](/Base/Relatórios/SubEquipe_01/DiagramaAtividades.md)
+        - [Diagrama de Estados](/Base/Relatórios/SubEquipe_01/DiagramaEstados.md)
       - [3. IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
     - C · SubEquipe 02
       - [1. Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md)
