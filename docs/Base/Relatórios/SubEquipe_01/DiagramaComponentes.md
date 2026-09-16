@@ -10,9 +10,11 @@ Representar a estrutura do sistema em componentes e evidenciar suas interfaces e
 
 ## Metodologia
 
-O diagrama foi elaborado no [draw.io](https://www.drawio.com/), utilizando como base os requisitos funcionais definidos para o MVP e os artefatos produzidos anteriormente pela equipe, como o [mapa mental](https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_01/#/Base/Relat%C3%B3rios/SubEquipe_03/MapaMental), o [BPMN](https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_01/#/Base/Relat%C3%B3rios/SubEquipe_03/BPMN) e o [diagrama de atividades](DiagramaAtividades.md). Esses materiais foram analisados para identificar as principais responsabilidades do sistema e agrupá-las em componentes e subsistemas.
+O artefato foi produzido conforme a distribuição registrada na [Ata 01](/Atas/AtaSub01_01.md) e na [issue #5][issue]. O [Mapa Mental][mapa] orientou a identificação das mecânicas, e o [BPMN][bpmn] e o [diagrama de atividades](DiagramaAtividades.md) ajudaram a identificar os serviços necessários para executá-las. Na V2, as responsabilidades foram reorganizadas a partir dos RF01 a RF19 do [Subgrupo 03][rf].
 
-A definição dos componentes, portas e interfaces foi refinada com base na notação UML, nos slides de Milene Serrano (páginas 47 a 49), no [UML Diagrams](https://www.uml-diagrams.org/) e na especificação [UML 2.5.1](https://www.omg.org/spec/UML/2.5.1/). As versões anteriores foram preservadas para registrar a evolução da modelagem.
+Os arquivos SVG e a fonte editável em arquivo draw.io foram construídos pelo site [draw.io](https://app.diagrams.net/). Informações sobre revisões e uso de IA estão registradas em [IA Generativa](IAGenerativa.md#yogi-nam-de-souza-barbosa). Os diagramas tomam como referência os slides de Milene Serrano (páginas 47 a 49), os [exemplos de componentes do UML Diagrams](https://www.uml-diagrams.org/component-diagrams.html) e a UML 2.5.1 (§§11.2, 11.6 e 22).
+
+A conferência da V2 examinou o sentido de cada interface fornecida/requerida, as delegações para as partes internas e a correspondência entre os serviços e os requisitos. O carrossel preserva a comparação visual; os commits no histórico permitem consultar as alterações de conteúdo.
 
 ## Conteúdo
 
@@ -30,18 +32,18 @@ A definição dos componentes, portas e interfaces foi refinada com base na nota
 <a href="Base/Relatórios/SubEquipe_01/assets/componentes/componentes-v2.svg" target="_blank" rel="noopener"><img src="Base/Relatórios/SubEquipe_01/assets/componentes/componentes-v2.svg" alt="V2: Controle da Partida coordena Mundo e Interações, Combate e Magia e Progressão. Portas dos subsistemas delegam os serviços às partes internas. Salvamento e Catálogo atendem ao Controle; Magias atende ao Combate; Inventário e Diário atendem ao Estado do Jogador."></a>
 <figcaption>Figura 2: Diagrama de componentes, V2. Fonte: Yogi Nam de Souza Barbosa, 2026.</figcaption>
 </figure>
-<p>A V2 apresenta uma separação mais clara das responsabilidades, agrupando componentes relacionados em subsistemas e explicitando os serviços oferecidos por meio de interfaces. Essa organização melhora a leitura arquitetural e reduz dependências diretas entre componentes de domínio.</p>
+<p>A V2 apresenta uma separação mais clara das responsabilidades, agrupando componentes relacionados em subsistemas e explicitando os serviços oferecidos por meio de interfaces. Acho que essa organização melhora a leitura arquitetural e reduz dependências diretas entre componentes de domínio.</p>
 <p><a href="Base/Relatórios/SubEquipe_01/assets/componentes/componentes-v2.drawio" download>Fonte da V2 em draw.io</a> · <a href="Base/Relatórios/SubEquipe_01/assets/componentes/componentes-v2.svg" target="_blank" rel="noopener" download>SVG editável da V2</a></p>
 </div>
 </div>
 
 Os quadrados representam portas; círculos e tomadas indicam interfaces fornecidas e requeridas. Os encaixes representam montagem, e as linhas entre portas externas e internas representam delegação. Em `papel : Tipo`, o nome à esquerda identifica a parte interna.
 
-### Análise crítica
+### Análise
 
-A decomposição adotada favorece a separação de responsabilidades e permite identificar com facilidade quais serviços cada parte do sistema fornece ou utiliza. Entretanto, o **Controle da Partida** concentra diversas dependências e achamos que deve ser observado durante a implementação para evitar que se torne um componente excessivamente acoplado.
+**Yogi Nam de Souza Barbosa:** uma questão que precisei esclarecer foi a diferença entre componentes e classes. Por exemplo, Inventário aparece aqui pelo serviço que oferece; seus atributos, operações e classes internas pertencem a outro nível de detalhamento. Os subsistemas foram úteis porque evidenciam esse limite entre um serviço público e sua realização interna.
 
-Além disso, o diagrama oferece uma visão estrutural do sistema, mas não representa a ordem das interações nem o comportamento interno dos componentes. Por isso, sua interpretação deve ser complementada pelos outros diagramas desenvolvidos pela equipe.
+A coordenação central reduz ligações diretas entre as mecânicas, mas exige cuidado para que o Controle da Partida não absorva regras de combate, compras ou inventário. Neste modelo, ele encaminha os dados necessários e incorpora os resultados ao progresso. O diagrama mostra essas dependências, mas não demonstra a ordem das chamadas nem como uma atualização é concluída antes do salvamento; essas questões dependem do detalhamento comportamental.
 
 ### Serviços das interfaces
 
@@ -53,24 +55,36 @@ Além disso, o diagrama oferece uma visão estrutural do sistema, mas não repre
 | `IExploracao` | Exploração | Movimentar o jogador e processar os eventos associados à exploração do mundo. | RF01, RF02, RF04, RF10 |
 | `INPCs` | Interações com NPCs | Processar compras e iniciar missões secundárias. | RF14, RF15 |
 | `ICombate` | Combate em Turnos | Resolver ações de combate, calcular dano, alternar turnos e determinar vitória ou derrota. | RF05, RF06, RF07, RF13, RF16, RF17 |
-| `IMagias` | Magias | Determinar os efeitos das combinações de magia utilizadas pelo jogador. | RF05, RF09 |
+| `IMagias` | Magias | Determinar combinações e efeitos a partir dos elementos coletados pelo jogador. | RF05, RF09 |
 | `IProgresso` | Estado do Jogador | Manter estatísticas e missões e incorporar os resultados das mecânicas ao estado do jogador. | RF15, RF16; integração de RF08, RF11, RF12, RF18 e RF19 |
 | `IInventario` | Inventário | Administrar os itens e recursos mantidos pelo jogador. | RF14, RF18, RF19 |
-| `IDiario` | Diário do Aventureiro | Registrar livros e magias descobertas e disponibilizar essas informações ao jogador. | RF08, RF11, RF12 |
-| `ISalvamento` | Salvamento | Gravar e recuperar o progresso da partida. | RF03 |
+| `IDiario` | Diário do Aventureiro | Manter livros e magias descobertas e apresentar o enredo ou as combinações reveladas pelos livros. | RF08, RF11, RF12 |
+| `ISalvamento` | Salvamento | Gravar o progresso ao salvar e sair. | RF03 |
 | `ICatalogo` | Catálogo do Jogo | Fornecer definições utilizadas pelas mecânicas do jogo, como áreas, personagens, magias, itens e NPCs. | RF02, RF13, RF16, RF17 |
 
 </div>
 
-<p align="center">Tabela 1: Interfaces da V2 e cobertura funcional. Fonte: requisitos do Subgrupo 03, organizados por Yogi Nam de Souza Barbosa, 2026.</p>
+<p align="center">Tabela 1: Interfaces da V2 e cobertura funcional. Fonte: requisitos do Subgrupo 03, organizados por Yogi Nam de Souza Barbosa com auxílio IA para linkar requisitos, 2026.</p>
 
-O **Controle da Partida** atua como coordenador entre os principais subsistemas, enquanto as regras específicas permanecem nos componentes responsáveis por cada domínio. Essa divisão busca reduzir o conhecimento direto entre componentes e tornar suas responsabilidades mais explícitas.
+### Decisões e evidências
+
+| Alternativa considerada | Decisão de Yogi Nam de Souza Barbosa | Justificativa e evidência |
+|------------------------|-------------------------------------|-------------------------|
+| Manter todos os componentes no mesmo nível, como na V1. | Agrupar responsabilidades em subsistemas com portas e delegações. | Expõe os serviços usados pelo Controle e preserva a estrutura interna. Comparação V1/V2 e [commit e732f48][v2]. |
+| Manter a notação anônima `:Componente` da V1. | Nomear as partes no formato `papel : Tipo` e explicitar os pares de interfaces. | Distingue o papel interno do tipo do componente e permite conferir quem fornece e quem requer cada serviço. [Fonte da V2](Base/Relatórios/SubEquipe_01/assets/componentes/componentes-v2.drawio ':ignore'). |
+| Complementar a lista do Subgrupo 03 com RF20 a RF22. | Retirar esses códigos da base funcional do artefato. | A IA tinha sugerido novos requisitos, mas acho que não são necessários. A remoção está no [commit 9a82f35][revisao-texto]; |
+
+<p align="center">Tabela 2: Alternativas e decisões de modelagem. Fonte: solicitações de Yogi Nam de Souza Barbosa e histórico de alterações do artefato, 2026.</p>
 
 ## Referências
 
 OBJECT MANAGEMENT GROUP. **UML 2.5.1**. 2017. Seções 11.2, 11.6 e 22. [Especificação](https://www.omg.org/spec/UML/2.5.1/PDF).
 
 SERRANO, Milene. **Modelagem UML Estática**. Universidade de Brasília, [s. d.]. Páginas 47 a 49. [Slides](Base/Relatórios/SubEquipe_01/assets/componentes/referencias/modelagem-uml-estatica.pdf ':ignore').
+
+SUBGRUPO 03. **BPMN**. 2026. [Exploração e combate][bpmn].
+
+SUBGRUPO 03. **Mapa Mental**. 2026. [Visão do jogo][mapa].
 
 SUBGRUPO 03. **Requisitos funcionais do MVP**. 2026. [Lista de referência][rf].
 
@@ -82,11 +96,11 @@ UML DIAGRAMS. **Component Diagrams**. [Notação e exemplos](https://www.uml-dia
 |------|-------------------|
 | Yogi Nam de Souza Barbosa | 100% |
 
-<p align="center">Tabela 2: Contribuição no artefato.</p>
+<p align="center">Tabela 3: Contribuição no artefato.</p>
 
 ## Histórico de Versão
 
-<div role="region" aria-label="Tabela 3" tabindex="0" style="overflow-x:auto;padding:0 6px 6px 0;">
+<div role="region" aria-label="Tabela 4" tabindex="0" style="overflow-x:auto;padding:0 6px 6px 0;">
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|:----:|-----------|-----------|---------|
@@ -96,6 +110,14 @@ UML DIAGRAMS. **Component Diagrams**. [Notação e exemplos](https://www.uml-dia
 
 </div>
 
-<p align="center">Tabela 3: Histórico de versão.</p>
+<p align="center">Tabela 4: Histórico de versão. O campo Revisor identifica revisão por outra pessoa.</p>
 
 [rf]: Base/Relatórios/SubEquipe_01/assets/referencias/requisitos-subgrupo03.txt ':ignore'
+[mapa]: https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_01/#/Base/Relat%C3%B3rios/SubEquipe_03/MapaMental.md
+[bpmn]: https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-G4_ProjetoJogo_Entrega_01/#/Base/Relat%C3%B3rios/SubEquipe_03/BPMN.md
+[issue]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/issues/5
+[pr]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/pull/10
+[v1]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/d1ddd713d22038daa1a9189cd8fc9cdbb1f6e30b
+[v2]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/e732f4816fe9ad4201b15d2704d0e76d0db94512
+[revisao-texto]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/9a82f35660010398255b7e17f3ab8099983cd509
+[base-evidencias]: Base/Relatórios/SubEquipe_01/assets/evidencias/README.md ':ignore'

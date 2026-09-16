@@ -1,0 +1,62 @@
+Data: 11/09/2026
+Horário de Início: 18:00
+Horário de Término: 18:40
+Local: Google Meet
+Redator: Yogi
+
+Os três do subgrupo estavam presentes.
+O Gabriel Magiolli apresentou os diagramas disponíveis na matéria, estáticos e dinâmicos.
+Discutimos que para ser melhor que a entrega mínima [[Entrega Mínima (por subgrupo da equipe):
+[svg](https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/blob/main/docs/Base/1.Modelagem.md#entrega-mínima-por-subgrupo-da-equipe)
+
+- um modelo estático na notação UML
+- um modelo dinâmico na notação UML, e
+- pontos de vista de cada membro da equipe sobre as lições aprendidas e uso da IA Generativa.
+
+Mira-se no MM, com a entrega mínima.
+
+# Como ir além, para conseguir menções superiores?
+
+[svg](https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/blob/main/docs/Base/1.Modelagem.md#como-ir-além-para-conseguir-menções-superiores)
+
+Embasar cada artefato gerado e cada decisão tomada na literatura; Manter rastros claros para o trabalho em equipe (ex. vídeos das reuniões e atas bem elaboradas), evidenciando práticas metodológicas (ex. reuniões periódicas das metodologias ágeis; checklists; debates, e assim vai); Usar os vários recursos de modelagem da notação UML, e Reportar os pontos de vista de forma fundamentada, clara e com senso crítico.)
+]]
+devemos fazer 1 tipo de cada porque outros grupos como https://unbarqdsw2026-2-turma01.github.io/2026.2-T01-_G1_ProjetoComercioEletronico_Entrega_02/#/
+parece que estão fazendo e mostra que conseguimos fazer diagramações de vários tipos.
+
+Dentre eles, decidimos:
+
+Estáticos:
+Magioli - Pacotes
+Yogi - Componentes
+Cibelly - Classes
+
+Dinâmicos
+Magioli - Estados
+Yogi - Atividades
+Cibelly - Sequência
+
+Gabriel também citou quais partes do jogo poderia ficar melhor em cada diagramação.
+Nós vimos os slides da professora, enviado em anexo e conferimos no aprender3 da professora o conteúdo.
+
+Yogi relembrou que na reunião geral do dia 9/9/2026 definimos de cada subgrupo definir seus próprios requisitos funcionais para poder realizar os diagramas.
+Definimos em conjunto requisitos para um MVP:
+| ID       | Requisito funcional                                                                                                                                                    |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **RF01** | O sistema deve permitir ao jogador **iniciar uma nova partida**.                                                                                                       |
+| **RF02** | O sistema deve permitir ao jogador **movimentar o personagem por uma área do mapa** e interagir com elementos do cenário.                                              |
+| **RF03** | O sistema deve permitir ao jogador **coletar elementos químicos** encontrados durante a exploração ou obtidos após combates.                                           |
+| **RF04** | O sistema deve permitir ao jogador **consultar seu inventário**, contendo elementos químicos e itens criados.                                                          |
+| **RF05** | O sistema deve permitir ao jogador **combinar elementos químicos fora do combate**, consumindo os ingredientes e criando um item quando existir uma combinação válida. |
+| **RF06** | O sistema deve **registrar receitas descobertas no Livro do Aventureiro** e permitir que o jogador consulte essas receitas.                                            |
+| **RF07** | O sistema deve permitir **combates por turnos** entre jogador e inimigo, possibilitando ao menos atacar e usar itens, atualizando os pontos de vida dos participantes. |
+| **RF08** | O sistema deve permitir ao jogador **utilizar itens do inventário durante o combate**, aplicando seu efeito e consumindo a unidade utilizada.                          |
+| **RF09** | O sistema deve **encerrar o combate por vitória ou derrota** e permitir a progressão da pequena sequência principal do MVP após uma vitória.                           |
+
+A próxima reunião vai ocorrer na dia 18/09/2026 vai ser uma reunião geral.
+Reafirmamos que o prazo para terminar e por no github esses diagramas é próxima quarta 16/09/2026.
+Os requisitos funcionais estão genéricos então é mais uma base, quando formos construindo os diagramas especificamos melhor.
+Vimos se dava para agrupar requisitos específicos para cada diagramação, mas decidimos que é melhor não.
+Acho que é melhor as próximas reuniões a gente ver se já dá para fazer transcrição no google meet ou de repente usar o teams.
+revimos o mapa mental do subgrupo 3 para tentar definir requisitos.
+Decidimos que Yogi vai acompanhar Marcos no vídeo.
