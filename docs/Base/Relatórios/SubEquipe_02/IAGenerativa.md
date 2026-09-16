@@ -54,7 +54,7 @@ Note-se a ausência de diferenciação entre os círculos de início e fim do fl
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-|  1.0   |15/09 | Adicição do meu relatório de IA Generativa          |  [João Igor](github.com/JoaoPC10)        |         |
+|  1.0   |15/09 | Adição do meu relatório de IA Generativa          |  [João Igor](github.com/JoaoPC10)        |         |
 
 <p align="center">Tabela 3: Histórico de versão.</p>
 
