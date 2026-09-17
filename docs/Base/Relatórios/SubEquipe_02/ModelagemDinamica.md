@@ -10,6 +10,10 @@ Elaborar em UML uma modelagem dinâmica pela subequipe, evidenciando as atividad
 
 ## Metodologia
 
+A Modelagem Dinâmica é aplicada na fase de análise e projeto de sistemas orientados a objetos para representar o comportamento do sistema ao longo do tempo. No projeto, ela foi empregada para especificar a lógica de execução e a coordenação temporal das interações entre os objetos em cenários críticos.
+
+A elaboração dos diagramas foi conduzida na plataforma web **Draw.io** (*diagrams.net*). A escolha da ferramenta fundamentou-se em sua conformidade com a notação padrão da UML, além da facilidade de versionamento e portabilidade para documentações técnicas em formato digital (PENDER, 2003).
+
 A modelagem dinâmica descreve o comportamento do sistema ao longo do tempo, complementando a visão estrutural fornecida pela modelagem estática. Enquanto os diagramas estruturais mostram quais elementos compõem o sistema, os diagramas de interação mostram como esses elementos colaboram para realizar uma funcionalidade (BOOCH; RUMBAUGH; JACOBSON, 2005).
 
 Para esta entrega, a subequipe optou pelo **Diagrama de Comunicação**. Conforme Fowler (2005), os diagramas de comunicação e os de sequência são semanticamente equivalentes, ambos representam trocas de mensagens entre objetos, porém enfatizam aspectos distintos: o diagrama de sequência destaca a ordem temporal das mensagens, ao passo que o diagrama de comunicação destaca os vínculos estruturais entre os objetos participantes. Essa segunda ênfase foi considerada mais adequada ao momento do projeto, pois permite verificar diretamente se as colaborações previstas nos fluxos do jogo são suportadas pelos componentes definidos na modelagem estática.
@@ -24,10 +28,6 @@ O processo seguido foi dividido em quatro etapas:
 A ferramenta **Draw.io** foi escolhida por disponibilizar uma biblioteca de formas aderente à notação UML e por permitir o posicionamento direto dos objetos e das mensagens com o mouse, o que se mostrou decisivo em um diagrama cujo entendimento depende fortemente da disposição espacial dos participantes.
 
 Como achado principal, a modelagem evidenciou que os objetos `:GerenciadorDeInventario` e `:SistemaSalvar` recebem mensagens em praticamente todos os cenários analisados, confirmando o papel central que lhes havia sido atribuído na modelagem estática e reforçando a necessidade de que suas interfaces sejam estáveis, uma vez que qualquer alteração nelas se propaga para múltiplos fluxos do jogo.
-
-A Modelagem Dinâmica é aplicada na fase de análise e projeto de sistemas orientados a objetos para representar o comportamento do sistema ao longo do tempo. No projeto, ela foi empregada para especificar a lógica de execução e a coordenação temporal das interações entre os objetos em cenários críticos.
-
-A elaboração dos diagramas foi conduzida na plataforma web **Draw.io** (*diagrams.net*). A escolha da ferramenta fundamentou-se em sua conformidade com a notação padrão da UML, além da facilidade de versionamento e portabilidade para documentações técnicas em formato digital (PENDER, 2003).
 
 ## Conteúdo
 
@@ -146,35 +146,7 @@ Este cenário descreve a compra de itens junto aos mercadores. O fluxo tem iníc
 | 1.1.3 | `transacaoItem()` | `:LojasMerchants` | `:GerenciadorDeInventario` |
 
 <p align="center">Tabela 4: Mensagens da interação "Interação de Loja".</p>
-### Elementos Principais
 
-Nos diagramas de atividades, os nós de atividades e os arcos (transições) são utilizados para modelar o fluxo de controle e o fluxo de dados entre as ações:
-
-| Elemento | Representação Visual | Função |
-| :--- | :--- | :--- |
-| **Nó Inicial** | Círculo sólido preto | Marca o início do fluxo de atividade. |
-| **Ação / Atividade** | Retângulo arredondado | Representa um passo de execução ou tarefa no processo. |
-| **Decisão** | Losango | Ponto de bifurcação condicional (caminhos alternativos). |
-| **Fork / Join** | Barra espessa horizontal | Sincronização ou divisão de fluxos paralelos. |
-| **Nó Final** | Círculo duplo (olho de boi) | Indica o encerramento do fluxo. |
-| **Transição** | Setas direcionadas | Indicam a direção do fluxo de controle entre os elementos. |
-
----
-
-### Caso de Uso: Projeto Jogo – Sistema de Crafting
-
-Um diagrama de atividades para o sistema de *crafting* do projeto é particularmente útil para:
-
-* **Visualizar o fluxo completo** de coleta de elementos, validação de receitas e criação de itens;
-* **Identificar pontos de decisão** (*Elemento encontrado? Receita válida?*);
-* **Documentar caminhos de sucesso e falha** no processo de criação;
-* **Servir como base** para a implementação direta das classes e seus métodos correspondentes.
-
-## Modelagem Dinâmica: Diagrama de Atividades
-
-<img src="../../../Assets/diagramaDeAtividade.png" alt="Diagrama de Classe">
-
-<p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: COSTA, João Igor (2026).</p>
 ### Elementos Principais
 
 Nos diagramas de atividades, os nós de atividades e os arcos (transições) são utilizados para modelar o fluxo de controle e o fluxo de dados entre as ações:
@@ -219,8 +191,8 @@ IBM. **Diagramas de atividade**. IBM Documentation, 2021. Disponível em: <https
 
 | Nome | % de Contribuição |
 |------|-------------------|
-|Marcos Vinícius Gündel da Silva |     25%       |
 |João Igor |     25%       |
+|Marcos Vinícius Gündel da Silva |     25%       |
 
 <p align="center">Tabela 5: Contribuição dos integrantes.</p>
 
@@ -228,8 +200,8 @@ IBM. **Diagramas de atividade**. IBM Documentation, 2021. Disponível em: <https
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-|  1.0   | 16/09|  Adição da literatura correspondente e do Diagrama de Comunicação, com o detalhamento das quatro interações  | [Marcos Vinícius](https://github.com/MarcosViniciusG)          |         |
-|  1.0   | 15/09|  Adição da literatura correspondente e do Diagrama de Atividade  | [João Igor](github.com/JoaoPC10)          |         |       |
+|  1.0   | 15/09|  Adição da literatura correspondente e do Diagrama de Atividade  | [João Igor](github.com/JoaoPC10)          |         |
+|  1.1   | 16/09|  Adição da literatura correspondente e do Diagrama de Comunicação, com o detalhamento das quatro interações  | [Marcos Vinícius](https://github.com/MarcosViniciusG)          |         |
 
 <p align="center">Tabela 6: Histórico de versão.</p>
 
