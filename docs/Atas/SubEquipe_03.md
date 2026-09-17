@@ -30,6 +30,7 @@ Toda reunião é registrada em uma ata própria, seguindo o modelo definido em [
 |:---:|:----:|---------|---------|:----:|
 | 1 | 12/09 | Levantamento de Requisitos Funcionais e Revisão do BPMN. | Pedro Teixeira Moriel Sanchez | [AtaSub03_01](AtaSub03_01.md) |
 | 2 | 15/09 | Elaboração do Diagrama de Classes. | Pedro Teixeira Moriel Sanchez | [AtaSub03_02](AtaSub03_02.md) |
+| 3 | 16/09 | Revisão do Diagrama de Classes e elaboração do Diagrama de Atividades. | Pedro Teixeira Moriel Sanchez | [AtaSub03_03](AtaSub03_03.md) |
 
 <p align="center">Tabela 2: Registro de reuniões.</p>
 
@@ -41,9 +42,9 @@ Toda reunião é registrada em uma ata própria, seguindo o modelo definido em [
 
 | Nome | % de Contribuição |
 |------|-------------------|
-| Carlos Henrique Brasil de Souza | A definir |
-| Pedro Teixeira Moriel Sanchez | A definir |
-| Renan Pereira Reis | A definir |
+| Carlos Henrique Brasil de Souza | 33,3% |
+| Pedro Teixeira Moriel Sanchez | 33,3% |
+| Renan Pereira Reis | 33,3% |
 
 <p align="center">Tabela 3: Contribuição dos integrantes. Fonte: Autores, 2026.</p>
 
@@ -52,6 +53,7 @@ Toda reunião é registrada em uma ata própria, seguindo o modelo definido em [
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
 | 1.0 | 16/09/2026 | Adição das Atas das reuniões 1 e 2 | Pedro Teixeira Moriel Sanchez | |
+| 1.1 | 17/09/2026 | Adição da Ata da reunião 3 | Pedro Teixeira Moriel Sanchez | |
 
 <p align="center">Tabela 4: Histórico de versão. Fonte: Autores, 2026.</p>
 
