@@ -24,6 +24,7 @@
       - [3. IA Generativa](/Base/Relatórios/SubEquipe_03/IAGenerativa.md)
 
   - [Participações](/Base/1.2.ParticipacoesModelagem.md)
+  - [Iniciativas Extras](/Base/1.3.IniciativasExtras.md)
 
 - Atas de Reunião
   - [Reuniões Gerais](/Atas/Gerais.md)
