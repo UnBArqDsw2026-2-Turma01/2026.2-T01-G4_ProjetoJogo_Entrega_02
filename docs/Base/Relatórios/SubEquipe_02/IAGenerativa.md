@@ -93,6 +93,25 @@ No ciclo de vida de um pedido, a IA explicou o papel de cada elemento: o círcul
 
 No exemplo de implantação, a explicação seguiu a mesma lógica: o que é um nó `<<device>>`, que representa uma máquina, o que é um ambiente de execução que roda dentro dele, por que os artefatos aparecem desenhados dentro do nó em que são implantados e por que cada ligação entre nós leva o nome do protocolo usado. Com esses conceitos claros, consegui descrever a implantação do G4_ProjetoJogo, com o PC do jogador, o runtime do Godot, os arquivos gravados em `user://` e a integração opcional com a plataforma de distribuição.
 
+### João Victor
+
+#### Lições Aprendidas
+
+Usei a IA Generativa de forma pontual, em tarefas bem delimitadas: resolver um merge com conflitos na documentação, elaborar o Diagrama de Casos de Uso da iniciativa extra e revisar o texto e os links das páginas. O retorno foi melhor quando cada sugestão podia ser conferida na hora, nos próprios arquivos ou no site publicado.
+
+#### Uso da IA Generativa (senso crítico)
+
+O assistente utilizado foi o **GitHub Copilot**, no VS Code. Ele atuou como apoio de implementação: propôs a resolução do merge, gerou o código PlantUML do diagrama e o PNG exportado, ambos revisados por mim, e apoiou as revisões de texto e a montagem dos links de rastreabilidade, com a verificação das âncoras no site. As decisões seguiram comigo: a lista final de casos de uso, os ajustes de escopo e a conferência do diff antes de cada commit.
+
+**Vantagens observadas**
+
+- **Eficiência em tarefas mecânicas:** merge, renderização e revisão saíram rápido, sobrando tempo para as decisões de conteúdo.
+- **Verificabilidade:** como tudo ficava visível no repositório (diff, arquivos, site), dava para conferir cada sugestão na prática.
+
+**Desvantagens observadas**
+
+- **Requer conferência:** as saídas precisaram de revisão linha a linha; detalhes de conteúdo e de formatação exigiram ajustes meus.
+- **Risco de aceitar rápido demais:** com a resposta pronta, é fácil não reler; manter a revisão do diff antes do commit foi o que garantiu a segurança.
 
 ## Referências
 
@@ -111,6 +130,7 @@ UML-DIAGRAMS.ORG. **UML Component**. Disponível em: <https://www.uml-diagrams.o
 |João Igor  |  25%         |
 |[Marcos Vinícius](https://github.com/MarcosViniciusG)  |  25%         |
 |[Marcelo de Araújo Lopes](https://github.com/MatielloAL)  |  25%         |
+|[João Victor da Silva Batista de Farias](https://github.com/beyondmagic)  |  25%         |
 
 <p align="center">Tabela 3: Contribuição dos integrantes.</p>
 
@@ -124,6 +144,7 @@ UML-DIAGRAMS.ORG. **UML Component**. Disponível em: <https://www.uml-diagrams.o
 |  1.3   |17/09 | Preenchimento da seção de Metodologia | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.4   |17/09 | Correção da renderização das imagens no GitHub Pages (troca de `<img>` por sintaxe Markdown) e dos links de perfil sem `https://` | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.5   |17/09 | Adição do meu relatório de IA Generativa | [Marcelo de Araújo Lopes](https://github.com/MatielloAL) |         |
+|  1.6   |17/09 | Adição do meu relatório de IA Generativa | [João Victor](https://github.com/beyondmagic) |         |
 
 <p align="center">Tabela 4: Histórico de versão.</p>
 
