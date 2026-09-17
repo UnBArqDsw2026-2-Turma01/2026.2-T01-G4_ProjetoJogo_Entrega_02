@@ -24,6 +24,13 @@ Para contornar essa limitação, o código do PlantUML foi importado no [Draw.io
 
 Segundo a IBM, os diagramas de classe são fundamentais para o processo de modelagem de objetos, pois modelam a estrutura estática de um sistema. Dependendo da complexidade do projeto, é possível utilizar um único diagrama de classe para representar o sistema inteiro ou múltiplos diagramas para especificar componentes individuais.
 
+---
+
+### Modelagem Estática: Diagrama de Classe
+
+<img src="../../../Assets/diagramaDeClasse.png" alt="Diagrama de Classe">
+
+<p align="center">Figura 1: Modelo Estático na notação UML. Fonte: COSTA, João Igor (2026).</p>
 Estes diagramas funcionam como representações abstratas da estrutura do sistema ou subsistema e são utilizados para:
 
 * **Modelar os objetos** que compõem o sistema e suas respectivas responsabilidades;
@@ -42,12 +49,6 @@ Estes diagramas funcionam como representações abstratas da estrutura do sistem
 | **Atributos** | Características que definem o estado de um objeto. | `vida`, `nome`, `posição` |
 | **Métodos / Operações** | Comportamentos e funcionalidades executadas pela classe. | `atacar()`, `coletar()`, `validar()` |
 | **Relacionamentos** | Conexões que indicam como as classes interagem entre si. | Associação, Herança, Composição, Agregação |
-
-### Modelagem Estática: Diagrama de Classe
-
-<img src="../../../Assets/diagramaDeClasse.png" alt="Diagrama de Classe">
-
-<p align="center">Figura 1: Modelo Estático na notação UML. Fonte: COSTA, João Igor (2026).</p>
 
 ---
 
@@ -239,11 +240,10 @@ pJor_Save -down-( I_Persistencia : Serializa Progresso
 
 ## Referências
 
-BOOCH, Grady; RUMBAUGH, James; JACOBSON, Ivar. **UML: Guia do Usuário**. 2. ed. Rio de Janeiro: Elsevier, 2005.
-
 CARVALHO, Ariadne Maria Brito Rizzoni. **Engenharia de Software: Capítulo 3**. Instituto de Computação – UNICAMP. Disponível em: <https://www.ic.unicamp.br/~ariadne/mc426/cap03.pdf>. Acesso em: 15 set. 2026.
 
 IBM. **Diagramas de classe**. IBM Documentation, 2021. Disponível em: <https://www.ibm.com/docs/pt-br/rsas/7.5.0?topic=structure-class-diagrams>. Acesso em: 15 set. 2026.
+BOOCH, Grady; RUMBAUGH, James; JACOBSON, Ivar. **UML: Guia do Usuário**. 2. ed. Rio de Janeiro: Elsevier, 2005.
 
 ## Nível de Contribuição dos Integrantes
 
@@ -259,6 +259,7 @@ IBM. **Diagramas de classe**. IBM Documentation, 2021. Disponível em: <https://
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
 |  1.0   | 15/09|  Adição da literatura correspondente e do Diagrama de Classe  | [João Igor](github.com/JoaoPC10)          |         |
+
 |  1.1   | 16/09|  Adição do Diagrama de Componentes, do seu código-fonte em PlantUML e da referência literária correspondente  | [Marcos Vinícius](https://github.com/MarcosViniciusG)          |         |
 |  1.2   | 16/09|  Adição da versão 1.1 do Diagrama de Componentes, refinada no Draw.io a partir da importação do código em PlantUML  | [Marcos Vinícius](https://github.com/MarcosViniciusG)          |         |
 
