@@ -17,6 +17,7 @@ A IA Generativa foi empregada em dois momentos da entrega: no **estudo das técn
 ## Conteúdo
 
 ### João Igor
+
 #### Lições Aprendidas
 O uso da IA Generativa facilita a análise e a reavaliação de escolhas dentro de um projeto. Na programação de um jogo, por exemplo, tudo é considerado um objeto, desde o personagem principal e os itens até as próprias funções do sistema. Com a ajuda da IA, o escopo do projeto passou por um filtro, focando nas informações mais relevantes. Isso permitiu priorizar os elementos que realmente precisavam ser diagramados, excluindo objetos secundários, como os de cenário. 
 
