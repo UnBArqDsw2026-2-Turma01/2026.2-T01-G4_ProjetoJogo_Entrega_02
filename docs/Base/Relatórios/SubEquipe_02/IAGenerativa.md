@@ -97,11 +97,11 @@ No exemplo de implantação, a explicação seguiu a mesma lógica: o que é um 
 
 #### Lições Aprendidas
 
-Usei a IA Generativa de forma pontual, em tarefas bem delimitadas: resolver um merge com conflitos na documentação, elaborar o Diagrama de Casos de Uso da iniciativa extra e revisar o texto e os links das páginas. O retorno foi melhor quando cada sugestão podia ser conferida na hora, nos próprios arquivos ou no site publicado.
+Usei a IA Generativa de forma pontual, em tarefas bem delimitadas: resolver um merge com conflitos na documentação, ajudar na elaboração do Diagrama de Casos de Uso da iniciativa extra e revisar o texto e os links das páginas. O retorno foi melhor quando cada sugestão podia ser conferida na hora, nos próprios arquivos ou no site publicado.
 
 #### Uso da IA Generativa (senso crítico)
 
-O assistente utilizado foi o **GitHub Copilot**, no VS Code. Ele atuou como apoio de implementação: propôs a resolução do merge, gerou o código PlantUML do diagrama e o PNG exportado, ambos revisados por mim, e apoiou as revisões de texto e a montagem dos links de rastreabilidade, com a verificação das âncoras no site. As decisões seguiram comigo: a lista final de casos de uso, os ajustes de escopo e a conferência do diff antes de cada commit.
+O assistente utilizado foi o **GitHub Copilot**, no VS Code. Ele atuou como apoio de implementação: propôs a resolução de conflitos em merge, gerou o código PlantUML do diagrama, ambos revisados por mim, e apoiou as revisões de texto e a montagem dos links de rastreabilidade, com a verificação manual de conexões no site. As decisões seguiram comigo: a lista final de casos de uso, os ajustes de escopo e a conferência do diff antes de cada commit.
 
 **Vantagens observadas**
 
@@ -111,7 +111,7 @@ O assistente utilizado foi o **GitHub Copilot**, no VS Code. Ele atuou como apoi
 **Desvantagens observadas**
 
 - **Requer conferência:** as saídas precisaram de revisão linha a linha; detalhes de conteúdo e de formatação exigiram ajustes meus.
-- **Risco de aceitar rápido demais:** com a resposta pronta, é fácil não reler; manter a revisão do diff antes do commit foi o que garantiu a segurança.
+- **Risco de aceitar rápido demais:** com a resposta pronta, é fácil não reler; manter a revisão do diff antes do commit foi o que me garantiu segurança.
 
 ## Referências
 
