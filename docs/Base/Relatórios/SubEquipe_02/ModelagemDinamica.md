@@ -62,7 +62,7 @@ Sua utilização no projeto tem por finalidade:
 
 A prancha a seguir reúne as quatro interações modeladas pela subequipe. Em razão da sua extensão, cada cenário é apresentado individualmente nas subseções seguintes.
 
-<img src="../../../Assets/subgrupo02_diagrama_comunicacao.png" alt="Diagrama de Comunicação completo">
+![Diagrama de Comunicação completo](../../../Assets/subgrupo02_diagrama_comunicacao.png)
 
 <p align="center">Figura 1: Modelo Dinâmico na notação UML — visão geral das quatro interações. Fonte: SILVA, Marcos (2026).</p>
 
@@ -72,7 +72,7 @@ A prancha a seguir reúne as quatro interações modeladas pela subequipe. Em ra
 
 Este cenário representa o ciclo de um turno no sistema de batalha. O `:MotorDeBatalhaATB` sinaliza ao jogador que o seu turno começou; caso a ação escolhida seja a utilização de elementos químicos, a mistura consome os reagentes do inventário e devolve o efeito da poção ao motor de batalha. Em paralelo, o motor mantém a sincronização contínua com a inteligência artificial dos inimigos, comportamento representado pelo marcador de iteração.
 
-<img src="../../../Assets/subgrupo02_diagrama_comunicacao_interacao1.png" alt="Interação Turno de Combate">
+![Interação Turno de Combate](../../../Assets/subgrupo02_diagrama_comunicacao_interacao1.png)
 
 <p align="center">Figura 2: Interação "Turno de Combate". Fonte: SILVA, Marcos (2026).</p>
 
@@ -92,7 +92,7 @@ Este cenário representa o ciclo de um turno no sistema de batalha. O `:MotorDeB
 
 Este cenário detalha o sistema de *crafting* químico fora do combate. O jogador combina elementos, o que consome reagentes do inventário e, em caso de sucesso, devolve a nova poção ao mesmo inventário. Quando a combinação resulta em uma receita inédita, ela é registrada no Livro do Aventureiro, que por sua vez aciona a serialização das descobertas, garantindo a persistência do progresso.
 
-<img src="../../../Assets/subgrupo02_diagrama_comunicacao_interacao2.png" alt="Interação Mistura e Descoberta">
+![Interação Mistura e Descoberta](../../../Assets/subgrupo02_diagrama_comunicacao_interacao2.png)
 
 <p align="center">Figura 3: Interação "Mistura e Descoberta". Fonte: SILVA, Marcos (2026).</p>
 
@@ -112,7 +112,7 @@ Este cenário detalha o sistema de *crafting* químico fora do combate. O jogado
 
 Este cenário representa o modo de jogo do Coliseu, no qual o jogador aposta um item para disputar uma batalha. Ao receber a aposta, `:OColiseu` remove o item apostado do inventário e configura as regras da arena junto ao motor de batalha. Concluído o combate, o motor reporta o resultado e, havendo vitória, o prêmio é concedido e o estado do jogo é salvo.
 
-<img src="../../../Assets/subgrupo02_diagrama_comunicacao_interacao3.png" alt="Interação Batalha no Coliseu">
+![Interação Batalha no Coliseu](../../../Assets/subgrupo02_diagrama_comunicacao_interacao3.png)
 
 <p align="center">Figura 4: Interação "Batalha no Coliseu". Fonte: SILVA, Marcos (2026).</p>
 
@@ -133,7 +133,7 @@ Este cenário representa o modo de jogo do Coliseu, no qual o jogador aposta um 
 
 Este cenário descreve a compra de itens junto aos mercadores. O fluxo tem início quando o jogador ativa o *collider* de um NPC; identificado o NPC, a conversa é iniciada e, caso a opção de compra seja escolhida, a interface da loja é aberta. Havendo ouro suficiente, o valor é debitado no menu de status e o item é transferido para o inventário do jogador.
 
-<img src="../../../Assets/subgrupo02_diagrama_comunicacao_interacao4.png" alt="Interação de Loja">
+![Interação de Loja](../../../Assets/subgrupo02_diagrama_comunicacao_interacao4.png)
 
 <p align="center">Figura 5: Interação "Interação de Loja". Fonte: SILVA, Marcos (2026).</p>
 
@@ -173,7 +173,7 @@ Um diagrama de atividades para o sistema de *crafting* do projeto é particularm
 
 ## Modelagem Dinâmica: Diagrama de Atividades
 
-<img src="../../../Assets/diagramaDeAtividade.png" alt="Diagrama de Classe">
+![Diagrama de Atividade](../../../Assets/diagramaDeAtividade.png)
 
 <p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: COSTA, João Igor (2026).</p>
 
@@ -200,8 +200,9 @@ IBM. **Diagramas de atividade**. IBM Documentation, 2021. Disponível em: <https
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-|  1.0   | 15/09|  Adição da literatura correspondente e do Diagrama de Atividade  | [João Igor](github.com/JoaoPC10)          |         |
+|  1.0   | 15/09|  Adição da literatura correspondente e do Diagrama de Atividade  | [João Igor](https://github.com/JoaoPC10)          |         |
 |  1.1   | 16/09|  Adição da literatura correspondente e do Diagrama de Comunicação, com o detalhamento das quatro interações  | [Marcos Vinícius](https://github.com/MarcosViniciusG)          |         |
+|  1.2   |17/09 | Correção da renderização das imagens no GitHub Pages (troca de `<img>` por sintaxe Markdown) e dos links de perfil sem `https://` | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 
 <p align="center">Tabela 6: Histórico de versão.</p>
 
