@@ -24,13 +24,13 @@ O uso da IA Generativa facilita a análise e a reavaliação de escolhas dentro 
 #### Uso da IA Generativa (senso crítico)
 Para fins de estudo, questionou-se ao Claude.ai se ele conseguiria priorizar os objetos do projeto que deveriam ser diagramados. Além de realizar essa priorização, a ferramenta gerou espontaneamente o Diagrama de Classes apresentado abaixo:
 
-<img src="../../../Assets/diagramaDeClasseClaude.jpeg">
+![Diagrama de Classes gerado pelo Claude.ai](../../../Assets/diagramaDeClasseClaude.jpeg)
 
 Por mais que tenha acertado, em sua maioria, as classes, observa-se a necessidade de maior rigor técnico no diagrama gerado, o qual exibe falhas estruturais e de notação. Entre os problemas identificados, destacam-se a ausência de distinção entre as setas, a associação incoerente de funções às classes, nomenclaturas errôneas para os tipos de dados e a rotulagem dispensável de ações em determinadas conexões. Soma-se a isso o apelo visual excessivo devido ao uso inadequado de cores e ao cruzamento de linhas sobre o diagrama, comprometendo a sua inteligibilidade. 
 
 A mesma coisa se vê no Diagrama de Atividades, porém aqui os erros foram bem mais críticos:
 
-<img src="../../../Assets/diagramaDeAtividadeClaude.jpeg">
+![Diagrama de Atividades gerado pelo Claude.ai](../../../Assets/diagramaDeAtividadeClaude.jpeg)
 
 Note-se a ausência de diferenciação entre os círculos de início e fim do fluxo, além de elementos isolados e da falta de losangos nas bifurcações de decisão. A leitura do diagrama é prejudicada por termos ambíguos e pela ausência de notas explicativas.
 
@@ -94,10 +94,11 @@ UML-DIAGRAMS.ORG. **UML Component**. Disponível em: <https://www.uml-diagrams.o
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-|  1.0   |15/09 | Adição do meu relatório de IA Generativa          |  [João Igor](github.com/JoaoPC10)        |         |
+|  1.0   |15/09 | Adição do meu relatório de IA Generativa          |  [João Igor](https://github.com/JoaoPC10)        |         |
 |  1.1   |17/09 | Adição do relatório de IA Generativa, com os históricos de conversa, referências e renumeração das tabelas | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.2   |17/09 | Revisão do relatório: texto condensado e correção dos links para os PDFs das conversas | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.3   |17/09 | Preenchimento da seção de Metodologia | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
+|  1.4   |17/09 | Correção da renderização das imagens no GitHub Pages (troca de `<img>` por sintaxe Markdown) e dos links de perfil sem `https://` | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 
 <p align="center">Tabela 4: Histórico de versão.</p>
 

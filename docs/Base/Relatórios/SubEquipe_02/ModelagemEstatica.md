@@ -28,7 +28,7 @@ Segundo a IBM, os diagramas de classe são fundamentais para o processo de model
 
 ### Modelagem Estática: Diagrama de Classe
 
-<img src="../../../Assets/diagramaDeClasse.png" alt="Diagrama de Classe">
+![Diagrama de Classe](../../../Assets/diagramaDeClasse.png)
 
 <p align="center">Figura 1: Modelo Estático na notação UML. Fonte: COSTA, João Igor (2026).</p>
 
@@ -82,13 +82,13 @@ O diagrama elaborado organiza o jogo em cinco agrupamentos: **Core e Exploraçã
 
 A **versão 1.0** corresponde à renderização direta do código-fonte pelo editor online do PlantUML:
 
-<img src="../../../Assets/subgrupo02_diagrama_componentes.png" alt="Diagrama de Componentes - versão 1.0">
+![Diagrama de Componentes - versão 1.0](../../../Assets/subgrupo02_diagrama_componentes.png)
 
 <p align="center">Figura 2: Diagrama de Componentes na notação UML (versão 1.0, gerada no PlantUML). Fonte: SILVA, Marcos (2026).</p>
 
 A **versão 1.1**, apresentada a seguir, é o resultado da importação desse mesmo código no Draw.io, com reorganização manual dos componentes e das setas, porém sem a presença de portas, pois o Draw.io não suporta nativamente esse elemento. Por manter a mesma semântica da versão anterior e oferecer melhor legibilidade, é a versão vigente do diagrama:
 
-<img src="../../../Assets/subgrupo02_diagrama_componentes_v2.png" alt="Diagrama de Componentes - versão 1.1">
+![Diagrama de Componentes - versão 1.1](../../../Assets/subgrupo02_diagrama_componentes_v2.png)
 
 <p align="center">Figura 3: Diagrama de Componentes na notação UML (versão 1.1, refinada no Draw.io). Fonte: SILVA, Marcos (2026).</p>
 
@@ -260,9 +260,10 @@ BOOCH, Grady; RUMBAUGH, James; JACOBSON, Ivar. **UML: Guia do Usuário**. 2. ed.
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-|  1.0   | 15/09|  Adição da literatura correspondente e do Diagrama de Classe  | [João Igor](github.com/JoaoPC10)          |         |
+|  1.0   | 15/09|  Adição da literatura correspondente e do Diagrama de Classe  | [João Igor](https://github.com/JoaoPC10)          |         |
 |  1.1   | 16/09|  Adição do Diagrama de Componentes, do seu código-fonte em PlantUML e da referência literária correspondente  | [Marcos Vinícius](https://github.com/MarcosViniciusG)          |         |
 |  1.2   | 16/09|  Adição da versão 1.1 do Diagrama de Componentes, refinada no Draw.io a partir da importação do código em PlantUML  | [Marcos Vinícius](https://github.com/MarcosViniciusG)          |         |
+|  1.3   |17/09 | Correção da renderização das imagens no GitHub Pages (troca de `<img>` por sintaxe Markdown) e dos links de perfil sem `https://` | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 
 <p align="center">Tabela 2: Histórico de versão.</p>
 
