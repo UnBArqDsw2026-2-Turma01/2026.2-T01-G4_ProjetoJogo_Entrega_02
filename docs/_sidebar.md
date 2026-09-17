@@ -14,6 +14,7 @@
       - 1 . Modelagem Estática na Notação UML
         - [Diagrama de Componentes](/Base/Relatórios/SubEquipe_01/DiagramaComponentes.md)
         - [Diagrama de Pacotes](/Base/Relatórios/SubEquipe_01/DiagramaPacotes.md)
+        - [Diagrama de Classes](/Base/Relatórios/SubEquipe_01/DiagramaClasses.md)
       - 2 . Modelagem Dinâmica na Notação UML
         - [Diagrama de Atividades](/Base/Relatórios/SubEquipe_01/DiagramaAtividades.md)
         - [Diagrama de Estados](/Base/Relatórios/SubEquipe_01/DiagramaEstados.md)
