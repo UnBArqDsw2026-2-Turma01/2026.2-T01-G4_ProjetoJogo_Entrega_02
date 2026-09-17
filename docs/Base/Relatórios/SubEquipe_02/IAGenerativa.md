@@ -24,13 +24,13 @@ O uso da IA Generativa facilita a análise e a reavaliação de escolhas dentro 
 #### Uso da IA Generativa (senso crítico)
 Para fins de estudo, questionou-se ao Claude.ai se ele conseguiria priorizar os objetos do projeto que deveriam ser diagramados. Além de realizar essa priorização, a ferramenta gerou espontaneamente o Diagrama de Classes apresentado abaixo:
 
-<img src="../../../Assets/diagramaDeClasseClaude.jpeg">
+![Diagrama de Classes gerado pelo Claude.ai](../../../Assets/diagramaDeClasseClaude.jpeg)
 
 Por mais que tenha acertado, em sua maioria, as classes, observa-se a necessidade de maior rigor técnico no diagrama gerado, o qual exibe falhas estruturais e de notação. Entre os problemas identificados, destacam-se a ausência de distinção entre as setas, a associação incoerente de funções às classes, nomenclaturas errôneas para os tipos de dados e a rotulagem dispensável de ações em determinadas conexões. Soma-se a isso o apelo visual excessivo devido ao uso inadequado de cores e ao cruzamento de linhas sobre o diagrama, comprometendo a sua inteligibilidade. 
 
 A mesma coisa se vê no Diagrama de Atividades, porém aqui os erros foram bem mais críticos:
 
-<img src="../../../Assets/diagramaDeAtividadeClaude.jpeg">
+![Diagrama de Atividades gerado pelo Claude.ai](../../../Assets/diagramaDeAtividadeClaude.jpeg)
 
 Note-se a ausência de diferenciação entre os círculos de início e fim do fluxo, além de elementos isolados e da falta de losangos nas bifurcações de decisão. A leitura do diagrama é prejudicada por termos ambíguos e pela ausência de notas explicativas.
 
@@ -71,6 +71,29 @@ O modelo utilizado foi o **Gemini 3.1 Pro Estendido**, do Google. A IA não foi 
 
 **Conclusão:** a IA se mostrou mais valiosa como tutor do que como geradora de artefatos. Nas explicações conceituais o retorno foi consistente; nas saídas técnicas houve erro que exigiu correção. O uso produtivo depende de o usuário já ter repertório suficiente para verificar a resposta recebida.
 
+### Marcelo de Araújo Lopes
+
+#### Lições Aprendidas
+
+O uso da IA Generativa se concentrou em dois pontos. O primeiro foi a organização geral do repositório e dos arquivos `.md`, com a padronização das seções, das tabelas e da numeração das figuras. O segundo foi o apoio ao entendimento do conteúdo em si, principalmente da notação dos Diagramas de Estados e do Diagrama de Implantação, que foram os artefatos sob minha responsabilidade. Em nenhum dos casos a IA substituiu a decisão de modelagem, que foi sempre conferida na especificação da UML e nos artefatos da Entrega 01.
+
+#### Uso da IA Generativa (senso crítico)
+
+Para entender os conceitos por trás do Diagrama de Estados e do Diagrama de Implantação, pedi à IA exemplos em domínios simples. Ela gerou as figuras abaixo e foi explicando cada elemento delas, e foi assim que fui compreendendo como cada parte da notação funciona.
+
+![Ciclo de vida de um pedido de compra, exemplo gerado com apoio de IA Generativa](../../../Assets/subgrupo02_marcelo_estados_pedido_compra.png)
+
+<p align="center">Figura 1: Ciclo de vida de um pedido de compra, usado como exemplo de estudo da notação de máquina de estados. Fonte: Marcelo (2026).</p>
+
+No ciclo de vida de um pedido, a IA explicou o papel de cada elemento: o círculo preenchido que marca o início, a atividade `entry` que roda ao entrar em um estado, as condições entre colchetes que decidem qual caminho seguir e o estado final que encerra o fluxo. Entendi ali que um estado representa uma situação em que o sistema permanece, e que a transição só acontece quando a condição é satisfeita. Foi esse entendimento que me permitiu montar a máquina de estados da partida e a da batalha.
+
+![Diagrama de implantação de uma aplicação web, exemplo gerado com apoio de IA Generativa](../../../Assets/subgrupo02_marcelo_implantacao_exemplo_ia.jpeg)
+
+<p align="center">Figura 2: Diagrama de Implantação de uma aplicação web em nuvem, usado como exemplo de estudo da notação. Fonte: Marcelo (2026).</p>
+
+No exemplo de implantação, a explicação seguiu a mesma lógica: o que é um nó `<<device>>`, que representa uma máquina, o que é um ambiente de execução que roda dentro dele, por que os artefatos aparecem desenhados dentro do nó em que são implantados e por que cada ligação entre nós leva o nome do protocolo usado. Com esses conceitos claros, consegui descrever a implantação do G4_ProjetoJogo, com o PC do jogador, o runtime do Godot, os arquivos gravados em `user://` e a integração opcional com a plataforma de distribuição.
+
+
 ## Referências
 
 OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.1**. OMG, 2017. Disponível em: <https://www.omg.org/spec/UML/2.5.1/>. Acesso em: 17 set. 2026.
@@ -87,6 +110,7 @@ UML-DIAGRAMS.ORG. **UML Component**. Disponível em: <https://www.uml-diagrams.o
 |------|-------------------|
 |João Igor  |  25%         |
 |[Marcos Vinícius](https://github.com/MarcosViniciusG)  |  25%         |
+|[Marcelo de Araújo Lopes](https://github.com/MatielloAL)  |  25%         |
 
 <p align="center">Tabela 3: Contribuição dos integrantes.</p>
 
@@ -94,10 +118,12 @@ UML-DIAGRAMS.ORG. **UML Component**. Disponível em: <https://www.uml-diagrams.o
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-|  1.0   |15/09 | Adição do meu relatório de IA Generativa          |  [João Igor](github.com/JoaoPC10)        |         |
+|  1.0   |15/09 | Adição do meu relatório de IA Generativa          |  [João Igor](https://github.com/JoaoPC10)        |         |
 |  1.1   |17/09 | Adição do relatório de IA Generativa, com os históricos de conversa, referências e renumeração das tabelas | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.2   |17/09 | Revisão do relatório: texto condensado e correção dos links para os PDFs das conversas | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.3   |17/09 | Preenchimento da seção de Metodologia | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
+|  1.4   |17/09 | Correção da renderização das imagens no GitHub Pages (troca de `<img>` por sintaxe Markdown) e dos links de perfil sem `https://` | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
+|  1.5   |17/09 | Adição do meu relatório de IA Generativa | [Marcelo de Araújo Lopes](https://github.com/MatielloAL) |         |
 
 <p align="center">Tabela 4: Histórico de versão.</p>
 
