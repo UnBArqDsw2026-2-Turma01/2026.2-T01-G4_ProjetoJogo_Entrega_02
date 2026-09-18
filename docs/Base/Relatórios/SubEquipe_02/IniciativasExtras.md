@@ -223,9 +223,10 @@ UML-DIAGRAMS.ORG. **UML Use Case Diagrams**. Disponível em: <https://www.uml-di
 
 | Nome | % de Contribuição |
 |------|-------------------|
-| João Victor da Silva Batista de Farias | 33% |
-| João Igor Pereira da Costa | 33% |
-| Marcelo de Araújo Lopes | 33% |
+| João Igor Pereira da Costa | 25% |
+| João Victor da Silva Batista de Farias | 25% |
+| Marcelo de Araújo Lopes | 25% |
+| Marcos Vinícius de Oliveira | 25% |
 
 <p align="center">Tabela 5: Contribuição dos integrantes.</p>
 
@@ -239,6 +240,7 @@ UML-DIAGRAMS.ORG. **UML Use Case Diagrams**. Disponível em: <https://www.uml-di
 |  1.3   | 17/09 | Fundo avermelhado nas linhas dos requisitos não usados e correção de digitação na tabela | [João Victor](https://github.com/beyondmagic) |         |
 |  1.4   | 17/09 | Adição de explicação sobre os requisitos não contemplados nas modelagens | [João Victor](https://github.com/beyondmagic) |         |
 |  1.5   | 17/09 | Correção dos links relativos e ajuste da redação após a movimentação da página | [João Victor](https://github.com/beyondmagic) |         |
+|  1.6   | 17/09 | Adição de contribuição de todos os membros do subgrupo e atualização da tabela de histórico de versão | [João Victor](https://github.com/beyondmagic) | [Marcos Vinícius](https://github.com/MarcosViniciusG) |
 
 <p align="center">Tabela 6: Histórico de versão.</p>
 
