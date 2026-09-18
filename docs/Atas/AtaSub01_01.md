@@ -94,7 +94,7 @@ O Subgrupo 01 estabeleceu, contudo, o dia **16/09/2026** como prazo interno para
 
 Não foi possível obter **transcrição automática** desta reunião, pois os participantes não dispunham, no momento da chamada, dos recursos premium do Google Meet necessários para utilização dessa funcionalidade.
 
-Dessa forma, esta ata foi elaborada a partir das **anotações realizadas durante e imediatamente após a reunião**, buscando preservar as decisões, definições, prazos e responsabilidades estabelecidos pelo subgrupo.
+Dessa forma, esta ata foi elaborada a partir das [anotações realizadas durante e imediatamente após a reunião](Base/Relatórios/SubEquipe_01/assets/evidencias/anotacoes_manuais.txt ":ignore"), buscando preservar as decisões, definições, prazos e responsabilidades estabelecidos pelo subgrupo.
 
 Para as próximas reuniões, o grupo pretende verificar antecipadamente a disponibilidade do recurso de transcrição no Google Meet. Caso a funcionalidade continue indisponível, será considerada a utilização de outra plataforma, como o **Microsoft Teams**, a fim de melhorar a rastreabilidade e a documentação das discussões da equipe.
 
@@ -102,8 +102,6 @@ Para as próximas reuniões, o grupo pretende verificar antecipadamente a dispon
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
-| 1.0 | 11/09/2026 | Criação da ata com base nas anotações manuais da reunião | Yogi Nam de Souza Barbosa | A definir |
+| 1.0 | 11/09/2026 | Criação da ata com base nas anotações manuais da reunião | Yogi Nam de Souza Barbosa | |
 
 <p align="center">Tabela 7: Histórico de versão.</p>
-
-Ver também: [Atas do Subgrupo 01](SubEquipe_01.md) · [Modelagem UML](/Base/1.Modelagem.md)

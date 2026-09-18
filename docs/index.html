@@ -11,7 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css">
+  <link rel="stylesheet" href="Assets/vendor/photoswipe/photoswipe.css">
+  <link rel="stylesheet" href="Assets/css/page-tools.css">
+  <link rel="stylesheet" href="Assets/css/sidebar.css">
 
   <script>
     (function () {
@@ -83,14 +85,17 @@
       font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
     }
     ::selection { background: var(--gold); color: #10243b; }
-    .content { background-color: var(--surface); }
+    .content {
+      padding-top: 0;
+      background-color: var(--surface);
+    }
     .markdown-section {
       box-sizing: border-box;
       width: auto;
       max-width: none;
       min-height: 100vh;
       margin: 0;
-      padding: 40px clamp(24px, 4vw, 72px) 64px;
+      padding: 0 clamp(24px, 4vw, 72px) 24px;
       color: var(--text);
       background: var(--surface);
     }
@@ -144,7 +149,7 @@
     .markdown-section h1,
     .markdown-section h2,
     .markdown-section h3,
-    .markdown-section h4 { scroll-margin-top: 24px; }
+    .markdown-section h4 { scroll-margin-top: 52px; }
     .markdown-section strong { color: var(--heading); }
     .markdown-section a {
       color: var(--accent);
@@ -236,15 +241,26 @@
 
     /* ---------- page navigation ---------- */
     .breadcrumbs {
+      position: sticky;
+      top: 0;
+      z-index: 20;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       align-items: center;
       gap: 6px;
-      margin: 0 0 22px;
+      margin: 0 calc(-1 * clamp(24px, 4vw, 72px)) 22px;
+      padding: 7px clamp(24px, 4vw, 72px);
+      overflow-x: auto;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.4;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+      line-height: 1.25;
+      scrollbar-width: none;
     }
+    .breadcrumbs::-webkit-scrollbar { display: none; }
+    .breadcrumbs a,
+    .breadcrumbs span { white-space: nowrap; }
     .breadcrumbs a {
       color: var(--accent-strong);
       font-weight: 600;
@@ -296,143 +312,44 @@
       border-left-color: var(--section-accent);
     }
 
-    /* ---------- sidebar ---------- */
+
+    /* ---------- sidebar layout ---------- */
     .sidebar {
-      background: var(--sidebar-bg-deep);
-      border-right: 3px solid var(--accent);
-      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
     }
-    .sidebar > h1 { margin-bottom: 1.2rem; }
-    .sidebar > h1 a {
-      color: #ffffff;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-weight: 700;
-      text-shadow: 3px 3px 0 #020a12;
-    }
-    .sidebar > h1::after {
-      content: "H  C  O  Na  Cl";
-      display: block;
-      margin-top: 8px;
-      color: #bfe2ff;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: .18em;
-    }
-    .sidebar-toggle { background-color: var(--sidebar-bg-deep); }
-    .sidebar-toggle span { background-color: var(--sidebar-text); }
-    .sidebar .sidebar-nav { padding: 0 14px 90px 16px; line-height: 1.45; }
-    .sidebar ul { margin: 0; padding: 0; }
-
-    .sidebar ul li a,
-    .sidebar ul li > p {
-      color: var(--sidebar-text);
-      display: block;
-      margin: 2px 0;
-      padding: 6px 8px;
-      border-left: 3px solid transparent;
-      border-radius: 0;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.4;
-      text-decoration: none;
-      white-space: normal;
-      overflow: visible;
-      overflow-wrap: break-word;
-      text-overflow: clip;
-      font-family: "Courier New", "Lucida Console", monospace;
-    }
-    .sidebar ul li a:hover,
-    .sidebar ul li > p:hover {
-      background: var(--sidebar-bg);
-      color: #ffffff;
-      text-decoration: none;
-    }
-    .sidebar ul li.active > a {
-      background: var(--accent);
-      color: #ffffff;
-      font-weight: 700;
-      border-left: 6px solid #ffffff;
-    }
-    /* group headers */
-    .sidebar-nav li:not(.file) {
-      color: #ffffff !important;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-weight: 700;
-      opacity: 1;
-    }
-    .sidebar .sidebar-nav li > p {
-      color: #ffffff !important;
-      background: transparent !important;
-      border-left-color: transparent;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: .01em;
-      opacity: 1;
-    }
-    .sidebar-nav li:not(.file) > p,
-    .sidebar-nav li:not(.file) > a {
-      color: #ffffff !important;
-      background: transparent !important;
-      font-family: "Pixelify Sans", "Courier New", monospace;
-      font-size: 14px;
-      font-weight: 700;
-      opacity: 1;
-    }
-    /* nested levels */
-    .sidebar ul li ul {
-      padding-left: 10px;
-      margin-left: 4px;
-      border-left: 0;
-    }
-
-    .sidebar .sidebar-nav li.active > a,
-    .sidebar .sidebar-nav a.active,
-    .sidebar .sidebar-nav a.route-active,
-    .sidebar .sidebar-nav a[aria-current="page"] {
-      color: #ffffff !important;
-      background: var(--accent) !important;
-      border-left: 6px solid #ffffff;
-      font-weight: 700;
-    }
-
-    /* caret colors (plugin draws the chevron via ::before) */
-    .sidebar-nav ul:not(.app-sub-sidebar) > li:not(.file)::before {
-      border-right-color: rgba(255,255,255,.55);
-      border-bottom-color: rgba(255,255,255,.55);
-    }
-    .sidebar-nav ul:not(.app-sub-sidebar) > li.open::before {
-      border-right-color: var(--sidebar-text);
-      border-bottom-color: var(--sidebar-text);
-    }
-
-    /* ---------- search ---------- */
+    .sidebar .app-name,
     .sidebar .search {
-      margin: 0 16px 18px;
-      padding: 0;
-      border-bottom: 0;
+      flex: 0 0 auto;
     }
-    .sidebar .search input {
-      box-sizing: border-box;
-      width: 100%;
-      padding: 9px 10px;
-      color: #20272d;
-      background: #f7f8f9;
-      border: 2px solid #8e979f;
-      border-radius: 0;
-      box-shadow: 3px 3px 0 #090b0d;
-      font-family: "Courier New", "Lucida Console", monospace;
+    .sidebar .sidebar-nav {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
-    .sidebar .search input::placeholder { color: #68717a; }
-    .sidebar .search .results-panel { margin-top: 10px; }
-    .sidebar .search .matching-post {
-      border-bottom: 1px solid #4b5359;
-      color: var(--sidebar-text);
+    .sidebar:has(.search input:not(:placeholder-shown)) .sidebar-nav {
+      display: none;
     }
-    .sidebar .search .search-keyword {
-      color: #ffffff;
-      text-decoration: underline;
+    .sidebar:has(.search input:not(:placeholder-shown)) .search {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+    }
+
+    .sidebar .app-name-link .title-char {
+      display: inline-block;
+      animation: title-jump 3.5s infinite;
+      animation-delay: calc(var(--i) * 45ms);
+      text-shadow: inherit;
+    }
+    @keyframes title-jump {
+      0%, 8%, 100% { transform: translateY(0); }
+      4% { transform: translateY(-4px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sidebar .app-name-link .title-char { animation: none; }
     }
 
     /* ---------- theme toggle ---------- */
@@ -511,14 +428,17 @@
     }
 
     @media screen and (min-width: 1280px) {
-      body.has-page-toc .content { right: 250px; }
+      body.has-page-toc .content,
+      body:has(.related-pages) .content {
+        right: 250px;
+      }
       .page-toc {
         position: fixed;
         top: 92px;
         right: 18px;
         z-index: 12;
         width: 214px;
-        max-height: calc(100vh - 219px);
+        max-height: calc(100vh - 360px);
         margin: 0;
         overflow-y: auto;
       }
@@ -528,7 +448,11 @@
       .sidebar { width: 300px; }
       .markdown-section {
         margin: 0;
-        padding: 24px 16px 48px;
+        padding: 0 16px 24px;
+      }
+      .breadcrumbs {
+        margin: 0 -16px 18px;
+        padding: 7px 16px;
       }
       .markdown-section .project-hero { border-radius: 0; }
       #theme-toggle {
@@ -578,10 +502,30 @@
       });
     }
 
+    function animateAppName() {
+      var title = document.querySelector('.sidebar .app-name-link');
+      if (!title || title.dataset.animated) return;
+
+      var text = title.textContent;
+      title.textContent = '';
+      title.dataset.animated = 'true';
+
+      Array.from(text).forEach(function (char, index) {
+        var span = document.createElement('span');
+        span.className = 'title-char';
+        span.style.setProperty('--i', index);
+        span.textContent = char === ' ' ? '\u00A0' : char;
+        title.appendChild(span);
+      });
+    }
+
     function getDirectSidebarLabel(item) {
       for (var i = 0; i < item.children.length; i += 1) {
         var child = item.children[i];
-        if (child.tagName === 'A' || child.tagName === 'P') {
+        if (child.classList.contains('sidebar-group-row')) {
+          child = child.querySelector('a, .sidebar-disclosure');
+        }
+        if (child && (child.tagName === 'A' || child.tagName === 'P' || child.tagName === 'BUTTON')) {
           return {
             text: child.textContent.trim(),
             href: child.tagName === 'A' ? child.getAttribute('href') : null
@@ -726,12 +670,82 @@
       renderPageToc(content);
     }
 
+
+    var githubRepo =
+      'UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02';
+
+    async function getGithubStats() {
+      if (window.githubStats) return window.githubStats;
+
+      var responses = await Promise.all([
+        fetch('https://api.github.com/repos/' + githubRepo + '/issues?state=all&per_page=100'),
+        fetch('https://api.github.com/repos/' + githubRepo + '/pulls?state=all&per_page=100')
+      ]);
+
+      if (!responses[0].ok || !responses[1].ok) {
+        throw new Error('Não foi possível consultar a API do GitHub.');
+      }
+
+      var items = await responses[0].json();
+      var prs = await responses[1].json();
+      var issues = items.filter(function (item) { return !item.pull_request; });
+      var merged = prs.filter(function (pr) { return pr.merged_at; }).length;
+      var open = prs.filter(function (pr) { return pr.state === 'open'; }).length;
+      var closedWithoutMerge = prs.length - merged - open;
+
+      window.githubStats = {
+        issues: issues.length,
+        issuesOpen: issues.filter(function (issue) { return issue.state === 'open'; }).length,
+        issuesClosed: issues.filter(function (issue) { return issue.state === 'closed'; }).length,
+        prs: prs.length,
+        prsOpen: open,
+        prsMerged: merged,
+        prsClosedWithoutMerge: closedWithoutMerge
+      };
+
+      return window.githubStats;
+    }
+
+    async function updateGithubStats() {
+      var issuesElement = document.getElementById('gh-issues');
+      var prsElement = document.getElementById('gh-prs');
+      if (!issuesElement && !prsElement) return;
+
+      try {
+        var stats = await getGithubStats();
+
+        if (issuesElement) {
+          issuesElement.textContent =
+            stats.issues + ' issues: ' + stats.issuesClosed + ' fechadas e ' +
+            stats.issuesOpen + ' abertas.';
+        }
+
+        if (prsElement) {
+          var text = stats.prs + ' pull requests: ' + stats.prsMerged +
+            ' integrados e ' + stats.prsOpen + ' abertos';
+
+          if (stats.prsClosedWithoutMerge) {
+            text += ', além de ' + stats.prsClosedWithoutMerge + ' fechado(s) sem merge';
+          }
+
+          prsElement.textContent = text + '.';
+        }
+      } catch (error) {
+        if (issuesElement) issuesElement.textContent = 'Não foi possível consultar o GitHub.';
+        if (prsElement) prsElement.textContent = 'Não foi possível consultar o GitHub.';
+        console.error(error);
+      }
+    }
+
     window.$docsify = {
       loadSidebar: true,
       name: 'G4 - Projeto Jogo',
       repo: 'https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02',
       auto2top: true,
       relativePath: true,
+      plantuml: {
+        skin: 'classic'
+      },
       search: {
         maxAge: 86400000,
         paths: 'auto',
@@ -744,7 +758,6 @@
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       subMaxLevel: 0,
-      sidebarDisplayLevel: 6,
       plugins: [
         function (hook, vm) {
           hook.doneEach(function () {
@@ -767,6 +780,8 @@
             window.setTimeout(function () {
               highlightCurrentSidebarLink();
               renderPageNavigation();
+              animateAppName();
+              updateGithubStats();
             }, 0);
           });
         }
@@ -819,7 +834,7 @@
         var text = selectedText;
         if (!text) {
           var readableContent = content.cloneNode(true);
-          var excluded = readableContent.querySelectorAll('.breadcrumbs, .page-toc, script, style');
+          var excluded = readableContent.querySelectorAll('.breadcrumbs, .page-toc, .related-pages, .diagram-carousel-controls, .diagram-carousel-status, [hidden], script, style');
           Array.prototype.forEach.call(excluded, function (element) { element.remove(); });
           text = readableContent.textContent.replace(/\s+/g, ' ').trim();
         }
@@ -846,8 +861,11 @@
       syncBackToTop();
     })();
   </script>
+  <script src="Assets/vendor/photoswipe/photoswipe.umd.min.js"></script>
+  <script src="Assets/js/sidebar.js"></script>
+  <script src="Assets/js/page-tools.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
 </body>
 </html>

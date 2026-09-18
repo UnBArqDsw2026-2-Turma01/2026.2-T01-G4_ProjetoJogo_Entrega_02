@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="1330" viewBox="0 0 1720 1330" role="img" aria-labelledby="title desc"><title id="title">Componentes do G4_ProjetoJogo, V2</title><desc id="desc">Modelagem UML 2.5.1 do G4_ProjetoJogo, versão 2, com base nos requisitos do Subgrupo 03.</desc><metadata>{&quot;version&quot;: &quot;2.0&quot;, &quot;date&quot;: &quot;2026-09-14&quot;, &quot;author&quot;: &quot;Yogi Nam de Souza Barbosa&quot;, &quot;nodes&quot;: {&quot;ui&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;ui : Interface\ndo Jogador&quot;, &quot;x&quot;: 80, &quot;y&quot;: 155, &quot;w&quot;: 280, &quot;h&quot;: 110}, &quot;controle&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;controle : Controle da Partida&quot;, &quot;x&quot;: 550, &quot;y&quot;: 115, &quot;w&quot;: 600, &quot;h&quot;: 285}, &quot;save&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;save : Salvamento&quot;, &quot;x&quot;: 1330, &quot;y&quot;: 140, &quot;w&quot;: 300, &quot;h&quot;: 100}, &quot;catalogo&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;catalogo :\nCatálogo do Jogo&quot;, &quot;x&quot;: 1330, &quot;y&quot;: 300, &quot;w&quot;: 300, &quot;h&quot;: 100}, &quot;mundo&quot;: {&quot;kind&quot;: &quot;subsystem&quot;, &quot;role&quot;: &quot;mundo : Mundo e Interações&quot;, &quot;x&quot;: 70, &quot;y&quot;: 565, &quot;w&quot;: 520, &quot;h&quot;: 590}, &quot;exploracao&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;exploracao : Exploração&quot;, &quot;x&quot;: 140, &quot;y&quot;: 700, &quot;w&quot;: 300, &quot;h&quot;: 110}, &quot;npcs&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;npcs : Interações\ncom NPCs&quot;, &quot;x&quot;: 140, &quot;y&quot;: 945, &quot;w&quot;: 300, &quot;h&quot;: 110}, &quot;batalha&quot;: {&quot;kind&quot;: &quot;subsystem&quot;, &quot;role&quot;: &quot;batalha : Combate e Magia&quot;, &quot;x&quot;: 645, &quot;y&quot;: 565, &quot;w&quot;: 430, &quot;h&quot;: 590}, &quot;combate&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;combate : Combate\nem Turnos&quot;, &quot;x&quot;: 710, &quot;y&quot;: 705, &quot;w&quot;: 300, &quot;h&quot;: 110}, &quot;magias&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;magias : Magias&quot;, &quot;x&quot;: 710, &quot;y&quot;: 960, &quot;w&quot;: 300, &quot;h&quot;: 110}, &quot;progresso&quot;: {&quot;kind&quot;: &quot;subsystem&quot;, &quot;role&quot;: &quot;progresso : Progressão&quot;, &quot;x&quot;: 1130, &quot;y&quot;: 565, &quot;w&quot;: 520, &quot;h&quot;: 650}, &quot;estado&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;estado : Estado\ndo Jogador&quot;, &quot;x&quot;: 1240, &quot;y&quot;: 705, &quot;w&quot;: 300, &quot;h&quot;: 125}, &quot;inventario&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;inventario :\nInventário&quot;, &quot;x&quot;: 1170, &quot;y&quot;: 1020, &quot;w&quot;: 215, &quot;h&quot;: 110}, &quot;diario&quot;: {&quot;kind&quot;: &quot;component-part&quot;, &quot;role&quot;: &quot;diario : Diário\ndo Aventureiro&quot;, &quot;x&quot;: 1410, &quot;y&quot;: 1020, &quot;w&quot;: 215, &quot;h&quot;: 110}}, &quot;flows&quot;: [], &quot;ports&quot;: {&quot;ui-partida&quot;: {&quot;x&quot;: 360, &quot;y&quot;: 210, &quot;owner&quot;: &quot;ui&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;IPartida&quot;}, &quot;ctl-partida&quot;: {&quot;x&quot;: 550, &quot;y&quot;: 210, &quot;owner&quot;: &quot;controle&quot;, &quot;provided&quot;: &quot;IPartida&quot;, &quot;required&quot;: null}, &quot;ctl-save&quot;: {&quot;x&quot;: 1150, &quot;y&quot;: 190, &quot;owner&quot;: &quot;controle&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;ISalvamento&quot;}, &quot;save-p&quot;: {&quot;x&quot;: 1330, &quot;y&quot;: 190, &quot;owner&quot;: &quot;save&quot;, &quot;provided&quot;: &quot;ISalvamento&quot;, &quot;required&quot;: null}, &quot;ctl-catalogo&quot;: {&quot;x&quot;: 1150, &quot;y&quot;: 350, &quot;owner&quot;: &quot;controle&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;ICatalogo&quot;}, &quot;catalogo-p&quot;: {&quot;x&quot;: 1330, &quot;y&quot;: 350, &quot;owner&quot;: &quot;catalogo&quot;, &quot;provided&quot;: &quot;ICatalogo&quot;, &quot;required&quot;: null}, &quot;ctl-mundo&quot;: {&quot;x&quot;: 620, &quot;y&quot;: 400, &quot;owner&quot;: &quot;controle&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;IExploracao&quot;}, &quot;mundo-p&quot;: {&quot;x&quot;: 140, &quot;y&quot;: 565, &quot;owner&quot;: &quot;mundo&quot;, &quot;provided&quot;: &quot;IExploracao&quot;, &quot;required&quot;: null}, &quot;exploracao-p&quot;: {&quot;x&quot;: 220, &quot;y&quot;: 700, &quot;owner&quot;: &quot;exploracao&quot;, &quot;provided&quot;: &quot;IExploracao&quot;, &quot;required&quot;: null}, &quot;ctl-npcs&quot;: {&quot;x&quot;: 740, &quot;y&quot;: 400, &quot;owner&quot;: &quot;controle&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;INPCs&quot;}, &quot;mundo-npcs&quot;: {&quot;x&quot;: 540, &quot;y&quot;: 565, &quot;owner&quot;: &quot;mundo&quot;, &quot;provided&quot;: &quot;INPCs&quot;, &quot;required&quot;: null}, &quot;npcs-p&quot;: {&quot;x&quot;: 440, &quot;y&quot;: 1000, &quot;owner&quot;: &quot;npcs&quot;, &quot;provided&quot;: &quot;INPCs&quot;, &quot;required&quot;: null}, &quot;ctl-combate&quot;: {&quot;x&quot;: 870, &quot;y&quot;: 400, &quot;owner&quot;: &quot;controle&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;ICombate&quot;}, &quot;batalha-p&quot;: {&quot;x&quot;: 675, &quot;y&quot;: 565, &quot;owner&quot;: &quot;batalha&quot;, &quot;provided&quot;: &quot;ICombate&quot;, &quot;required&quot;: null}, &quot;combate-p&quot;: {&quot;x&quot;: 870, &quot;y&quot;: 705, &quot;owner&quot;: &quot;combate&quot;, &quot;provided&quot;: &quot;ICombate&quot;, &quot;required&quot;: null}, &quot;combate-magias&quot;: {&quot;x&quot;: 860, &quot;y&quot;: 815, &quot;owner&quot;: &quot;combate&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;IMagias&quot;}, &quot;magias-p&quot;: {&quot;x&quot;: 860, &quot;y&quot;: 960, &quot;owner&quot;: &quot;magias&quot;, &quot;provided&quot;: &quot;IMagias&quot;, &quot;required&quot;: null}, &quot;ctl-progresso&quot;: {&quot;x&quot;: 1050, &quot;y&quot;: 400, &quot;owner&quot;: &quot;controle&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;IProgresso&quot;}, &quot;progresso-p&quot;: {&quot;x&quot;: 1605, &quot;y&quot;: 565, &quot;owner&quot;: &quot;progresso&quot;, &quot;provided&quot;: &quot;IProgresso&quot;, &quot;required&quot;: null}, &quot;estado-p&quot;: {&quot;x&quot;: 1540, &quot;y&quot;: 765, &quot;owner&quot;: &quot;estado&quot;, &quot;provided&quot;: &quot;IProgresso&quot;, &quot;required&quot;: null}, &quot;estado-inv&quot;: {&quot;x&quot;: 1277, &quot;y&quot;: 830, &quot;owner&quot;: &quot;estado&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;IInventario&quot;}, &quot;inv-p&quot;: {&quot;x&quot;: 1277, &quot;y&quot;: 1020, &quot;owner&quot;: &quot;inventario&quot;, &quot;provided&quot;: &quot;IInventario&quot;, &quot;required&quot;: null}, &quot;estado-diario&quot;: {&quot;x&quot;: 1517, &quot;y&quot;: 830, &quot;owner&quot;: &quot;estado&quot;, &quot;provided&quot;: null, &quot;required&quot;: &quot;IDiario&quot;}, &quot;diario-p&quot;: {&quot;x&quot;: 1517, &quot;y&quot;: 1020, &quot;owner&quot;: &quot;diario&quot;, &quot;provided&quot;: &quot;IDiario&quot;, &quot;required&quot;: null}}, &quot;contracts&quot;: [{&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;IPartida&quot;, &quot;consumer&quot;: &quot;ui-partida&quot;, &quot;provider&quot;: &quot;ctl-partida&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;ISalvamento&quot;, &quot;consumer&quot;: &quot;ctl-save&quot;, &quot;provider&quot;: &quot;save-p&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;ICatalogo&quot;, &quot;consumer&quot;: &quot;ctl-catalogo&quot;, &quot;provider&quot;: &quot;catalogo-p&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;IExploracao&quot;, &quot;consumer&quot;: &quot;ctl-mundo&quot;, &quot;provider&quot;: &quot;mundo-p&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;INPCs&quot;, &quot;consumer&quot;: &quot;ctl-npcs&quot;, &quot;provider&quot;: &quot;mundo-npcs&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;ICombate&quot;, &quot;consumer&quot;: &quot;ctl-combate&quot;, &quot;provider&quot;: &quot;batalha-p&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;IProgresso&quot;, &quot;consumer&quot;: &quot;ctl-progresso&quot;, &quot;provider&quot;: &quot;progresso-p&quot;}, {&quot;kind&quot;: &quot;delegation&quot;, &quot;external&quot;: &quot;mundo-p&quot;, &quot;internal&quot;: &quot;exploracao-p&quot;}, {&quot;kind&quot;: &quot;delegation&quot;, &quot;external&quot;: &quot;mundo-npcs&quot;, &quot;internal&quot;: &quot;npcs-p&quot;}, {&quot;kind&quot;: &quot;delegation&quot;, &quot;external&quot;: &quot;batalha-p&quot;, &quot;internal&quot;: &quot;combate-p&quot;}, {&quot;kind&quot;: &quot;delegation&quot;, &quot;external&quot;: &quot;progresso-p&quot;, &quot;internal&quot;: &quot;estado-p&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;IMagias&quot;, &quot;consumer&quot;: &quot;combate-magias&quot;, &quot;provider&quot;: &quot;magias-p&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;IInventario&quot;, &quot;consumer&quot;: &quot;estado-inv&quot;, &quot;provider&quot;: &quot;inv-p&quot;}, {&quot;kind&quot;: &quot;assembly&quot;, &quot;interface&quot;: &quot;IDiario&quot;, &quot;consumer&quot;: &quot;estado-diario&quot;, &quot;provider&quot;: &quot;diario-p&quot;}]}</metadata><defs><marker id="arrow" viewBox="0 0 12 10" refX="11" refY="5" markerWidth="9" markerHeight="8" orient="auto-start-reverse"><path d="M 1 1 L 11 5 L 1 9" fill="none" stroke="#252525" stroke-width="1.5"/></marker></defs><rect width="100%" height="100%" fill="white"/><g font-family="Arial, Helvetica, sans-serif" fill="#202020">
+<rect id="graphic-1" x="20" y="20" width="1680" height="1230" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="45" y="49" text-anchor="start" font-size="22" font-weight="700">
+<tspan x="45" y="56.480000000000004">«component» G4_ProjetoJogo</tspan>
+</text>
+<polyline id="graphic-3" points="20,80 1700,80" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect id="ui" x="80" y="155" width="280" height="110" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-4" x="330" y="167" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-5" x="324" y="171" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-6" x="324" y="181" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="220.0" y="210.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="220.0" y="203.73">ui : Interface</tspan>
+<tspan x="220.0" y="231.23">do Jogador</tspan>
+</text>
+<rect id="controle" x="550" y="115" width="600" height="285" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-8" x="1120" y="127" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-9" x="1114" y="131" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-10" x="1114" y="141" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="850.0" y="257.5" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="850.0" y="264.98">controle : Controle da Partida</tspan>
+</text>
+<rect id="save" x="1330" y="140" width="300" height="100" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-12" x="1600" y="152" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-13" x="1594" y="156" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-14" x="1594" y="166" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1480.0" y="190.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="1480.0" y="197.48">save : Salvamento</tspan>
+</text>
+<rect id="catalogo" x="1330" y="300" width="300" height="100" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-16" x="1600" y="312" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-17" x="1594" y="316" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-18" x="1594" y="326" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1480.0" y="350.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="1480.0" y="343.73">catalogo :</tspan>
+<tspan x="1480.0" y="371.23">Catálogo do Jogo</tspan>
+</text>
+<rect id="mundo" x="70" y="565" width="520" height="590" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-20" x="560" y="577" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-21" x="554" y="581" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-22" x="554" y="591" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="330.0" y="591" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="330.0" y="597.12">«Subsystem»</tspan>
+</text>
+<text x="330.0" y="618" text-anchor="middle" font-size="20" font-weight="700">
+<tspan x="330.0" y="624.8">mundo : Mundo e Interações</tspan>
+</text>
+<polyline id="graphic-25" points="70,643 590,643" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect id="exploracao" x="140" y="700" width="300" height="110" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-26" x="410" y="712" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-27" x="404" y="716" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-28" x="404" y="726" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="290.0" y="755.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="290.0" y="762.48">exploracao : Exploração</tspan>
+</text>
+<rect id="npcs" x="140" y="945" width="300" height="110" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-30" x="410" y="957" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-31" x="404" y="961" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-32" x="404" y="971" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="290.0" y="1000.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="290.0" y="993.73">npcs : Interações</tspan>
+<tspan x="290.0" y="1021.23">com NPCs</tspan>
+</text>
+<rect id="batalha" x="645" y="565" width="430" height="590" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-34" x="1045" y="577" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-35" x="1039" y="581" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-36" x="1039" y="591" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="860.0" y="591" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="860.0" y="597.12">«Subsystem»</tspan>
+</text>
+<text x="860.0" y="618" text-anchor="middle" font-size="20" font-weight="700">
+<tspan x="860.0" y="624.8">batalha : Combate e Magia</tspan>
+</text>
+<polyline id="graphic-39" points="645,643 1075,643" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect id="combate" x="710" y="705" width="300" height="110" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-40" x="980" y="717" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-41" x="974" y="721" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-42" x="974" y="731" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="860.0" y="760.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="860.0" y="753.73">combate : Combate</tspan>
+<tspan x="860.0" y="781.23">em Turnos</tspan>
+</text>
+<rect id="magias" x="710" y="960" width="300" height="110" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-44" x="980" y="972" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-45" x="974" y="976" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-46" x="974" y="986" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="860.0" y="1015.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="860.0" y="1022.48">magias : Magias</tspan>
+</text>
+<rect id="progresso" x="1130" y="565" width="520" height="650" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-48" x="1620" y="577" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-49" x="1614" y="581" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-50" x="1614" y="591" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1390.0" y="591" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="1390.0" y="597.12">«Subsystem»</tspan>
+</text>
+<text x="1390.0" y="618" text-anchor="middle" font-size="20" font-weight="700">
+<tspan x="1390.0" y="624.8">progresso : Progressão</tspan>
+</text>
+<polyline id="graphic-53" points="1130,643 1650,643" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect id="estado" x="1240" y="705" width="300" height="125" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-54" x="1510" y="717" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-55" x="1504" y="721" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-56" x="1504" y="731" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1390.0" y="767.5" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="1390.0" y="761.23">estado : Estado</tspan>
+<tspan x="1390.0" y="788.73">do Jogador</tspan>
+</text>
+<rect id="inventario" x="1170" y="1020" width="215" height="110" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-58" x="1355" y="1032" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-59" x="1349" y="1036" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-60" x="1349" y="1046" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1277.5" y="1075.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="1277.5" y="1068.73">inventario :</tspan>
+<tspan x="1277.5" y="1096.23">Inventário</tspan>
+</text>
+<rect id="diario" x="1410" y="1020" width="215" height="110" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-62" x="1595" y="1032" width="18" height="22" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-63" x="1589" y="1036" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="graphic-64" x="1589" y="1046" width="10" height="6" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="1517.5" y="1075.0" text-anchor="middle" font-size="22" font-weight="700">
+<tspan x="1517.5" y="1068.73">diario : Diário</tspan>
+<tspan x="1517.5" y="1096.23">do Aventureiro</tspan>
+</text>
+<rect id="ui-partida" x="354" y="204" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="ctl-partida" x="544" y="204" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="ctl-save" x="1144" y="184" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="save-p" x="1324" y="184" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="ctl-catalogo" x="1144" y="344" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="catalogo-p" x="1324" y="344" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="ctl-mundo" x="614" y="394" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="mundo-p" x="134" y="559" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="exploracao-p" x="214" y="694" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="ctl-npcs" x="734" y="394" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="mundo-npcs" x="534" y="559" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="npcs-p" x="434" y="994" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="ctl-combate" x="864" y="394" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="batalha-p" x="669" y="559" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="combate-p" x="864" y="699" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="combate-magias" x="854" y="809" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="magias-p" x="854" y="954" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="ctl-progresso" x="1044" y="394" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="progresso-p" x="1599" y="559" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="estado-p" x="1534" y="759" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="estado-inv" x="1271" y="824" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="inv-p" x="1271" y="1014" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="estado-diario" x="1511" y="824" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<rect id="diario-p" x="1511" y="1014" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<circle id="graphic-66" cx="450" cy="210" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-68" points="366,210 437,210" fill="none" stroke="#252525" stroke-width="1.8" data-source="ui-partida" data-target="graphic-67"/>
+<polyline id="graphic-69" points="458,210 544,210" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-66" data-target="ctl-partida"/>
+<polyline id="graphic-70" points="450.0,223.0 448.64,222.93 447.3,222.72 445.98,222.36 444.71,221.88 443.5,221.26 442.36,220.52 441.3,219.66 440.34,218.7 439.48,217.64 438.74,216.5 438.12,215.29 437.64,214.02 437.28,212.7 437.07,211.36 437.0,210.0 437.07,208.64 437.28,207.3 437.64,205.98 438.12,204.71 438.74,203.5 439.48,202.36 440.34,201.3 441.3,200.34 442.36,199.48 443.5,198.74 444.71,198.12 445.98,197.64 447.3,197.28 448.64,197.07 450.0,197.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="403.68" y="170.75" width="92.64000000000001" height="22.5" fill="white"/>
+<text x="450" y="182" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="450" y="188.12">IPartida</tspan>
+</text>
+<circle id="graphic-72" cx="1240" cy="190" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-74" points="1156,190 1227,190" fill="none" stroke="#252525" stroke-width="1.8" data-source="ctl-save" data-target="graphic-73"/>
+<polyline id="graphic-75" points="1248,190 1324,190" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-72" data-target="save-p"/>
+<polyline id="graphic-76" points="1240.0,203.0 1238.64,202.93 1237.3,202.72 1235.98,202.36 1234.71,201.88 1233.5,201.26 1232.36,200.52 1231.3,199.66 1230.34,198.7 1229.48,197.64 1228.74,196.5 1228.12,195.29 1227.64,194.02 1227.28,192.7 1227.07,191.36 1227.0,190.0 1227.07,188.64 1227.28,187.3 1227.64,185.98 1228.12,184.71 1228.74,183.5 1229.48,182.36 1230.34,181.3 1231.3,180.34 1232.36,179.48 1233.5,178.74 1234.71,178.12 1235.98,177.64 1237.3,177.28 1238.64,177.07 1240.0,177.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="1178.56" y="150.75" width="122.88000000000001" height="22.5" fill="white"/>
+<text x="1240" y="162" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="1240" y="168.12">ISalvamento</tspan>
+</text>
+<circle id="graphic-78" cx="1240" cy="350" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-80" points="1156,350 1227,350" fill="none" stroke="#252525" stroke-width="1.8" data-source="ctl-catalogo" data-target="graphic-79"/>
+<polyline id="graphic-81" points="1248,350 1324,350" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-78" data-target="catalogo-p"/>
+<polyline id="graphic-82" points="1240.0,363.0 1238.64,362.93 1237.3,362.72 1235.98,362.36 1234.71,361.88 1233.5,361.26 1232.36,360.52 1231.3,359.66 1230.34,358.7 1229.48,357.64 1228.74,356.5 1228.12,355.29 1227.64,354.02 1227.28,352.7 1227.07,351.36 1227.0,350.0 1227.07,348.64 1227.28,347.3 1227.64,345.98 1228.12,344.71 1228.74,343.5 1229.48,342.36 1230.34,341.3 1231.3,340.34 1232.36,339.48 1233.5,338.74 1234.71,338.12 1235.98,337.64 1237.3,337.28 1238.64,337.07 1240.0,337.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="1188.64" y="310.75" width="102.72000000000001" height="22.5" fill="white"/>
+<text x="1240" y="322" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="1240" y="328.12">ICatalogo</tspan>
+</text>
+<circle id="graphic-84" cx="140" cy="500" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-86" points="620,406 620,440 140,440 140,487" fill="none" stroke="#252525" stroke-width="1.8" data-source="ctl-mundo" data-target="graphic-85"/>
+<polyline id="graphic-87" points="140,508 140,559" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-84" data-target="mundo-p"/>
+<polyline id="graphic-88" points="127.0,500.0 127.07,498.64 127.28,497.3 127.64,495.98 128.12,494.71 128.74,493.5 129.48,492.36 130.34,491.3 131.3,490.34 132.36,489.48 133.5,488.74 134.71,488.12 135.98,487.64 137.3,487.28 138.64,487.07 140.0,487.0 141.36,487.07 142.7,487.28 144.02,487.64 145.29,488.12 146.5,488.74 147.64,489.48 148.7,490.34 149.66,491.3 150.52,492.36 151.26,493.5 151.88,494.71 152.36,495.98 152.72,497.3 152.93,498.64 153.0,500.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="164" y="488.75" width="122.88000000000001" height="22.5" fill="white"/>
+<text x="164" y="500" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="164" y="506.12">IExploracao</tspan>
+</text>
+<circle id="graphic-90" cx="540" cy="520" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-92" points="740,406 740,470 540,470 540,507" fill="none" stroke="#252525" stroke-width="1.8" data-source="ctl-npcs" data-target="graphic-91"/>
+<polyline id="graphic-93" points="540,528 540,559" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-90" data-target="mundo-npcs"/>
+<polyline id="graphic-94" points="527.0,520.0 527.07,518.64 527.28,517.3 527.64,515.98 528.12,514.71 528.74,513.5 529.48,512.36 530.34,511.3 531.3,510.34 532.36,509.48 533.5,508.74 534.71,508.12 535.98,507.64 537.3,507.28 538.64,507.07 540.0,507.0 541.36,507.07 542.7,507.28 544.02,507.64 545.29,508.12 546.5,508.74 547.64,509.48 548.7,510.34 549.66,511.3 550.52,512.36 551.26,513.5 551.88,514.71 552.36,515.98 552.72,517.3 552.93,518.64 553.0,520.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="564" y="508.75" width="62.400000000000006" height="22.5" fill="white"/>
+<text x="564" y="520" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="564" y="526.12">INPCs</tspan>
+</text>
+<circle id="graphic-96" cx="675" cy="530" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-98" points="870,406 870,495 675,495 675,517" fill="none" stroke="#252525" stroke-width="1.8" data-source="ctl-combate" data-target="graphic-97"/>
+<polyline id="graphic-99" points="675,538 675,559" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-96" data-target="batalha-p"/>
+<polyline id="graphic-100" points="662.0,530.0 662.07,528.64 662.28,527.3 662.64,525.98 663.12,524.71 663.74,523.5 664.48,522.36 665.34,521.3 666.3,520.34 667.36,519.48 668.5,518.74 669.71,518.12 670.98,517.64 672.3,517.28 673.64,517.07 675.0,517.0 676.36,517.07 677.7,517.28 679.02,517.64 680.29,518.12 681.5,518.74 682.64,519.48 683.7,520.34 684.66,521.3 685.52,522.36 686.26,523.5 686.88,524.71 687.36,525.98 687.72,527.3 687.93,528.64 688.0,530.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="699" y="518.75" width="92.64000000000001" height="22.5" fill="white"/>
+<text x="699" y="530" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="699" y="536.12">ICombate</tspan>
+</text>
+<circle id="graphic-102" cx="1605" cy="510" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-104" points="1050,406 1050,465 1605,465 1605,497" fill="none" stroke="#252525" stroke-width="1.8" data-source="ctl-progresso" data-target="graphic-103"/>
+<polyline id="graphic-105" points="1605,518 1605,559" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-102" data-target="progresso-p"/>
+<polyline id="graphic-106" points="1592.0,510.0 1592.07,508.64 1592.28,507.3 1592.64,505.98 1593.12,504.71 1593.74,503.5 1594.48,502.36 1595.34,501.3 1596.3,500.34 1597.36,499.48 1598.5,498.74 1599.71,498.12 1600.98,497.64 1602.3,497.28 1603.64,497.07 1605.0,497.0 1606.36,497.07 1607.7,497.28 1609.02,497.64 1610.29,498.12 1611.5,498.74 1612.64,499.48 1613.7,500.34 1614.66,501.3 1615.52,502.36 1616.26,503.5 1616.88,504.71 1617.36,505.98 1617.72,507.3 1617.93,508.64 1618.0,510.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="1468.2" y="498.75" width="112.80000000000001" height="22.5" fill="white"/>
+<text x="1581" y="510" text-anchor="end" font-size="18" font-weight="400">
+<tspan x="1581" y="516.12">IProgresso</tspan>
+</text>
+<polyline id="graphic-108" points="140,571 140,665 220,665 220,694" fill="none" stroke="#252525" stroke-width="1.8" data-source="mundo-p" data-target="exploracao-p"/>
+<polyline id="graphic-109" points="540,571 540,1000 446,1000" fill="none" stroke="#252525" stroke-width="1.8" data-source="mundo-npcs" data-target="npcs-p"/>
+<polyline id="graphic-110" points="675,571 675,665 870,665 870,699" fill="none" stroke="#252525" stroke-width="1.8" data-source="batalha-p" data-target="combate-p"/>
+<polyline id="graphic-111" points="1605,571 1605,765 1546,765" fill="none" stroke="#252525" stroke-width="1.8" data-source="progresso-p" data-target="estado-p"/>
+<circle id="graphic-112" cx="860" cy="890" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-114" points="860,821 860,877" fill="none" stroke="#252525" stroke-width="1.8" data-source="combate-magias" data-target="graphic-113"/>
+<polyline id="graphic-115" points="860,898 860,954" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-112" data-target="magias-p"/>
+<polyline id="graphic-116" points="847.0,890.0 847.07,888.64 847.28,887.3 847.64,885.98 848.12,884.71 848.74,883.5 849.48,882.36 850.34,881.3 851.3,880.34 852.36,879.48 853.5,878.74 854.71,878.12 855.98,877.64 857.3,877.28 858.64,877.07 860.0,877.0 861.36,877.07 862.7,877.28 864.02,877.64 865.29,878.12 866.5,878.74 867.64,879.48 868.7,880.34 869.66,881.3 870.52,882.36 871.26,883.5 871.88,884.71 872.36,885.98 872.72,887.3 872.93,888.64 873.0,890.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="884" y="878.75" width="82.56" height="22.5" fill="white"/>
+<text x="884" y="890" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="884" y="896.12">IMagias</tspan>
+</text>
+<circle id="graphic-118" cx="1277" cy="925" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-120" points="1277,836 1277,912" fill="none" stroke="#252525" stroke-width="1.8" data-source="estado-inv" data-target="graphic-119"/>
+<polyline id="graphic-121" points="1277,933 1277,1014" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-118" data-target="inv-p"/>
+<polyline id="graphic-122" points="1264.0,925.0 1264.07,923.64 1264.28,922.3 1264.64,920.98 1265.12,919.71 1265.74,918.5 1266.48,917.36 1267.34,916.3 1268.3,915.34 1269.36,914.48 1270.5,913.74 1271.71,913.12 1272.98,912.64 1274.3,912.28 1275.64,912.07 1277.0,912.0 1278.36,912.07 1279.7,912.28 1281.02,912.64 1282.29,913.12 1283.5,913.74 1284.64,914.48 1285.7,915.34 1286.66,916.3 1287.52,917.36 1288.26,918.5 1288.88,919.71 1289.36,920.98 1289.72,922.3 1289.93,923.64 1290.0,925.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="1301" y="913.75" width="122.88000000000001" height="22.5" fill="white"/>
+<text x="1301" y="925" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="1301" y="931.12">IInventario</tspan>
+</text>
+<circle id="graphic-124" cx="1517" cy="925" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-126" points="1517,836 1517,912" fill="none" stroke="#252525" stroke-width="1.8" data-source="estado-diario" data-target="graphic-125"/>
+<polyline id="graphic-127" points="1517,933 1517,1014" fill="none" stroke="#252525" stroke-width="1.8" data-source="graphic-124" data-target="diario-p"/>
+<polyline id="graphic-128" points="1504.0,925.0 1504.07,923.64 1504.28,922.3 1504.64,920.98 1505.12,919.71 1505.74,918.5 1506.48,917.36 1507.34,916.3 1508.3,915.34 1509.36,914.48 1510.5,913.74 1511.71,913.12 1512.98,912.64 1514.3,912.28 1515.64,912.07 1517.0,912.0 1518.36,912.07 1519.7,912.28 1521.02,912.64 1522.29,913.12 1523.5,913.74 1524.64,914.48 1525.7,915.34 1526.66,916.3 1527.52,917.36 1528.26,918.5 1528.88,919.71 1529.36,920.98 1529.72,922.3 1529.93,923.64 1530.0,925.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<rect x="1541" y="913.75" width="82.56" height="22.5" fill="white"/>
+<text x="1541" y="925" text-anchor="start" font-size="18" font-weight="400">
+<tspan x="1541" y="931.12">IDiario</tspan>
+</text>
+<text x="490" y="1193" text-anchor="middle" font-size="18" font-weight="400">
+<tspan x="490" y="1199.12">Estruturas internas com papéis nomeados: papel : Tipo</tspan>
+</text>
+<rect id="graphic-131" x="55" y="1280" width="12" height="12" rx="0" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="85" y="1286" text-anchor="start" font-size="17" font-weight="400">
+<tspan x="85" y="1291.78">Porta</tspan>
+</text>
+<polyline id="graphic-133" points="205,1286 245,1286" fill="none" stroke="#252525" stroke-width="1.8"/>
+<circle id="graphic-134" cx="253" cy="1286" r="8" fill="white" stroke="#252525" stroke-width="1.8"/>
+<text x="277" y="1286" text-anchor="start" font-size="17" font-weight="400">
+<tspan x="277" y="1291.78">Interface fornecida</tspan>
+</text>
+<polyline id="graphic-136" points="500,1286 527,1286" fill="none" stroke="#252525" stroke-width="1.8"/>
+<polyline id="graphic-137" points="540.0,1299.0 538.64,1298.93 537.3,1298.72 535.98,1298.36 534.71,1297.88 533.5,1297.26 532.36,1296.52 531.3,1295.66 530.34,1294.7 529.48,1293.64 528.74,1292.5 528.12,1291.29 527.64,1290.02 527.28,1288.7 527.07,1287.36 527.0,1286.0 527.07,1284.64 527.28,1283.3 527.64,1281.98 528.12,1280.71 528.74,1279.5 529.48,1278.36 530.34,1277.3 531.3,1276.34 532.36,1275.48 533.5,1274.74 534.71,1274.12 535.98,1273.64 537.3,1273.28 538.64,1273.07 540.0,1273.0" fill="none" stroke="#252525" stroke-width="1.8"/>
+<text x="565" y="1286" text-anchor="start" font-size="17" font-weight="400">
+<tspan x="565" y="1291.78">Interface requerida</tspan>
+</text>
+<polyline id="graphic-139" points="810,1286 880,1286" fill="none" stroke="#252525" stroke-width="1.8"/>
+<text x="900" y="1286" text-anchor="start" font-size="17" font-weight="400">
+<tspan x="900" y="1291.78">Delegação entre a porta externa e a parte interna</tspan>
+</text></g></svg>
