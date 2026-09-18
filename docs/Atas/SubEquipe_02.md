@@ -29,7 +29,9 @@ Toda reunião é registrada em uma ata própria, seguindo o modelo definido em [
 
 | Ata | Data | Assunto | Redator | Link |
 |:---:|:----:|---------|---------|:----:|
-|     |      |         |         |      |
+| Sub02 01 | 11/09/2026 | Planejamento da subequipe: requisitos brutos, distribuição de atividades e início dos diagramas | [João Victor](https://github.com/beyondmagic) | [AtaSub02_01](/Atas/AtaSub02_01.md) |
+| Sub02 02 | 15/09/2026 | Conclusão dos diagramas com revisão e início da iniciativa extra de Casos de Uso | [João Victor](https://github.com/beyondmagic) | [AtaSub02_02](/Atas/AtaSub02_02.md) |
+| Sub02 03 | 17/09/2026 | Conclusão das atividades principais e revisão final da subequipe | [João Victor](https://github.com/beyondmagic) | [AtaSub02_03](/Atas/AtaSub02_03.md) |
 
 <p align="center">Tabela 2: Registro de reuniões.</p>
 
