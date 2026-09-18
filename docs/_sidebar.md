@@ -34,7 +34,14 @@
 
 - Atas de Reunião
   - [Reuniões Gerais](/Atas/Gerais.md)
+    - [Ata 01: 08/09/2026](/Atas/AtaGeral01.md)
   - Subgrupo 01
     - [Ata 01: 11/09/2026](/Atas/AtaSub01_01.md)
-  - Subgrupo 02
-  - Subgrupo 03
+  - [Subgrupo 02](/Atas/SubEquipe_02.md)
+    - [Ata 01: 11/09/2026](/Atas/AtaSub02_01.md)
+    - [Ata 02: 15/09/2026](/Atas/AtaSub02_02.md)
+    - [Ata 03: 17/09/2026](/Atas/AtaSub02_03.md)
+  - [Subgrupo 03](/Atas/SubEquipe_03.md)
+    - [Ata 01: 12/09/2026](/Atas/AtaSub03_01.md)
+    - [Ata 02: 15/09/2026](/Atas/AtaSub03_02.md)
+    - [Ata 03: 16/09/2026](/Atas/AtaSub03_03.md)
