@@ -345,6 +345,7 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 |João Igor |     25%       |
 |Marcos Vinícius Gündel da Silva |     25%       |
 |Marcelo de Araújo Lopes |     25%       |
+|João Victor da Silva Batista de Farias (revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
 
 <p align="center">Tabela 4: Contribuição dos integrantes.</p>
 
@@ -357,6 +358,7 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 |  1.2   | 16/09|  Adição da versão 1.1 do Diagrama de Componentes, refinada no Draw.io a partir da importação do código em PlantUML  | [Marcos Vinícius](https://github.com/MarcosViniciusG)          |         |
 |  1.3   |17/09 | Correção da renderização das imagens no GitHub Pages (troca de `<img>` por sintaxe Markdown) e dos links de perfil sem `https://` | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.4   |17/09 | Adição do Diagrama de Implantação, com as tabelas de nós e artefatos, caminhos de comunicação e rastreabilidade | [Marcelo de Araújo Lopes](https://github.com/MatielloAL) |         |
+|  1.5   |17/09 | Adição da participação de João Victor (revisão geral e elicitação da lista de requisitos iniciais) | [João Victor](https://github.com/beyondmagic) |         |
 
 <p align="center">Tabela 5: Histórico de versão.</p>
 
