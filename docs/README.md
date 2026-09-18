@@ -106,3 +106,17 @@ npx docsify-cli serve docs
 ```
 
 O site fica disponível em `http://localhost:3000`.
+
+## Vídeo da Apresentação
+
+Apresentação da Entrega 02, com os artefatos produzidos pelas três subequipes, o quadro de participações e os comentários sobre o trabalho em equipe.
+
+<div style="max-width:720px;margin:0 auto;">
+  <div style="position:relative;width:100%;padding-top:56.25%;">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/EAKD7sSNUJQ" title="Apresentação da Entrega 02 — G4_ProjetoJogo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<p align="center">Vídeo 1: Apresentação da Entrega 02. Fonte: Autores, 2026.</p>
+
+Caso o vídeo não carregue, acesse-o diretamente em <https://youtu.be/EAKD7sSNUJQ>.
