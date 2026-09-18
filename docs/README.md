@@ -67,7 +67,7 @@ Artefatos: [Diagrama de Componentes](/Base/Relatórios/SubEquipe_01/DiagramaComp
 
 <p align="center">Tabela 3: Integrantes do Subgrupo 02.</p>
 
-Artefatos: [Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md) · [Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemDinamica.md) · [IA Generativa](/Base/Relatórios/SubEquipe_02/IAGenerativa.md)
+Artefatos: [Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md) · [Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemDinamica.md) · [IA Generativa](/Base/Relatórios/SubEquipe_02/IAGenerativa.md) · [Iniciativas Extras](/Base/Relatórios/SubEquipe_02/IniciativasExtras.md)
 
 ### Subgrupo 03
 

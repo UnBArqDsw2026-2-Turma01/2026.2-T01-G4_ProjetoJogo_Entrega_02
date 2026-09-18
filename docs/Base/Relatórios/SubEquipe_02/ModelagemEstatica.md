@@ -24,10 +24,6 @@ Para contornar essa limitação, o código do PlantUML foi importado no [Draw.io
 
 Segundo a IBM, os diagramas de classe são fundamentais para o processo de modelagem de objetos, pois modelam a estrutura estática de um sistema. Dependendo da complexidade do projeto, é possível utilizar um único diagrama de classe para representar o sistema inteiro ou múltiplos diagramas para especificar componentes individuais.
 
----
-
-### Modelagem Estática: Diagrama de Classe
-
 ![Diagrama de Classe](../../../Assets/diagramaDeClasse.png)
 
 <p align="center">Figura 1: Modelo Estático na notação UML. Fonte: COSTA, João Igor (2026).</p>
@@ -42,7 +38,7 @@ Estes diagramas funcionam como representações abstratas da estrutura do sistem
 
 ---
 
-### Elementos Essenciais do Diagrama de Classe
+#### Elementos Essenciais do Diagrama de Classe
 
 | Elemento | Descrição | Exemplo |
 | :--- | :--- | :--- |
@@ -65,7 +61,7 @@ Enquanto o diagrama de classe descreve a estrutura lógica do sistema, o diagram
 * **Apoiar a divisão do trabalho** de implementação entre os integrantes da equipe;
 * **Documentar a arquitetura** de forma independente das classes concretas que a realizam.
 
-### Elementos Essenciais do Diagrama de Componentes
+#### Elementos Essenciais do Diagrama de Componentes
 
 | Elemento | Descrição | Exemplo no diagrama |
 | :--- | :--- | :--- |
@@ -78,7 +74,7 @@ Enquanto o diagrama de classe descreve a estrutura lógica do sistema, o diagram
 
 O diagrama elaborado organiza o jogo em cinco agrupamentos: **Core e Exploração**, **Motor de Combate**, **Sistemas de Progressão**, **Sistemas de Inventário e Crafting** e o nó de **Armazenamento Local**. A interface `Persistencia`, exposta pelo componente `SistemaSalvar`, concentra a serialização de status, itens, descobertas e progresso das missões, evitando que cada subsistema implemente a sua própria rotina de salvamento.
 
-### Modelagem Estática: Diagrama de Componentes
+#### Imagens
 
 A **versão 1.0** corresponde à renderização direta do código-fonte pelo editor online do PlantUML:
 
@@ -92,7 +88,7 @@ A **versão 1.1**, apresentada a seguir, é o resultado da importação desse me
 
 <p align="center">Figura 3: Diagrama de Componentes na notação UML (versão 1.1, refinada no Draw.io). Fonte: SILVA, Marcos (2026).</p>
 
-### Código-Fonte do Diagrama de Componentes
+#### Código-Fonte do Diagrama de Componentes
 
 Abaixo encontra-se o código em linguagem PlantUML utilizado para gerar a imagem da Figura 2 e que serviu de base para a Figura 3. Para reproduzi-lo, basta colar o conteúdo no [editor online do PlantUML](https://www.plantuml.com/plantuml/uml/); para obter a versão editável, basta importar esse mesmo código no Draw.io.
 
@@ -261,7 +257,7 @@ O diagrama usa dois tipos de linha, com significados diferentes. As **linhas con
 
 ---
 
-### Modelagem Estática: Diagrama de Implantação
+#### Diagrama
 
 O diagrama pode ser lido de cima para baixo em quatro partes: **produção** (máquina de CI com o Godot em modo *headless*, que exporta o executável e o pacote do jogo), **execução** (PC do jogador com o runtime do Godot e o subsistema de cenas e scripts), **persistência e hardware** (disco local com `user://` e GPU) e **integração opcional** (GodotSteam, cliente Steam e serviços da Steamworks).
 
@@ -271,7 +267,7 @@ O diagrama pode ser lido de cima para baixo em quatro partes: **produção** (m�
 
 ---
 
-### Nós e artefatos implantados
+#### Nós e artefatos implantados
 
 | Nó | Estereótipo | Artefatos implantados | Papel na solução |
 |----|-------------|-----------------------|------------------|
@@ -289,7 +285,7 @@ O diagrama pode ser lido de cima para baixo em quatro partes: **produção** (m�
 
 <p align="center">Tabela 1: Nós, estereótipos e artefatos do Diagrama de Implantação. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
 
-### Caminhos de comunicação e dependências
+#### Caminhos de comunicação e dependências
 
 | Origem | Destino | Tipo e estereótipo | Significado |
 |--------|---------|--------------------|-------------|
@@ -309,7 +305,7 @@ O diagrama pode ser lido de cima para baixo em quatro partes: **produção** (m�
 
 <p align="center">Tabela 2: Caminhos de comunicação e dependências do Diagrama de Implantação. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
 
-### Rastreabilidade com os artefatos da Entrega 01
+#### Rastreabilidade com os artefatos da Entrega 01
 
 | Elemento do diagrama | Evidência de origem (SubEquipe_02, Entrega 01) |
 |----------------------|------------------------------------------------|

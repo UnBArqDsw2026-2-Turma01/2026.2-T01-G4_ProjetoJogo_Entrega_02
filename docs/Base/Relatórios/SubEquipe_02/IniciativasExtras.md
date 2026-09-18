@@ -23,111 +23,6 @@ Como o PlantUML posiciona os elementos automaticamente, a disposição visual se
 
 ## Conteúdo
 
-### Atores e Fronteira do Sistema
-
-| Ator | Descrição | Casos de uso associados |
-| :--- | :--- | :--- |
-| **Jogador** | Controla o protagonista na exploração e no combate; interage com NPCs, lojas e o Coliseu; gerencia itens e receitas; decide quando salvar o progresso. | UC01 a UC13 |
-
-<p align="center">Tabela 1: Atores do Diagrama de Casos de Uso. Fonte: FARIAS, João Victor (2026).</p>
-
-Todos os casos de uso estão na fronteira do sistema (**G4_ProjetoJogo**). Não há ator secundário: persistência e demais serviços são componentes internos do jogo, não entidades externas.
-
-### Modelagem Organizacional: Diagrama de Casos de Uso
-
-![Diagrama de Casos de Uso](../../../Assets/subgrupo02_diagrama_casosdeuso.png)
-
-<p align="center">Figura 1: Diagrama de Casos de Uso da modelagem organizacional na notação UML. Fonte: FARIAS, João Victor (2026).</p>
-
-### Casos de Uso
-
-Os elos da última coluna são links para as origens de cada caso de uso: os componentes da [Modelagem Estática](ModelagemEstatica.md) e as interações da [Modelagem Dinâmica](ModelagemDinamica.md).
-
-| Nº | Caso de Uso | Descrição | Elos (componentes e interações) |
-| :--: | :--- | :--- | :--- |
-| UC01 | Explorar o Mundo | Movimenta o protagonista pelo mundo semiaberto; os *colliders* disparam encontros e demais gatilhos. | [Movimentação Livre; Interação e Gatilhos](ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC02 | Combater em Turnos | Enfrenta inimigos em batalhas por turnos, com menu de ações e sincronização de turnos com a IA. | [Motor de Batalha (ATB); IA de Inimigos](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 1](ModelagemDinamica.md?id=interação-1-turno-de-combate) |
-| UC03 | Usar Habilidade Especial | Extensão de UC02: emprega golpes exclusivos durante o turno de combate. | [Gerenciador de Habilidades Exclusivas](ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC04 | Misturar Elementos Químicos | Combina elementos coletados para criar itens, consumindo reagentes do inventário. | [Mistura de Elementos Químicos; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 1](ModelagemDinamica.md?id=interação-1-turno-de-combate) e [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
-| UC05 | Registrar Nova Receita | Extensão de UC04: registra no Livro do Aventureiro uma receita inédita obtida na mistura (`[nova receita]`). | [Livro do Aventureiro; SistemaSalvar](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
-| UC06 | Consultar o Livro do Aventureiro | Consulta as receitas descobertas e a lore registrada. | [Livro do Aventureiro](ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC07 | Gerenciar Inventário | Organiza e consulta itens e reagentes; base para *crafting*, lojas, Coliseu e batalha. | [Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC08 | Interagir com NPCs | Ativa *colliders* de NPCs e inicia conversas. | [Interação e Gatilhos; Controlador de NPCs](ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC09 | Aceitar e Acompanhar Missões | Inicia *sidequests* oferecidas por NPCs e acompanha o progresso no Jornal de Missões. | [Jornal de Missões; Controlador de NPCs](ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC10 | Comprar ou Vender Itens | Negocia com mercadores; a compra debita ouro e transfere o item ao inventário. | [Lojas (Merchants); Menu de Status; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 4](ModelagemDinamica.md?id=interação-4-interação-de-loja) |
-| UC11 | Disputar Batalha no Coliseu | Aposta um item e disputa uma batalha com regras de arena próprias. | [O Coliseu; Motor de Batalha (ATB)](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
-| UC12 | Salvar Progresso | Persiste status, itens, descobertas e progresso em pontos de salvamento e gatilhos. | [SistemaSalvar](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) e [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
-| UC13 | Personalizar Personagem | Ajusta a aparência e os atributos do protagonista. | [Personalização do Personagem; Menu de Status](ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC14 | Receber Prêmio | Extensão de UC11: recebe o prêmio ao vencer a batalha no Coliseu (`[se vitória]`). | [O Coliseu; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
-
-<p align="center">Tabela 2: Casos de uso do diagrama e seus elos de rastreabilidade. Fonte: FARIAS, João Victor (2026).</p>
-
-### Relações «include» e «extend»
-
-| Origem | Relação | Destino | Condição | Elo |
-| :--- | :--: | :--- | :--- | :--- |
-| UC03 Usar Habilidade Especial | «extend» | UC02 Combater em Turnos | Quando o jogador opta por um golpe especial no turno. | Invocação de golpes especiais (*[Motor de Batalha](ModelagemEstatica.md?id=diagrama-de-componentes) → [Habilidades Exclusivas](ModelagemEstatica.md?id=diagrama-de-componentes)*) |
-| UC05 Registrar Nova Receita | «extend» | UC04 Misturar Elementos Químicos | `[nova receita]`: apenas quando a combinação é inédita. | Guarda `[nova receita]` da [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
-| UC11 Disputar Batalha no Coliseu | «include» | UC02 Combater em Turnos | Sem condição: a arena reutiliza o motor de batalha. | Regras de arena (*[Coliseu](ModelagemEstatica.md?id=diagrama-de-componentes) → [Motor de Batalha](ModelagemEstatica.md?id=diagrama-de-componentes)*); [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
-| UC14 Receber Prêmio | «extend» | UC11 Disputar Batalha no Coliseu | `[se vitória]`: apenas se o jogador vencer a batalha. | Guarda `[se vitória]` da [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
-
-<p align="center">Tabela 3: Relações «include» e «extend» e suas condições. Fonte: FARIAS, João Victor (2026).</p>
-
-### Código-Fonte do Diagrama
-
-O código PlantUML utilizado para gerar a Figura 1 está abaixo. Para reproduzi-lo, basta colar o conteúdo no [editor online do PlantUML](https://www.plantuml.com/plantuml/uml/).
-
-<details>
-<summary>Clique para expandir o código-fonte (PlantUML)</summary>
-
-```plantuml
-@startuml
-!theme plain
-left to right direction
-skinparam shadowing false
-
-actor "Jogador" as J
-
-rectangle "G4_ProjetoJogo" {
-    usecase "Explorar o Mundo" as UC01
-    usecase "Combater em Turnos" as UC02
-    usecase "Usar Habilidade Especial" as UC03
-    usecase "Misturar Elementos Químicos" as UC04
-    usecase "Registrar Nova Receita" as UC05
-    usecase "Consultar o Livro do Aventureiro" as UC06
-    usecase "Gerenciar Inventário" as UC07
-    usecase "Interagir com NPCs" as UC08
-    usecase "Aceitar e Acompanhar Missões" as UC09
-    usecase "Comprar ou Vender Itens" as UC10
-    usecase "Disputar Batalha no Coliseu" as UC11
-    usecase "Salvar Progresso" as UC12
-    usecase "Personalizar Personagem" as UC13
-    usecase "Receber Prêmio" as UC14
-}
-
-J --> UC01
-J --> UC02
-J --> UC04
-J --> UC06
-J --> UC07
-J --> UC08
-J --> UC09
-J --> UC10
-J --> UC11
-J --> UC12
-J --> UC13
-
-UC03 .> UC02 : <<extend>>
-UC05 .> UC04 : <<extend>>\n[nova receita]
-UC11 ..> UC02 : <<include>>
-UC14 .> UC11 : <<extend>>\n[se vitória]
-@enduml
-```
-
-</details>
-
-<p align="center">Código 1: Código-fonte em PlantUML do Diagrama de Casos de Uso. Fonte: FARIAS, João Victor (2026).</p>
-
 ### Lista de Requisitos Iniciais
 
 A tabela a seguir reúne os 43 requisitos iniciais elicitados para o G4_ProjetoJogo, usados como inspiração para as modelagens.
@@ -207,7 +102,110 @@ html.dark-theme .tabela-requisitos tr.nao > td {
 </tbody>
 </table>
 
-<p align="center">Tabela 4: Lista de requisitos iniciais do G4_ProjetoJogo, inspiração das modelagens. Fonte: FARIAS, João Victor (2026).</p>
+<p align="center">Tabela 4: Lista de requisitos iniciais do G4_ProjetoJogo, inspiração das modelagens. Fonte: FARIAS, João Victor; LOPES, Marcelo de Araújo (2026).</p>
+
+### Casos de Uso
+
+![Diagrama de Casos de Uso](../../../Assets/subgrupo02_diagrama_casosdeuso.png)
+
+<p align="center">Figura 1: Diagrama de Casos de Uso da modelagem organizacional na notação UML. Fonte: FARIAS, João Victor (2026).</p>
+
+Os elos da última coluna são links para as origens de cada caso de uso: os componentes da [Modelagem Estática](ModelagemEstatica.md) e as interações da [Modelagem Dinâmica](ModelagemDinamica.md).
+
+| Nº | Caso de Uso | Descrição | Elos (componentes e interações) |
+| :--: | :--- | :--- | :--- |
+| UC01 | Explorar o Mundo | Movimenta o protagonista pelo mundo semiaberto; os *colliders* disparam encontros e demais gatilhos. | [Movimentação Livre; Interação e Gatilhos](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC02 | Combater em Turnos | Enfrenta inimigos em batalhas por turnos, com menu de ações e sincronização de turnos com a IA. | [Motor de Batalha (ATB); IA de Inimigos](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 1](ModelagemDinamica.md?id=interação-1-turno-de-combate) |
+| UC03 | Usar Habilidade Especial | Extensão de UC02: emprega golpes exclusivos durante o turno de combate. | [Gerenciador de Habilidades Exclusivas](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC04 | Misturar Elementos Químicos | Combina elementos coletados para criar itens, consumindo reagentes do inventário. | [Mistura de Elementos Químicos; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 1](ModelagemDinamica.md?id=interação-1-turno-de-combate) e [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
+| UC05 | Registrar Nova Receita | Extensão de UC04: registra no Livro do Aventureiro uma receita inédita obtida na mistura (`[nova receita]`). | [Livro do Aventureiro; SistemaSalvar](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
+| UC06 | Consultar o Livro do Aventureiro | Consulta as receitas descobertas e a lore registrada. | [Livro do Aventureiro](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC07 | Gerenciar Inventário | Organiza e consulta itens e reagentes; base para *crafting*, lojas, Coliseu e batalha. | [Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC08 | Interagir com NPCs | Ativa *colliders* de NPCs e inicia conversas. | [Interação e Gatilhos; Controlador de NPCs](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC09 | Aceitar e Acompanhar Missões | Inicia *sidequests* oferecidas por NPCs e acompanha o progresso no Jornal de Missões. | [Jornal de Missões; Controlador de NPCs](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC10 | Comprar ou Vender Itens | Negocia com mercadores; a compra debita ouro e transfere o item ao inventário. | [Lojas (Merchants); Menu de Status; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 4](ModelagemDinamica.md?id=interação-4-interação-de-loja) |
+| UC11 | Disputar Batalha no Coliseu | Aposta um item e disputa uma batalha com regras de arena próprias. | [O Coliseu; Motor de Batalha (ATB)](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+| UC12 | Salvar Progresso | Persiste status, itens, descobertas e progresso em pontos de salvamento e gatilhos. | [SistemaSalvar](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) e [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+| UC13 | Personalizar Personagem | Ajusta a aparência e os atributos do protagonista. | [Personalização do Personagem; Menu de Status](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC14 | Receber Prêmio | Extensão de UC11: recebe o prêmio ao vencer a batalha no Coliseu (`[se vitória]`). | [O Coliseu; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+
+<p align="center">Tabela 2: Casos de uso do diagrama e seus elos de rastreabilidade. Fonte: FARIAS, João Victor (2026).</p>
+
+#### Atores e Fronteira do Sistema
+
+| Ator | Descrição | Casos de uso associados |
+| :--- | :--- | :--- |
+| **Jogador** | Controla o protagonista na exploração e no combate; interage com NPCs, lojas e o Coliseu; gerencia itens e receitas; decide quando salvar o progresso. | UC01 a UC13 |
+
+<p align="center">Tabela 1: Atores do Diagrama de Casos de Uso. Fonte: FARIAS, João Victor (2026).</p>
+
+Todos os casos de uso estão na fronteira do sistema (**G4_ProjetoJogo**). Não há ator secundário: persistência e demais serviços são componentes internos do jogo, não entidades externas.
+
+#### Relações «include» e «extend»
+
+| Origem | Relação | Destino | Condição | Elo |
+| :--- | :--: | :--- | :--- | :--- |
+| UC03 Usar Habilidade Especial | «extend» | UC02 Combater em Turnos | Quando o jogador opta por um golpe especial no turno. | Invocação de golpes especiais (*[Motor de Batalha](ModelagemEstatica.md?id=diagrama-de-componentes) → [Habilidades Exclusivas](ModelagemEstatica.md?id=diagrama-de-componentes)*) |
+| UC05 Registrar Nova Receita | «extend» | UC04 Misturar Elementos Químicos | `[nova receita]`: apenas quando a combinação é inédita. | Guarda `[nova receita]` da [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
+| UC11 Disputar Batalha no Coliseu | «include» | UC02 Combater em Turnos | Sem condição: a arena reutiliza o motor de batalha. | Regras de arena (*[Coliseu](ModelagemEstatica.md?id=diagrama-de-componentes) → [Motor de Batalha](ModelagemEstatica.md?id=diagrama-de-componentes)*); [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+| UC14 Receber Prêmio | «extend» | UC11 Disputar Batalha no Coliseu | `[se vitória]`: apenas se o jogador vencer a batalha. | Guarda `[se vitória]` da [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+
+<p align="center">Tabela 3: Relações «include» e «extend» e suas condições. Fonte: FARIAS, João Victor (2026).</p>
+
+#### Código-Fonte do Diagrama
+
+O código PlantUML utilizado para gerar a Figura 1 está abaixo. Para reproduzi-lo, basta colar o conteúdo no [editor online do PlantUML](https://www.plantuml.com/plantuml/uml/).
+
+<details>
+<summary>Clique para expandir o código-fonte (PlantUML)</summary>
+
+```plantuml
+@startuml
+!theme plain
+left to right direction
+skinparam shadowing false
+
+actor "Jogador" as J
+
+rectangle "G4_ProjetoJogo" {
+    usecase "Explorar o Mundo" as UC01
+    usecase "Combater em Turnos" as UC02
+    usecase "Usar Habilidade Especial" as UC03
+    usecase "Misturar Elementos Químicos" as UC04
+    usecase "Registrar Nova Receita" as UC05
+    usecase "Consultar o Livro do Aventureiro" as UC06
+    usecase "Gerenciar Inventário" as UC07
+    usecase "Interagir com NPCs" as UC08
+    usecase "Aceitar e Acompanhar Missões" as UC09
+    usecase "Comprar ou Vender Itens" as UC10
+    usecase "Disputar Batalha no Coliseu" as UC11
+    usecase "Salvar Progresso" as UC12
+    usecase "Personalizar Personagem" as UC13
+    usecase "Receber Prêmio" as UC14
+}
+
+J --> UC01
+J --> UC02
+J --> UC04
+J --> UC06
+J --> UC07
+J --> UC08
+J --> UC09
+J --> UC10
+J --> UC11
+J --> UC12
+J --> UC13
+
+UC03 .> UC02 : <<extend>>
+UC05 .> UC04 : <<extend>>\n[nova receita]
+UC11 ..> UC02 : <<include>>
+UC14 .> UC11 : <<extend>>\n[se vitória]
+@enduml
+```
+
+</details>
+
+<p align="center">Código 1: Código-fonte em PlantUML do Diagrama de Casos de Uso. Fonte: FARIAS, João Victor (2026).</p>
 
 ## Referências
 
@@ -223,8 +221,10 @@ UML-DIAGRAMS.ORG. **UML Use Case Diagrams**. Disponível em: <https://www.uml-di
 
 | Nome | % de Contribuição |
 |------|-------------------|
-| João Victor da Silva Batista de Farias | 50% |
-| João Igor Pereira da Costa | 50% |
+| João Igor Pereira da Costa | 25% |
+| João Victor da Silva Batista de Farias | 25% |
+| Marcelo de Araújo Lopes | 25% |
+| Marcos Vinícius de Oliveira | 25% |
 
 <p align="center">Tabela 5: Contribuição dos integrantes.</p>
 
@@ -238,6 +238,7 @@ UML-DIAGRAMS.ORG. **UML Use Case Diagrams**. Disponível em: <https://www.uml-di
 |  1.3   | 17/09 | Fundo avermelhado nas linhas dos requisitos não usados e correção de digitação na tabela | [João Victor](https://github.com/beyondmagic) |         |
 |  1.4   | 17/09 | Adição de explicação sobre os requisitos não contemplados nas modelagens | [João Victor](https://github.com/beyondmagic) |         |
 |  1.5   | 17/09 | Correção dos links relativos e ajuste da redação após a movimentação da página | [João Victor](https://github.com/beyondmagic) |         |
+|  1.6   | 17/09 | Adição de contribuição de todos os membros do subgrupo e atualização da tabela de histórico de versão | [João Victor](https://github.com/beyondmagic) | [Marcos Vinícius](https://github.com/MarcosViniciusG) |
 
 <p align="center">Tabela 6: Histórico de versão.</p>
 
