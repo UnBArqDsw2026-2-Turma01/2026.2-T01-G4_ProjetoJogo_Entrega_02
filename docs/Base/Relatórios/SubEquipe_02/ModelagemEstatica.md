@@ -26,7 +26,7 @@ Segundo a IBM, os diagramas de classe são fundamentais para o processo de model
 
 ![Diagrama de Classe](../../../Assets/diagramaDeClasse.png)
 
-<p align="center">Figura 1: Modelo Estático na notação UML. Fonte: Elaboração própria (COSTA, João Igor, 2026).</p>
+<p align="center">Figura 1: Modelo Estático na notação UML. Fonte: Elaboração própria (COSTA, João Igor; FARIAS, João Victor, 2026).</p>
 
 Estes diagramas funcionam como representações abstratas da estrutura do sistema ou subsistema e são utilizados para:
 
@@ -341,7 +341,7 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 |João Igor |     25%       |
 |Marcos Vinícius Gündel da Silva |     25%       |
 |Marcelo de Araújo Lopes |     25%       |
-|João Victor da Silva Batista de Farias (revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
+|João Victor da Silva Batista de Farias (co-autoria do Diagrama de Classe, revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
 
 <p align="center">Tabela 4: Contribuição dos integrantes. Fonte: Autores, 2026.</p>
 
@@ -355,6 +355,7 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 |  1.3   |17/09 | Correção da renderização das imagens no GitHub Pages (troca de `<img>` por sintaxe Markdown) e dos links de perfil sem `https://` | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.4   |17/09 | Adição do Diagrama de Implantação, com as tabelas de nós e artefatos, caminhos de comunicação e rastreabilidade | [Marcelo de Araújo Lopes](https://github.com/MatielloAL) |         |
 |  1.5   |17/09 | Adição da participação de João Victor (revisão geral e elicitação da lista de requisitos iniciais) | [João Victor](https://github.com/beyondmagic) |         |
+|  1.6   |18/09 | Adição de João Victor como co-autor do Diagrama de Classe | [João Victor](https://github.com/beyondmagic) |         |
 
 <p align="center">Tabela 5: Histórico de versão. Fonte: Autores, 2026.</p>
 

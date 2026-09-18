@@ -54,7 +54,7 @@ Um diagrama de atividades para o sistema de *crafting* do projeto é particularm
 
 ![Diagrama de Atividade](../../../Assets/diagramaDeAtividade.png)
 
-<p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: Elaboração própria (COSTA, João Igor, 2026).</p>
+<p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: Elaboração própria (COSTA, João Igor; FARIAS, João Victor, 2026).</p>
 
 #### Elementos Principais
 
@@ -303,7 +303,7 @@ IBM. **Diagramas de atividade**. IBM Documentation, 2021. Disponível em: <https
 |João Igor |     25%       |
 |Marcos Vinícius Gündel da Silva |     25%       |
 |Marcelo de Araújo Lopes |     25%       |
-|João Victor da Silva Batista de Farias (revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
+|João Victor da Silva Batista de Farias (co-autoria do Diagrama de Atividades, revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
 
 <p align="center">Tabela 8: Contribuição dos integrantes. Fonte: Autores, 2026.</p>
 
@@ -316,6 +316,7 @@ IBM. **Diagramas de atividade**. IBM Documentation, 2021. Disponível em: <https
 |  1.2   |17/09 | Correção da renderização das imagens no GitHub Pages (troca de `<img>` por sintaxe Markdown) e dos links de perfil sem `https://` | [Marcos Vinícius](https://github.com/MarcosViniciusG) |         |
 |  1.3   |17/09 | Adição dos Diagramas de Estados da sessão e da Batalha ATB, com as tabelas de estados, transições e rastreabilidade | [Marcelo de Araújo Lopes](https://github.com/MatielloAL) |         |
 |  1.4   |17/09 | Adição da participação de João Victor (revisão geral e elicitação da lista de requisitos iniciais) | [João Victor](https://github.com/beyondmagic) |         |
+|  1.5   |18/09 | Adição de João Victor como co-autor do Diagrama de Atividades | [João Victor](https://github.com/beyondmagic) |         |
 
 <p align="center">Tabela 9: Histórico de versão. Fonte: Autores, 2026.</p>
 

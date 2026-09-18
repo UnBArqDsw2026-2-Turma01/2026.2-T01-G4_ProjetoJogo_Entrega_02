@@ -108,7 +108,7 @@ html.dark-theme .tabela-requisitos tr.nao > td {
 
 ![Diagrama de Casos de Uso](../../../Assets/subgrupo02_diagrama_casosdeuso.png)
 
-<p align="center">Figura 1: Diagrama de Casos de Uso da modelagem organizacional na notação UML. Fonte: FARIAS, João Victor (2026).</p>
+<p align="center">Figura 1: Diagrama de Casos de Uso da modelagem organizacional na notação UML. Fonte: FARIAS, João Victor; COSTA, João Igor (2026).</p>
 
 Os elos da última coluna são links para as origens de cada caso de uso: os componentes da [Modelagem Estática](ModelagemEstatica.md) e as interações da [Modelagem Dinâmica](ModelagemDinamica.md).
 
@@ -224,7 +224,7 @@ UML-DIAGRAMS.ORG. **UML Use Case Diagrams**. Disponível em: <https://www.uml-di
 | João Igor Pereira da Costa | 25% |
 | João Victor da Silva Batista de Farias | 25% |
 | Marcelo de Araújo Lopes | 25% |
-| Marcos Vinícius de Oliveira | 25% |
+| Marcos Vinícius Gündel da Silva | 25% |
 
 <p align="center">Tabela 5: Contribuição dos integrantes.</p>
 
@@ -239,6 +239,7 @@ UML-DIAGRAMS.ORG. **UML Use Case Diagrams**. Disponível em: <https://www.uml-di
 |  1.4   | 17/09 | Adição de explicação sobre os requisitos não contemplados nas modelagens | [João Victor](https://github.com/beyondmagic) |         |
 |  1.5   | 17/09 | Correção dos links relativos e ajuste da redação após a movimentação da página | [João Victor](https://github.com/beyondmagic) |         |
 |  1.6   | 17/09 | Adição de contribuição de todos os membros do subgrupo e atualização da tabela de histórico de versão | [João Victor](https://github.com/beyondmagic) | [Marcos Vinícius](https://github.com/MarcosViniciusG) |
+|  1.7   | 18/09 | Adição de João Igor como co-autor do Diagrama de Casos de Uso | [João Victor](https://github.com/beyondmagic) |         |
 
 <p align="center">Tabela 6: Histórico de versão.</p>
 
