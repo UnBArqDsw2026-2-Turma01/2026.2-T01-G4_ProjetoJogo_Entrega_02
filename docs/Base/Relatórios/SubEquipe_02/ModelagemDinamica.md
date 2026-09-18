@@ -33,8 +33,6 @@ Como achado principal, a modelagem evidenciou que os objetos `:GerenciadorDeInve
 
 ### Diagrama de Atividade
 
-O diagrama de comunicação é um diagrama de interação que exibe um conjunto de objetos, os vínculos existentes entre eles e as mensagens trocadas para realizar um determinado comportamento. Diferentemente do diagrama de sequência, ele não possui um eixo temporal explícito: a ordem das mensagens é expressa exclusivamente pela sua numeração (OMG, 2017).
-
 Na UML, um diagrama de atividade fornece uma visualização do comportamento de um sistema, descrevendo a sequência de ações em um processo. Os diagramas de atividades são semelhantes aos fluxogramas porque representam o fluxo entre as ações em uma atividade; no entanto, eles são mais poderosos, pois também podem ilustrar fluxos paralelos ou simultâneos, fluxos alternativos (condicionais) e estruturas de sincronização entre diferentes caminhos de execução.
 
 Sua utilização no projeto tem por finalidade:
@@ -45,7 +43,39 @@ Sua utilização no projeto tem por finalidade:
 * **Identificar acoplamentos**, revelando os objetos que concentram o maior número de colaborações;
 * **Orientar a implementação**, já que cada mensagem corresponde a uma operação a ser codificada.
 
-### Elementos Essenciais do Diagrama de Comunicação
+#### Caso de Uso: Projeto Jogo – Sistema de Crafting
+
+Um diagrama de atividades para o sistema de *crafting* do projeto é particularmente útil para:
+
+* **Visualizar o fluxo completo** de coleta de elementos, validação de receitas e criação de itens;
+* **Identificar pontos de decisão** (*Elemento encontrado? Receita válida?*);
+* **Documentar caminhos de sucesso e falha** no processo de criação;
+* **Servir como base** para a implementação direta das classes e seus métodos correspondentes.
+
+![Diagrama de Atividade](../../../Assets/diagramaDeAtividade.png)
+
+<p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: COSTA, João Igor (2026).</p>
+
+#### Elementos Principais
+
+Os nós de atividades e os arcos (transições) são utilizados para modelar o fluxo de controle e o fluxo de dados entre as ações:
+
+| Elemento | Representação Visual | Função |
+| :--- | :--- | :--- |
+| **Nó Inicial** | Círculo sólido preto | Marca o início do fluxo de atividade. |
+| **Ação / Atividade** | Retângulo arredondado | Representa um passo de execução ou tarefa no processo. |
+| **Decisão** | Losango | Ponto de bifurcação condicional (caminhos alternativos). |
+| **Fork / Join** | Barra espessa horizontal | Sincronização ou divisão de fluxos paralelos. |
+| **Nó Final** | Círculo duplo (olho de boi) | Indica o encerramento do fluxo. |
+| **Transição** | Setas direcionadas | Indicam a direção do fluxo de controle entre os elementos. |
+
+### Diagrama de Comunicação
+
+A prancha a seguir reúne as quatro interações modeladas pela subequipe. Em razão da sua extensão, cada cenário é apresentado individualmente nas subseções seguintes.
+
+#### Elementos Essenciais do Diagrama de Comunicação
+
+O diagrama de comunicação é um diagrama de interação que exibe um conjunto de objetos, os vínculos existentes entre eles e as mensagens trocadas para realizar um determinado comportamento. Diferentemente do diagrama de sequência, ele não possui um eixo temporal explícito: a ordem das mensagens é expressa exclusivamente pela sua numeração (OMG, 2017).
 
 | Elemento | Descrição | Exemplo no diagrama |
 | :--- | :--- | :--- |
@@ -57,10 +87,6 @@ Sua utilização no projeto tem por finalidade:
 | **Condição de guarda** | Expressão entre colchetes que condiciona o envio da mensagem. | `[sucesso na mistura]`, `[se vitoria]` |
 | **Marcador de iteração** | Asterisco que indica envio repetido da mensagem. | `1.2 *: sincronizaTurnosEDanos()` |
 | ***Frame* de interação** | Moldura que delimita e nomeia o cenário representado. | `interaction Turno De Combate` |
-
-### Modelagem Dinâmica: Diagrama de Comunicação
-
-A prancha a seguir reúne as quatro interações modeladas pela subequipe. Em razão da sua extensão, cada cenário é apresentado individualmente nas subseções seguintes.
 
 ![Diagrama de Comunicação completo](../../../Assets/subgrupo02_diagrama_comunicacao.png)
 
@@ -147,35 +173,6 @@ Este cenário descreve a compra de itens junto aos mercadores. O fluxo tem iníc
 
 <p align="center">Tabela 4: Mensagens da interação "Interação de Loja".</p>
 
-### Elementos Principais
-
-Nos diagramas de atividades, os nós de atividades e os arcos (transições) são utilizados para modelar o fluxo de controle e o fluxo de dados entre as ações:
-
-| Elemento | Representação Visual | Função |
-| :--- | :--- | :--- |
-| **Nó Inicial** | Círculo sólido preto | Marca o início do fluxo de atividade. |
-| **Ação / Atividade** | Retângulo arredondado | Representa um passo de execução ou tarefa no processo. |
-| **Decisão** | Losango | Ponto de bifurcação condicional (caminhos alternativos). |
-| **Fork / Join** | Barra espessa horizontal | Sincronização ou divisão de fluxos paralelos. |
-| **Nó Final** | Círculo duplo (olho de boi) | Indica o encerramento do fluxo. |
-| **Transição** | Setas direcionadas | Indicam a direção do fluxo de controle entre os elementos. |
-
----
-
-### Caso de Uso: Projeto Jogo – Sistema de Crafting
-
-Um diagrama de atividades para o sistema de *crafting* do projeto é particularmente útil para:
-
-* **Visualizar o fluxo completo** de coleta de elementos, validação de receitas e criação de itens;
-* **Identificar pontos de decisão** (*Elemento encontrado? Receita válida?*);
-* **Documentar caminhos de sucesso e falha** no processo de criação;
-* **Servir como base** para a implementação direta das classes e seus métodos correspondentes.
-
-## Modelagem Dinâmica: Diagrama de Atividades
-
-![Diagrama de Atividade](../../../Assets/diagramaDeAtividade.png)
-
-<p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: COSTA, João Igor (2026).</p>
 
 ---
 
@@ -204,7 +201,7 @@ Nenhum estado foi criado sem base nos artefatos anteriores. O Léxico da subequi
 
 ---
 
-### Modelagem Dinâmica: Diagrama de Estados da Sessão
+#### Diagrama de Estados da Sessão
 
 A máquina da sessão começa no Menu principal. A partir dele, o jogador inicia uma nova partida ou carrega um Savepoint válido; os dois caminhos entram na Exploração por pontos de entrada distintos, e uma falha de carregamento devolve o jogador ao menu com mensagem de erro. Dentro da Exploração, o estado central é **Explorando**, do qual o jogador sai para interagir com NPCs, consultar inventário e livro, gravar no Savepoint ou abrir a Bancada de mistura. Ao encontrar um inimigo, a sessão passa para Batalha ATB e, conforme o resultado, segue para Vitória, Game Over ou retorna à Exploração pelo ponto Retorno do combate. A partida termina no Epílogo, alcançado quando a história é concluída.
 
@@ -234,7 +231,7 @@ Na **Bancada de mistura**, a transição `confirmar [2 slots preenchidos e reage
 
 ---
 
-### Modelagem Dinâmica: Diagrama de Estados da Batalha ATB
+#### Diagrama de Estados da Batalha ATB
 
 A máquina da Batalha começa em Preparando encontro. Um ponto de escolha define o tipo de início: no início **normal** o combate vai para Aguardando próximo turno, em que as barras de ATB se enchem conforme a velocidade; no **preemptivo** o jogador age primeiro; na **emboscada**, o inimigo. O Turno do jogador é um estado composto com a escolha de comando, a seleção de alvo e a aplicação da ação. Ao fim de cada turno, um segundo ponto de escolha verifica o HP do jogador e a existência de inimigos vivos para decidir entre continuar, vencer ou perder. A fuga é tratada por um terceiro ponto de escolha. Todo encerramento emite `batalhaEncerrada(resultado)`, consumido pela máquina da sessão.
 
@@ -270,7 +267,7 @@ A máquina da Batalha começa em Preparando encontro. Um ponto de escolha define
 
 ---
 
-### Rastreabilidade dos Diagramas de Estados
+#### Rastreabilidade dos Diagramas de Estados
 
 | Elemento dos diagramas | Evidência de origem (SubEquipe_02, Entrega 01) |
 |------------------------|------------------------------------------------|
