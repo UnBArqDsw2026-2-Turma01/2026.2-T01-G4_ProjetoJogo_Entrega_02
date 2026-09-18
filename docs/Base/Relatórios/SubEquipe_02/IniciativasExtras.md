@@ -207,7 +207,7 @@ html.dark-theme .tabela-requisitos tr.nao > td {
 </tbody>
 </table>
 
-<p align="center">Tabela 4: Lista de requisitos iniciais do G4_ProjetoJogo, inspiração das modelagens. Fonte: FARIAS, João Victor (2026).</p>
+<p align="center">Tabela 4: Lista de requisitos iniciais do G4_ProjetoJogo, inspiração das modelagens. Fonte: FARIAS, João Victor; LOPES, Marcelo de Araújo (2026).</p>
 
 ## Referências
 
@@ -223,8 +223,9 @@ UML-DIAGRAMS.ORG. **UML Use Case Diagrams**. Disponível em: <https://www.uml-di
 
 | Nome | % de Contribuição |
 |------|-------------------|
-| João Victor da Silva Batista de Farias | 50% |
-| João Igor Pereira da Costa | 50% |
+| João Victor da Silva Batista de Farias | 33% |
+| João Igor Pereira da Costa | 33% |
+| Marcelo de Araújo Lopes | 33% |
 
 <p align="center">Tabela 5: Contribuição dos integrantes.</p>
 
