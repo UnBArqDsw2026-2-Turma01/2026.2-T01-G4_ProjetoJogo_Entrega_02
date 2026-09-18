@@ -24,11 +24,11 @@
 | :-: | :-------- |
 | 1 | Revisão inicial do diagrama de classes estático e definição de enumerações |
 | 2 | Resolução de laços arquiteturais sobre áreas seguras e sistema de salvamento |
-| 3 | Correção de modificadores "abstract" em classes de entidades (Personagem e Área) |
+| 3 | Discussão sobre o modificador "abstract" nas classes de entidades (Personagem e Área) |
 | 4 | Criação e refinamento do diagrama de atividades (dinâmico) na ferramenta Draw.io |
 | 5 | Planejamento e sorteio dos integrantes para a gravação do vídeo de apresentação |
 
-<p align="center">Tabela 3: Pauta reconstruída a partir dos assuntos discutidos. Fonte: transcrição automática da reunião, 2026.</p>
+<p align="center">Tabela 3: Pauta reconstruída a partir dos assuntos discutidos. Fonte: transcrição automática da reunião, revisada pelos autores, 2026.</p>
 
 ## Pendências Anteriores
 
@@ -44,12 +44,13 @@
 | :-: | :-------- | :--: |
 | 1 | O grupo avaliou os modelos exportados e decidiu, por enquanto, considerar o diagrama estático como concluído para poder concentrar os esforços na construção do diagrama dinâmico (atividades). | 2 |
 | 2 | Houve um debate sobre a exclusão da entidade "área segura" do modelo, sendo decidido que ela atua como um padrão de herança na arquitetura para áreas sem combates aleatórios, justificando sua permanência estrutural mesmo estando vazia. | 2 |
-| 3 | Para corrigir erros apontados no uso da UML, foi acordado o retorno da definição abstrata (tag ou itálico) às superclasses 'Personagem' e 'Área', visto que não devem ser instanciadas diretamente. | 3 |
-| 4 | O grupo simplificou as enumerações no diagrama. A listagem que conteria todos os elementos químicos reais foi descartada em favor de uma enumeração mais enxuta, pautada nos efeitos práticos de magias (fogo, veneno, etc.). | 2 |
-| 5 | No planejamento do "Diário do Aventureiro", ficou determinado que ele possuirá duas abas principais: livros descobertos e histórico de magias. Essa modificação garantirá que o jogador utilize combinações registradas durante o combate. | 3 |
-| 6 | A equipe realizou um pequeno script de sorteio com a linguagem Python para definir os apresentadores do vídeo de entrega (Entrega 2). A responsabilidade pela apresentação recaiu sobre Carlos Henrique e Pedro Teixeira, em função do domínio das regras de negócio. | 2 |
+| 3 | Foi discutida a sugestão, levantada na revisão da UML, de retornar a definição abstrata (tag ou itálico) às superclasses 'Personagem' e 'Área'. A equipe manteve as classes concretas, conforme decidido na [Ata 02](AtaSub03_02.md), e registrou o custo dessa escolha na análise crítica da [Modelagem Estática](/Base/Relatórios/SubEquipe_03/ModelagemEstatica.md). | 2 |
+| 4 | O grupo simplificou as enumerações no diagrama. Em vez de uma enumeração com todos os elementos químicos reais, os elementos da tabela periódica passaram a ser representados pela classe `Elemento` (símbolo, nome e número atômico), e a enumeração ficou restrita aos tipos de efeito das magias (`TipoEfeito`: fogo, gelo e veneno). | 2 |
+| 5 | O salvamento foi mantido como classe própria (`SistemaSave`), com as operações de salvar, carregar e salvar e sair, pois o RF03 permite salvar em qualquer área do jogo. | 2 |
+| 6 | No planejamento do "Diário do Aventureiro", ficou determinado que ele possuirá duas abas principais: livros descobertos e histórico de magias. Essa modificação garantirá que o jogador utilize combinações registradas durante o combate. | 3 |
+| 7 | A equipe realizou um pequeno script de sorteio com a linguagem Python para definir os apresentadores do vídeo de entrega (Entrega 2). A responsabilidade pela apresentação recaiu sobre Carlos Henrique e Pedro Teixeira, em função do domínio das regras de negócio. | 2 |
 
-<p align="center">Tabela 5: Assuntos tratados. Fonte: transcrição automática da reunião, 2026.</p>
+<p align="center">Tabela 5: Assuntos tratados. Fonte: transcrição automática da reunião, revisada pelos autores, 2026.</p>
 
 > **Tipos:** 1. Apresentação · 2. Decisão · 3. Definição · 4. Solicitação · 5. Pendência.
 
@@ -61,11 +62,10 @@ Não agendada explicitamente, mas alinhou-se a obrigação conjunta de gravar o 
 
 | Nº | Compromisso | Responsável | Data |
 | :-: | :---------- | :---------- | :--: |
-| 1 | Ajustar no diagrama a notação em itálico ou estereótipo nas superclasses (Área, Personagem). | O grupo | Não especificado |
-| 2 | Gravar o vídeo oficial da Entrega 2. | O grupo (Apresentadores: Carlos e Pedro) | Não especificado |
-| 3 | Fazer o upload das alterações dos diagramas e anotações gerativas no repositório do GitHub. | Renan Pereira Reis | Não especificado |
+| 1 | Gravar o vídeo oficial da Entrega 2. | O grupo (Apresentadores: Carlos e Pedro) | Não especificado |
+| 2 | Fazer o upload das alterações dos diagramas e anotações gerativas no repositório do GitHub. | Renan Pereira Reis | Não especificado |
 
-<p align="center">Tabela 6: Compromissos acordados. Fonte: transcrição automática da reunião, 2026.</p>
+<p align="center">Tabela 6: Compromissos acordados. Fonte: transcrição automática da reunião, revisada pelos autores, 2026.</p>
 
 ## Gravação da Reunião
 
@@ -77,5 +77,6 @@ Não agendada explicitamente, mas alinhou-se a obrigação conjunta de gravar o 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|------|:----------|:----------|:--------|
 | 1.0 | 17/09/2026 | Criação da ata com base na transcrição automática e resumos gerados por IA | Gemini PRO 3.1 | Pedro Teixeira Moriel Sanchez |
+| 1.1 | 17/09/2026 | Revisão após conferência com os participantes: a versão gerada por IA registrava como decisão o retorno do *abstract*, que não refletia o resultado final da reunião. Correção dos itens 3 e 4, inclusão do item sobre o sistema de salvamento e remoção do compromisso de ajuste da notação abstrata | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
 
 <p align="center">Tabela 7: Histórico de versão.</p>
