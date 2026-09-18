@@ -341,7 +341,7 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 |João Igor |     25%       |
 |Marcos Vinícius Gündel da Silva |     25%       |
 |Marcelo de Araújo Lopes |     25%       |
-|João Victor da Silva Batista de Farias (co-autoria do Diagrama de Classe, revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
+|João Victor da Silva Batista de Farias |     25%       |
 
 <p align="center">Tabela 4: Contribuição dos integrantes. Fonte: Autores, 2026.</p>
 

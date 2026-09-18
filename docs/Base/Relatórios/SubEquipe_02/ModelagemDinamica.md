@@ -303,7 +303,7 @@ IBM. **Diagramas de atividade**. IBM Documentation, 2021. Disponível em: <https
 |João Igor |     25%       |
 |Marcos Vinícius Gündel da Silva |     25%       |
 |Marcelo de Araújo Lopes |     25%       |
-|João Victor da Silva Batista de Farias (co-autoria do Diagrama de Atividades, revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
+|João Victor da Silva Batista de Farias |     25%       |
 
 <p align="center">Tabela 8: Contribuição dos integrantes. Fonte: Autores, 2026.</p>
 
