@@ -20,6 +20,7 @@
         - [Diagrama de Estados](/Base/Relatórios/SubEquipe_01/DiagramaEstados.md)
       - [3. IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
       - [Metodologia GitHub](/Base/Relatórios/SubEquipe_01/MetodologiaGitHub.md)
+      - [Melhorias no Site](/Base/Relatórios/SubEquipe_01/MelhoriasSite.md)
       - [Requisitos Funcionais](/Base/Relatórios/SubEquipe_01/RequisitosFuncionais.md)
     - C · SubEquipe 02
       - [1. Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md)
