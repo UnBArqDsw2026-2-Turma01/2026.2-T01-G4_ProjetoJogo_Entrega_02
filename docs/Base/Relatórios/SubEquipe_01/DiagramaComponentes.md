@@ -68,7 +68,7 @@ A coordenação central reduz ligações diretas entre as mecânicas, mas exige 
 
 ### Decisões e evidências
 
-| Alternativa considerada | Decisão de Yogi Nam de Souza Barbosa | Justificativa e evidência |
+| Alternativa considerada | Decisão adotada | Justificativa e evidência |
 |------------------------|-------------------------------------|-------------------------|
 | Manter todos os componentes no mesmo nível, como na V1. | Agrupar responsabilidades em subsistemas com portas e delegações. | Expõe os serviços usados pelo Controle e preserva a estrutura interna. Comparação V1/V2 e [commit e732f48][v2]. |
 | Manter a notação anônima `:Componente` da V1. | Nomear as partes no formato `papel : Tipo` e explicitar os pares de interfaces. | Distingue o papel interno do tipo do componente e permite conferir quem fornece e quem requer cada serviço. [Fonte da V2](Base/Relatórios/SubEquipe_01/assets/componentes/componentes-v2.drawio ':ignore'). |
@@ -104,9 +104,9 @@ UML DIAGRAMS. **Component Diagrams**. [Notação e exemplos](https://www.uml-dia
 
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|:----:|-----------|-----------|---------|
-| 1.0 | 12/09/2026 | Inserção do diagrama de componentes. | Yogi Nam de Souza Barbosa | - |
-| 2.0 | 14/09/2026 | Adequação aos requisitos do Subgrupo 03, decomposição em subsistemas e carrossel de versões. | Yogi Nam de Souza Barbosa | - |
-| 2.1 | 14/09/2026 | Revisão da descrição e metodologia. | Yogi Nam de Souza Barbosa | - |
+| 1.0 | 12/09/2026 | Inserção do diagrama de componentes. | Yogi Nam de Souza Barbosa | |
+| 2.0 | 14/09/2026 | Adequação aos requisitos do Subgrupo 03, decomposição em subsistemas e carrossel de versões. | Yogi Nam de Souza Barbosa | |
+| 2.1 | 14/09/2026 | Revisão da descrição e metodologia. | Yogi Nam de Souza Barbosa | |
 
 </div>
 

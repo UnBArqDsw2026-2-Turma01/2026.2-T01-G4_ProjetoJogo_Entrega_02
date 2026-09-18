@@ -12,7 +12,7 @@ Representar o comportamento geral da partida por meio do fluxo de atividades, ev
 
 O artefato foi produzido conforme a [Ata 01](/Atas/AtaSub01_01.md) e a [issue #6][issue]. O [Mapa Mental][mapa] e o [BPMN][bpmn] orientaram a seleção dos caminhos de exploração e combate. Com a adoção dos RF01 a RF19 do [Subgrupo 03][rf], a V2 incorporou salvamento, interações com NPCs e combinação de elementos durante o combate.
 
-Os arquivos SVG e as fontes editáveis em draw.io foram construídos pelo site [draw.io](https://draw.io/). A redução dos fluxos detalhados, a inclusão de raias, a revisão da saída do jogo e outros relatos de auxílio de IA estão registradas em [IA Generativa](IAGenerativa.md#yogi-nam-de-souza-barbosa). A notação foi confrontada com os slides de Milene Serrano (páginas 17 a 19), os [exemplos de atividades do UML Diagrams](https://www.uml-diagrams.org/activity-diagrams.html) e a UML 2.5.1 (§§15 e 16.10).
+Os arquivos SVG e as fontes editáveis em draw.io foram construídos pelo site [draw.io](https://draw.io/). As decisões de reduzir os fluxos detalhados, incluir raias e revisar o fluxo de saída, bem como os demais usos de IA durante a elaboração do artefato, estão registradas em [IA Generativa](IAGenerativa.md#yogi-nam-de-souza-barbosa). A notação foi confrontada com os slides de Milene Serrano (páginas 17 a 19), os [exemplos de atividades do UML Diagrams](https://www.uml-diagrams.org/activity-diagrams.html) e a UML 2.5.1 (§§15 e 16.10).
 
 A conferência percorreu início, exploração, combate, saída e falha no salvamento, observando as guardas, os retornos e as arestas que deixam a região interrompível. As ações também foram relacionadas aos serviços do [diagrama de componentes](DiagramaComponentes.md). O carrossel e os commits preservam a evolução.
 
@@ -26,7 +26,7 @@ A conferência percorreu início, exploração, combate, saída e falha no salva
 <a href="Base/Relatórios/SubEquipe_01/assets/atividades/partida.svg" target="_blank" rel="noopener"><img src="Base/Relatórios/SubEquipe_01/assets/atividades/partida.svg" alt="V1: exploração, combinação e combate organizados no fluxo geral de uma partida."></a>
 <figcaption>Figura 1: Fluxo geral da partida, V1. Fonte: Yogi Nam de Souza Barbosa, 2026.</figcaption>
 </figure>
-<p>A primeira versão organizou as principais atividades de exploração e combate e permitiu visualizar o ciclo básico da partida. Entretanto, algumas responsabilidades e decisões ainda não estavam claramente separadas, o que motivou o refinamento do fluxo. Essa versão usou como base uma V0 que infelizmente esqueci de guardar para por no histórico. </p>
+<p>A primeira versão organizou as principais atividades de exploração e combate e permitiu visualizar o ciclo básico da partida. Entretanto, algumas responsabilidades e decisões ainda não estavam claramente separadas, o que motivou o refinamento do fluxo. A V1 foi precedida por uma versão preliminar utilizada durante a concepção inicial do fluxo. Essa versão não foi preservada no repositório e, portanto, não pôde ser incorporada ao histórico de versões. </p>
 <p><a href="Base/Relatórios/SubEquipe_01/assets/atividades/DiagramaAtividades.drawio" download>Fonte da V1 em draw.io</a> · <a href="Base/Relatórios/SubEquipe_01/assets/atividades/partida.svg" target="_blank" rel="noopener" download>SVG da V1</a></p>
 </div>
 <div class="diagram-slide" data-version="v2" data-label="V2 · requisitos do Subgrupo 03, 14/09/2026">
@@ -70,7 +70,7 @@ Os serviços associados a essas responsabilidades estão descritos em [Serviços
 
 ### Decisões e evidências
 
-| Alternativa considerada | Decisão de Yogi Nam de Souza Barbosa | Justificativa e evidência |
+| Alternativa considerada | Decisão adotada | Justificativa e evidência |
 |------------------------|-------------------------------------|-------------------------|
 | Detalhar combinação e combate em diagramas de atividades próprios. | Manter o fluxo geral e representar o combate em uma ação de alto nível. | Preserva o espaço de detalhamento dos diagramas atribuídos aos colegas na [Ata 01](/Atas/AtaSub01_01.md). Solicitação registrada em [IA Generativa](IAGenerativa.md#iterações-e-decisões). |
 | Tratar a saída somente como uma opção na exploração. | Preservar `Sair solicitado` e a região interrompível; acrescentar salvamento na V2. | Permite representar a saída durante uma ação em andamento e relacioná-la ao RF03. Comparação V1/V2 e [commit e732f48][v2]. |

@@ -18,6 +18,7 @@
         - [Diagrama de Atividades](/Base/Relatórios/SubEquipe_01/DiagramaAtividades.md)
         - [Diagrama de Estados](/Base/Relatórios/SubEquipe_01/DiagramaEstados.md)
       - [3. IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
+      - [Metodologia GitHub](/Base/Relatórios/SubEquipe_01/MetodologiaGitHub.md)
     - C · SubEquipe 02
       - [1. Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md)
       - [2. Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemDinamica.md)
