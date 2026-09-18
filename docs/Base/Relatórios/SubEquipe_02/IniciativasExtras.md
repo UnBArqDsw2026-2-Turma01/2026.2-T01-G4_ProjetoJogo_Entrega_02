@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Iniciativa extra do Grupo 04 no escopo do **Módulo Modelagem**: a **Modelagem Organizacional na notação UML** do **G4_ProjetoJogo**, expressa pelo **Diagrama de Casos de Uso** elaborado pela SubEquipe_02. O artefato descreve as funcionalidades do jogo sob a perspectiva do usuário e complementa a [Modelagem Estática](Relatórios/SubEquipe_02/ModelagemEstatica.md) e a [Modelagem Dinâmica](Relatórios/SubEquipe_02/ModelagemDinamica.md) da subequipe.
+Iniciativa extra do Grupo 04 no escopo do **Módulo Modelagem**: a **Modelagem Organizacional na notação UML** do **G4_ProjetoJogo**, expressa pelo **Diagrama de Casos de Uso**. O artefato descreve as funcionalidades do jogo sob a perspectiva do usuário e complementa a [Modelagem Estática](ModelagemEstatica.md) e a [Modelagem Dinâmica](ModelagemDinamica.md).
 
 ## Objetivo
 
@@ -14,8 +14,8 @@ A modelagem organizacional conecta o software ao seu contexto de uso ao descreve
 
 A elaboração seguiu quatro etapas:
 
-1. **Identificação do ator**: o único ator modelado é o **Jogador**, que controla o protagonista em todas as interações, conforme a [definição oficial do projeto](../Projeto/Projeto.md);
-2. **Derivação dos casos de uso**: os casos foram derivados dos componentes da [Modelagem Estática](Relatórios/SubEquipe_02/ModelagemEstatica.md), das interações da [Modelagem Dinâmica](Relatórios/SubEquipe_02/ModelagemDinamica.md) e das funcionalidades descritas no projeto;
+1. **Identificação do ator**: o único ator modelado é o **Jogador**, que controla o protagonista em todas as interações, conforme a [definição oficial do projeto](../../../Projeto/Projeto.md);
+2. **Derivação dos casos de uso**: os casos foram derivados dos componentes da [Modelagem Estática](ModelagemEstatica.md), das interações da [Modelagem Dinâmica](ModelagemDinamica.md) e das funcionalidades descritas no projeto;
 3. **Definição das relações «include» e «extend»**: as dependências entre casos de uso foram ancoradas nas condições de guarda da Modelagem Dinâmica (`[nova receita]` e `[se vitória]`);
 4. **Diagramação em PlantUML**: o diagrama foi descrito como código-fonte no [editor online do PlantUML](https://www.plantuml.com/plantuml/uml/), o mesmo recurso usado na versão 1.0 do Diagrama de Componentes, e exportado para PNG, mantendo o artefato versionável no repositório.
 
@@ -35,30 +35,30 @@ Todos os casos de uso estão na fronteira do sistema (**G4_ProjetoJogo**). Não 
 
 ### Modelagem Organizacional: Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](../Assets/subgrupo02_diagrama_casosdeuso.png)
+![Diagrama de Casos de Uso](../../../Assets/subgrupo02_diagrama_casosdeuso.png)
 
 <p align="center">Figura 1: Diagrama de Casos de Uso da modelagem organizacional na notação UML. Fonte: FARIAS, João Victor (2026).</p>
 
 ### Casos de Uso
 
-Os elos da última coluna são links para as origens de cada caso de uso: os componentes da [Modelagem Estática](Relatórios/SubEquipe_02/ModelagemEstatica.md) e as interações da [Modelagem Dinâmica](Relatórios/SubEquipe_02/ModelagemDinamica.md).
+Os elos da última coluna são links para as origens de cada caso de uso: os componentes da [Modelagem Estática](ModelagemEstatica.md) e as interações da [Modelagem Dinâmica](ModelagemDinamica.md).
 
 | Nº | Caso de Uso | Descrição | Elos (componentes e interações) |
 | :--: | :--- | :--- | :--- |
-| UC01 | Explorar o Mundo | Movimenta o protagonista pelo mundo semiaberto; os *colliders* disparam encontros e demais gatilhos. | [Movimentação Livre; Interação e Gatilhos](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC02 | Combater em Turnos | Enfrenta inimigos em batalhas por turnos, com menu de ações e sincronização de turnos com a IA. | [Motor de Batalha (ATB); IA de Inimigos](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 1](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-1-turno-de-combate) |
-| UC03 | Usar Habilidade Especial | Extensão de UC02: emprega golpes exclusivos durante o turno de combate. | [Gerenciador de Habilidades Exclusivas](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC04 | Misturar Elementos Químicos | Combina elementos coletados para criar itens, consumindo reagentes do inventário. | [Mistura de Elementos Químicos; Gerenciador de Inventário](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 1](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-1-turno-de-combate) e [Interação 2](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
-| UC05 | Registrar Nova Receita | Extensão de UC04: registra no Livro do Aventureiro uma receita inédita obtida na mistura (`[nova receita]`). | [Livro do Aventureiro; SistemaSalvar](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 2](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
-| UC06 | Consultar o Livro do Aventureiro | Consulta as receitas descobertas e a lore registrada. | [Livro do Aventureiro](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC07 | Gerenciar Inventário | Organiza e consulta itens e reagentes; base para *crafting*, lojas, Coliseu e batalha. | [Gerenciador de Inventário](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC08 | Interagir com NPCs | Ativa *colliders* de NPCs e inicia conversas. | [Interação e Gatilhos; Controlador de NPCs](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC09 | Aceitar e Acompanhar Missões | Inicia *sidequests* oferecidas por NPCs e acompanha o progresso no Jornal de Missões. | [Jornal de Missões; Controlador de NPCs](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC10 | Comprar ou Vender Itens | Negocia com mercadores; a compra debita ouro e transfere o item ao inventário. | [Lojas (Merchants); Menu de Status; Gerenciador de Inventário](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 4](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-4-interação-de-loja) |
-| UC11 | Disputar Batalha no Coliseu | Aposta um item e disputa uma batalha com regras de arena próprias. | [O Coliseu; Motor de Batalha (ATB)](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 3](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
-| UC12 | Salvar Progresso | Persiste status, itens, descobertas e progresso em pontos de salvamento e gatilhos. | [SistemaSalvar](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 2](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) e [Interação 3](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
-| UC13 | Personalizar Personagem | Ajusta a aparência e os atributos do protagonista. | [Personalização do Personagem; Menu de Status](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) |
-| UC14 | Receber Prêmio | Extensão de UC11: recebe o prêmio ao vencer a batalha no Coliseu (`[se vitória]`). | [O Coliseu; Gerenciador de Inventário](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 3](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+| UC01 | Explorar o Mundo | Movimenta o protagonista pelo mundo semiaberto; os *colliders* disparam encontros e demais gatilhos. | [Movimentação Livre; Interação e Gatilhos](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC02 | Combater em Turnos | Enfrenta inimigos em batalhas por turnos, com menu de ações e sincronização de turnos com a IA. | [Motor de Batalha (ATB); IA de Inimigos](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 1](ModelagemDinamica.md?id=interação-1-turno-de-combate) |
+| UC03 | Usar Habilidade Especial | Extensão de UC02: emprega golpes exclusivos durante o turno de combate. | [Gerenciador de Habilidades Exclusivas](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC04 | Misturar Elementos Químicos | Combina elementos coletados para criar itens, consumindo reagentes do inventário. | [Mistura de Elementos Químicos; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 1](ModelagemDinamica.md?id=interação-1-turno-de-combate) e [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
+| UC05 | Registrar Nova Receita | Extensão de UC04: registra no Livro do Aventureiro uma receita inédita obtida na mistura (`[nova receita]`). | [Livro do Aventureiro; SistemaSalvar](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
+| UC06 | Consultar o Livro do Aventureiro | Consulta as receitas descobertas e a lore registrada. | [Livro do Aventureiro](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC07 | Gerenciar Inventário | Organiza e consulta itens e reagentes; base para *crafting*, lojas, Coliseu e batalha. | [Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC08 | Interagir com NPCs | Ativa *colliders* de NPCs e inicia conversas. | [Interação e Gatilhos; Controlador de NPCs](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC09 | Aceitar e Acompanhar Missões | Inicia *sidequests* oferecidas por NPCs e acompanha o progresso no Jornal de Missões. | [Jornal de Missões; Controlador de NPCs](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC10 | Comprar ou Vender Itens | Negocia com mercadores; a compra debita ouro e transfere o item ao inventário. | [Lojas (Merchants); Menu de Status; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 4](ModelagemDinamica.md?id=interação-4-interação-de-loja) |
+| UC11 | Disputar Batalha no Coliseu | Aposta um item e disputa uma batalha com regras de arena próprias. | [O Coliseu; Motor de Batalha (ATB)](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+| UC12 | Salvar Progresso | Persiste status, itens, descobertas e progresso em pontos de salvamento e gatilhos. | [SistemaSalvar](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) e [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+| UC13 | Personalizar Personagem | Ajusta a aparência e os atributos do protagonista. | [Personalização do Personagem; Menu de Status](ModelagemEstatica.md?id=diagrama-de-componentes) |
+| UC14 | Receber Prêmio | Extensão de UC11: recebe o prêmio ao vencer a batalha no Coliseu (`[se vitória]`). | [O Coliseu; Gerenciador de Inventário](ModelagemEstatica.md?id=diagrama-de-componentes) · [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
 
 <p align="center">Tabela 2: Casos de uso do diagrama e seus elos de rastreabilidade. Fonte: FARIAS, João Victor (2026).</p>
 
@@ -66,10 +66,10 @@ Os elos da última coluna são links para as origens de cada caso de uso: os com
 
 | Origem | Relação | Destino | Condição | Elo |
 | :--- | :--: | :--- | :--- | :--- |
-| UC03 Usar Habilidade Especial | «extend» | UC02 Combater em Turnos | Quando o jogador opta por um golpe especial no turno. | Invocação de golpes especiais (*[Motor de Batalha](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) → [Habilidades Exclusivas](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes)*) |
-| UC05 Registrar Nova Receita | «extend» | UC04 Misturar Elementos Químicos | `[nova receita]`: apenas quando a combinação é inédita. | Guarda `[nova receita]` da [Interação 2](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
-| UC11 Disputar Batalha no Coliseu | «include» | UC02 Combater em Turnos | Sem condição: a arena reutiliza o motor de batalha. | Regras de arena (*[Coliseu](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes) → [Motor de Batalha](Relatórios/SubEquipe_02/ModelagemEstatica.md?id=diagrama-de-componentes)*); [Interação 3](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
-| UC14 Receber Prêmio | «extend» | UC11 Disputar Batalha no Coliseu | `[se vitória]`: apenas se o jogador vencer a batalha. | Guarda `[se vitória]` da [Interação 3](Relatórios/SubEquipe_02/ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+| UC03 Usar Habilidade Especial | «extend» | UC02 Combater em Turnos | Quando o jogador opta por um golpe especial no turno. | Invocação de golpes especiais (*[Motor de Batalha](ModelagemEstatica.md?id=diagrama-de-componentes) → [Habilidades Exclusivas](ModelagemEstatica.md?id=diagrama-de-componentes)*) |
+| UC05 Registrar Nova Receita | «extend» | UC04 Misturar Elementos Químicos | `[nova receita]`: apenas quando a combinação é inédita. | Guarda `[nova receita]` da [Interação 2](ModelagemDinamica.md?id=interação-2-mistura-e-descoberta) |
+| UC11 Disputar Batalha no Coliseu | «include» | UC02 Combater em Turnos | Sem condição: a arena reutiliza o motor de batalha. | Regras de arena (*[Coliseu](ModelagemEstatica.md?id=diagrama-de-componentes) → [Motor de Batalha](ModelagemEstatica.md?id=diagrama-de-componentes)*); [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
+| UC14 Receber Prêmio | «extend» | UC11 Disputar Batalha no Coliseu | `[se vitória]`: apenas se o jogador vencer a batalha. | Guarda `[se vitória]` da [Interação 3](ModelagemDinamica.md?id=interação-3-batalha-no-coliseu) |
 
 <p align="center">Tabela 3: Relações «include» e «extend» e suas condições. Fonte: FARIAS, João Victor (2026).</p>
 
@@ -130,7 +130,7 @@ UC14 .> UC11 : <<extend>>\n[se vitória]
 
 ### Lista de Requisitos Iniciais
 
-A tabela a seguir reúne os 43 requisitos iniciais elicitados para o G4_ProjetoJogo, usados como inspiração para as modelagens da SubEquipe_02.
+A tabela a seguir reúne os 43 requisitos iniciais elicitados para o G4_ProjetoJogo, usados como inspiração para as modelagens.
 
 Como se trata de uma lista inicial, nem todos os requisitos chegaram às modelagens: alguns não eram adequados ao escopo do jogo e às decisões de projeto, e outros ficaram fora do recorte desta entrega. Os itens não contemplados aparecem com fundo avermelhado na tabela; os demais foram usados nos artefatos modelados (Modelagem Estática, Modelagem Dinâmica e Diagrama de Casos de Uso).
 
@@ -207,7 +207,7 @@ html.dark-theme .tabela-requisitos tr.nao > td {
 </tbody>
 </table>
 
-<p align="center">Tabela 4: Lista de requisitos iniciais do G4_ProjetoJogo, inspiração das modelagens da SubEquipe_02. Fonte: FARIAS, João Victor (2026).</p>
+<p align="center">Tabela 4: Lista de requisitos iniciais do G4_ProjetoJogo, inspiração das modelagens. Fonte: FARIAS, João Victor (2026).</p>
 
 ## Referências
 
@@ -237,7 +237,8 @@ UML-DIAGRAMS.ORG. **UML Use Case Diagrams**. Disponível em: <https://www.uml-di
 |  1.2   | 17/09 | Adição da lista de requisitos iniciais que inspirou as modelagens | [João Victor](https://github.com/beyondmagic) |         |
 |  1.3   | 17/09 | Fundo avermelhado nas linhas dos requisitos não usados e correção de digitação na tabela | [João Victor](https://github.com/beyondmagic) |         |
 |  1.4   | 17/09 | Adição de explicação sobre os requisitos não contemplados nas modelagens | [João Victor](https://github.com/beyondmagic) |         |
+|  1.5   | 17/09 | Correção dos links relativos e ajuste da redação após a movimentação da página | [João Victor](https://github.com/beyondmagic) |         |
 
 <p align="center">Tabela 6: Histórico de versão.</p>
 
-Ver também: [Modelagem Estática (SubEquipe_02)](Relatórios/SubEquipe_02/ModelagemEstatica.md) · [Modelagem Dinâmica (SubEquipe_02)](Relatórios/SubEquipe_02/ModelagemDinamica.md) · [Participações](1.2.ParticipacoesModelagem.md)
+Ver também: [Modelagem Estática na Notação UML](ModelagemEstatica.md) · [Modelagem Dinâmica na Notação UML](ModelagemDinamica.md) · [Participações](../../1.2.ParticipacoesModelagem.md)
