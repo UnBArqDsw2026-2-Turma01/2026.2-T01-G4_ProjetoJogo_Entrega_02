@@ -70,7 +70,6 @@ Não agendada explicitamente, mas alinhou-se a obrigação conjunta de gravar o 
 ## Gravação da Reunião
 
 - **[Gravação em Vídeo](https://drive.google.com/file/d/1E8ac2_-rEdYhg5MFZ5SDsPuyjkAuSnJp/view?usp=drive_web)**
-- **[Transcrição Automática](https://docs.google.com/document/d/1BgikEyVfi9uk2LC5sTxas0wLZCTt5hNGMugnvBXZWQQ/edit?usp=drive_web&tab=t.hevtqi1mbqeg)**
 
 ## Histórico de Versão
 

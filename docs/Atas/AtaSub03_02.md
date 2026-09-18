@@ -73,7 +73,6 @@ Ficou acordada a realização de uma próxima reunião para discutir exclusivame
 ## Gravação da Reunião
 
 - **[Gravação em Vídeo](https://drive.google.com/file/d/11qzXBtpfd2JpZZM0FasqjvCfQ-zWTE0_/view?usp=drive_web)**
-- **[Transcrição Automática](https://docs.google.com/document/d/1TXpxm76y-UqvfBHU87paDYGzXpcujMUg5IYnygkPqn8/edit?usp=drive_web&tab=t.q2rm1djwjxuy)**
 
 ## Histórico de Versão
 

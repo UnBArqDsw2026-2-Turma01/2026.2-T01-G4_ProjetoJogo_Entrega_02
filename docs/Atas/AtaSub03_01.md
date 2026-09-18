@@ -74,7 +74,6 @@ Foi indicada uma reunião no dia seguinte para focar no desenvolvimento prático
 ## Gravação da Reunião
 
 - **[Gravação em Vídeo](https://drive.google.com/file/d/1kN_tZYn_n8lRyQTqJ4iq13iYj3eXkDH4/view?usp=drive_web)**
-- **[Transcrição Automática](https://docs.google.com/document/d/159Jzw09qa4NQVh7Sde4Qz3fWhPjEOkF8MZY-tkv6WTc/edit?usp=drive_web&tab=t.f4wtjpwqil9e)**
 
 ## Histórico de Versão
 
