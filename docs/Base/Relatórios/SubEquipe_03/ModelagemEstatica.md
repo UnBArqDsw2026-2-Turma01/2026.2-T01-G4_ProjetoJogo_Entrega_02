@@ -80,7 +80,7 @@ A Figura 1 apresenta a versão vigente (1.2) do diagrama. Por causa do tamanho, 
 
 ### Organização do Modelo
 
-As 20 classes do modelo se agrupam em quatro regiões, descritas a seguir.
+Os 20 elementos do modelo (18 classes e 2 enumerações) se agrupam em quatro regiões, descritas a seguir.
 
 #### Personagens
 
@@ -146,7 +146,7 @@ Um episódio da revisão merece registro. Na primeira rodada de correções, o s
 
 **Decisões com custo conhecido.**
 
-- **Classes concretas em vez de abstratas.** Conceitualmente, `Personagem`, `Combatente` e `Area` seriam abstratas, já que o jogo nunca instancia um "personagem genérico". A equipe optou por classes concretas para simplificar a instanciação na futura implementação ([Ata 02](/Atas/AtaSub03_02.md)). O custo é que o modelo não impede a criação dessas instâncias genéricas. A decisão pode ser revista quando houver código.
+- **Classes concretas em vez de abstratas.** Conceitualmente, `Personagem`, `Combatente` e `Area` seriam abstratas, já que o jogo nunca instancia um "personagem genérico". A equipe optou por classes concretas para simplificar a instanciação na futura implementação ([Ata 02](/Atas/AtaSub03_02.md)). Na reunião de 16/09, chegou a concordar em restaurar o *abstract*; ao revisar a versão 1.1, porém, considerou coerente a nova hierarquia com `Combatente` e manteve as classes concretas ([Ata 03](/Atas/AtaSub03_03.md)). O custo é que o modelo não impede a criação dessas instâncias genéricas. A decisão pode ser revista quando houver código.
 - **Composição e agregação.** Fowler (2005) observa que a semântica da agregação na UML é vaga e que muitos modeladores a evitam. A subequipe usou **composição** apenas onde o ciclo de vida é dependente: os inventários e o diário não existem sem o jogador. A **agregação** ficou para partes que existem por conta própria, como um elemento químico ou um livro no mundo. A distinção é intencional, mas uma associação simples comunicaria quase o mesmo.
 - **Fórmula como texto.** O atributo `formula: String` identifica a combinação de forma legível, mas não representa estruturalmente a quantidade de cada elemento (em H2O, dois átomos de hidrogênio e um de oxigênio). Uma classe associativa com a quantidade seria mais precisa. A solução foi adiada para não sobrecarregar o MVP.
 - **Enumeração para o papel do NPC.** `TipoNPC` resolve bem a classificação, mas, se vendedores e *quest givers* passarem a ter comportamentos muito diferentes, o polimorfismo por subclasses ou por padrões comportamentais será mais adequado.
@@ -154,6 +154,14 @@ Um episódio da revisão merece registro. Na primeira rodada de correções, o s
 **Limitações.** RF14 e RF15 estão apenas **parcialmente** modelados: o `NPC` sabe seu papel, mas não existem classes para loja, preço, moeda ou *sidequest*. A subequipe priorizou as mecânicas centrais da ênfase em Jogabilidade (combate e alquimia) e registra essas classes como evolução necessária. Além disso, o atributo `mana` existe em `Jogador`, mas nenhum requisito define como ele é consumido. Essa regra de negócio ainda precisa ser especificada.
 
 **Elo com as próximas entregas.** Alguns pontos do modelo são candidatos naturais a padrões de projeto, que serão avaliados na Entrega 03. A alternância de turnos em `Combate` e as diferenças de comportamento entre tipos de NPC são exemplos.
+
+### Pontos de Vista dos Integrantes
+
+Posição de cada integrante nos debates das reuniões, descrita em primeira pessoa e revisada por cada um.
+
+- **Carlos Henrique Brasil de Souza:** Critiquei o protótipo inicial por usar atributos públicos e protegidos e defendi atributos privados com *getters* e *setters*, convenção que a equipe adotou ([Ata 02](/Atas/AtaSub03_02.md)). Questionei a herança de `AreaSegura`, que repetia o salvamento já herdado de `Area`, e defendi retirar o ponto de salvamento, já que o salvamento livre bastava. Na revisão da versão 1.1, notei que o salvamento tinha sumido do diagrama e que FOGO, GELO e VENENO não são elementos químicos ([Ata 03](/Atas/AtaSub03_03.md)).
+- **Pedro Teixeira Moriel Sanchez:** Propus o diagrama de classes e trouxe o protótipo como ponto de partida ([Ata 02](/Atas/AtaSub03_02.md)). Defendi manter `AreaSegura`, mesmo vazia, como a área padrão da hierarquia: sem ela, todas as áreas teriam encontros aleatórios ([Ata 03](/Atas/AtaSub03_03.md)). Na revisão da versão 1.1, considerei coerente a divisão em `Combatente` e lembrei que o salvamento estava nos requisitos quando a IA sugeriu deixá-lo fora do MVP.
+- **Renan Pereira Reis:** Questionei se a regra de salvamento era coerente com a divisão entre áreas seguras e não seguras e pedi que ela fosse revalidada ([Ata 03](/Atas/AtaSub03_03.md)). Usei a IA para revisar o código do diagrama, o que apontou, entre outros problemas, o laço de auto-referência em `Jogador` ([Ata 02](/Atas/AtaSub03_02.md)). Na revisão da versão 1.1, observei que a IA tinha retirado o *abstract* seguindo as atas, e não a discussão da reunião ([Ata 03](/Atas/AtaSub03_03.md)).
 
 ### Rastreabilidade com Outros Artefatos
 
@@ -163,6 +171,7 @@ Um episódio da revisão merece registro. Na primeira rodada de correções, o s
 | [BPMN — Entrega 01](https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_01/blob/main/docs/Base/Relat%C3%B3rios/SubEquipe_03/BPMN.md) | Os fluxos de exploração, combate e livro colecionável fundamentam `AreaNaoSegura`, `Combate` e `DiarioAventureiro`. |
 | [Ata 01 — 12/09](/Atas/AtaSub03_01.md) | Consolidação dos requisitos, separação dos inventários, atributos de personagens e remoção da customização. |
 | [Ata 02 — 15/09](/Atas/AtaSub03_02.md) | Elaboração da versão 1.0, convenção de visibilidade e retirada do *abstract*. |
+| [Ata 03 — 16/09](/Atas/AtaSub03_03.md) | Revisão da versão 1.1: `AreaSegura` mantida como área padrão, salvamento como `SistemaSave`, elementos da tabela periódica e classes concretas. |
 | [Modelagem Dinâmica](ModelagemDinamica.md) | As partições do diagrama de atividades são classes deste modelo; o refinamento da versão 1.2 veio dessa modelagem. |
 | [IA Generativa](IAGenerativa.md) | Análise crítica do uso de IA generativa na revisão do diagrama. |
 | <a href="Base/Relatórios/SubEquipe_03/assets/diagrama-classes.drawio" download>diagrama-classes.drawio</a> | Arquivo-fonte editável do diagrama. |
@@ -200,6 +209,7 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 | 1.0 | 15/09/2026 | Elaboração da primeira versão do diagrama de classes no Draw.io | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
 | 1.1 | 16/09/2026 | Revisão de consistência com a UML e com os requisitos; inclusão de `Combate`, `Combatente`, `SistemaSave`, inventários separados e elementos da tabela periódica, com apoio de IA generativa | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
 | 1.2 | 16/09/2026 | Refinamento cruzado com o diagrama de atividades, revisão do RF08 e redação do relatório | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
+| 1.3 | 18/09/2026 | Inclusão dos pontos de vista dos integrantes, da Ata 03 na rastreabilidade e das duas etapas da decisão sobre o *abstract* | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
 
 <p align="center">Tabela 7: Histórico de versão.</p>
 

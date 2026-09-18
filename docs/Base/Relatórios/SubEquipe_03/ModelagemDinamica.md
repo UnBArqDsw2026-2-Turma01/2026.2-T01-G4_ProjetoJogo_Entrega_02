@@ -16,7 +16,9 @@ O diagrama foi construído sobre a [Modelagem Estática](ModelagemEstatica.md) d
 
 ### Escolha do Diagrama
 
-A [Ata 02](/Atas/AtaSub03_02.md) registra a intenção inicial de usar um diagrama de sequência. Em discussão posterior (16/09), a subequipe optou pelo **diagrama de atividades**. Fowler (2005) indica que diagramas de sequência são adequados para mostrar a colaboração entre objetos em um cenário, mas não são bons para representar laços e comportamento condicional. O combate por turnos é justamente um laço com várias decisões encadeadas. O diagrama de atividades descreve lógica procedural e fluxos de trabalho com decisões e iterações (FOWLER, 2005). Com o uso de **partições** (*swimlanes*), ele também mostra qual classe é responsável por cada ação (BOOCH; RUMBAUGH; JACOBSON, 2005), o que preserva o vínculo com o diagrama de classes.
+A escolha foi feita na reunião de 12/09 ([Ata 01](/Atas/AtaSub03_01.md)). O diagrama de sequência chegou a ser proposto, mas a equipe o considerou mais difícil de ler e de montar, e optou pelo **diagrama de atividades**, cujas partições se assemelham às *pools* do BPMN que a subequipe elaborou na Entrega 01. A [Ata 01](/Atas/AtaSub03_01.md) registrou a decisão de forma ambígua ("atividades/sequência"), e na reunião de 15/09 o grupo chegou a lembrar da escolha como diagrama de sequência, o que ficou na [Ata 02](/Atas/AtaSub03_02.md). A reunião de 16/09 confirmou o diagrama de atividades ([Ata 03](/Atas/AtaSub03_03.md)).
+
+Fowler (2005) indica que diagramas de sequência são adequados para mostrar a colaboração entre objetos em um cenário, mas não são bons para representar laços e comportamento condicional. O combate por turnos é justamente um laço com várias decisões encadeadas. O diagrama de atividades descreve lógica procedural e fluxos de trabalho com decisões e iterações (FOWLER, 2005). Com o uso de **partições** (*swimlanes*), ele também mostra qual classe é responsável por cada ação (BOOCH; RUMBAUGH; JACOBSON, 2005), o que preserva o vínculo com o diagrama de classes.
 
 ### Escolha do Cenário
 
@@ -34,7 +36,7 @@ O cenário modelado é o **combate por turnos com mistura de elementos**, porque
 
 <p align="center">Tabela 1: Etapas da modelagem dinâmica. Fonte: SOUZA, Carlos; SANCHEZ, Pedro; REIS, Renan (2026).</p>
 
-**Ferramentas.** O diagrama foi construído no [Draw.io](https://app.diagrams.net/), e o arquivo-fonte está versionado no repositório (<a href="Base/Relatórios/SubEquipe_03/assets/diagrama-atividades-combate.drawio" download>diagrama-atividades-combate.drawio</a>). A primeira versão foi gerada com apoio de IA generativa (Claude) a partir do diagrama de classes, como referência para a equipe trabalhar. As decisões de conteúdo, como o cenário, a penalidade e o atalho de combinações, foram da subequipe. A análise desse uso está em [IA Generativa](IAGenerativa.md).
+**Ferramentas.** O diagrama foi construído no [Draw.io](https://app.diagrams.net/), e o arquivo-fonte está versionado no repositório (<a href="Base/Relatórios/SubEquipe_03/assets/diagrama-atividades-combate.drawio" download>diagrama-atividades-combate.drawio</a>). A primeira versão foi gerada com apoio de IA generativa (Claude) a partir do diagrama de classes, como referência para a equipe trabalhar. O cenário de combate veio dessa versão e foi aceito pela subequipe; as regras de jogabilidade, como a penalidade e o atalho de combinações, vieram da própria subequipe. A análise desse uso está em [IA Generativa](IAGenerativa.md).
 
 ## Conteúdo
 
@@ -147,6 +149,14 @@ Esse ciclo, em que o modelo dinâmico corrige o estático e o requisito, mostra 
 
 **Elo com as próximas entregas.** A alternância de turnos e a mudança de comportamento do combate conforme o estado (turno do jogador, turno do inimigo, fim) são candidatas a padrões comportamentais, a serem avaliados na Entrega 03.
 
+### Pontos de Vista dos Integrantes
+
+Posição de cada integrante nos debates das reuniões, descrita em primeira pessoa e revisada por cada um.
+
+- **Carlos Henrique Brasil de Souza:** Na escolha do diagrama, achei o de sequência complicado e lembrei que as partições do diagrama de atividades se parecem com as *pools* do BPMN que fizemos na Entrega 01 ([Ata 01](/Atas/AtaSub03_01.md)). No debate sobre onde ficaria o histórico de magias, apoiei mantê-lo dentro do Diário do Aventureiro ([Ata 03](/Atas/AtaSub03_03.md)).
+- **Pedro Teixeira Moriel Sanchez:** Defendi o diagrama de atividades por ser mais simples de montar e parecido com o BPMN ([Ata 01](/Atas/AtaSub03_01.md)). Na revisão da versão de referência, apontei que faltava, no início do turno, a opção de usar uma magia já descoberta como alternativa à mistura. Propus que o Diário do Aventureiro tivesse duas abas, livros e histórico de magias, já que o jogador precisaria consultá-lo durante o combate de qualquer forma ([Ata 03](/Atas/AtaSub03_03.md)).
+- **Renan Pereira Reis:** Sugeri inicialmente o diagrama de sequência e concordei com o de atividades após a discussão ([Ata 01](/Atas/AtaSub03_01.md)). No debate sobre o atalho, ponderei que magias prontas não combinavam com o sistema que eu imaginava, mas concordei com a proposta: se o jogador já descobriu uma combinação, pode usá-la sem misturar de novo ([Ata 03](/Atas/AtaSub03_03.md)). Também levei à equipe a sugestão de explicitar isso nos requisitos, que todos aprovaram.
+
 ### Rastreabilidade com Outros Artefatos
 
 | Artefato | Relação com este modelo |
@@ -154,8 +164,9 @@ Esse ciclo, em que o modelo dinâmico corrige o estático e o requisito, mostra 
 | [Modelagem Estática](ModelagemEstatica.md) | Fonte das partições e operações; recebeu os refinamentos da versão 1.2. |
 | [Requisitos Funcionais de Referência](ModelagemEstatica.md?id=requisitos-funcionais-de-referência) | Requisitos cobertos pelo fluxo, incluindo o RF08 revisado. |
 | [BPMN — Entrega 01](https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_01/blob/main/docs/Base/Relat%C3%B3rios/SubEquipe_03/BPMN.md) | Os fluxos de exploração e combate levantados por engenharia reversa originaram a sequência exploração, encontro e combate por turnos. |
-| [Ata 01 — 12/09](/Atas/AtaSub03_01.md) | Mistura de elementos concentrada no combate e penalidade por combinação inválida. |
-| [Ata 02 — 15/09](/Atas/AtaSub03_02.md) | Registro da intenção inicial de usar diagrama de sequência. |
+| [Ata 01 — 12/09](/Atas/AtaSub03_01.md) | Escolha do diagrama de atividades, mistura de elementos concentrada no combate e penalidade por combinação inválida. |
+| [Ata 02 — 15/09](/Atas/AtaSub03_02.md) | Registro, por engano, do diagrama de sequência como opção da modelagem dinâmica. |
+| [Ata 03 — 16/09](/Atas/AtaSub03_03.md) | Revisão do diagrama de atividades, atalho de combinações registradas e histórico de magias no Diário do Aventureiro. |
 | [IA Generativa](IAGenerativa.md) | Análise crítica do uso de IA generativa na elaboração do diagrama. |
 | <a href="Base/Relatórios/SubEquipe_03/assets/diagrama-atividades-combate.drawio" download>diagrama-atividades-combate.drawio</a> | Arquivo-fonte editável do diagrama. |
 
@@ -190,6 +201,7 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 | 1.0 | 16/09/2026 | Versão de referência do diagrama de atividades, derivada do diagrama de classes, com apoio de IA generativa | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
 | 1.1 | 16/09/2026 | Verificação de consistência entre ações e operações e correção de duas ações | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
 | 1.2 | 16/09/2026 | Inclusão do atalho de reutilização de combinações registradas e redação do relatório | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
+| 1.3 | 18/09/2026 | Correção do histórico da escolha do diagrama, inclusão dos pontos de vista dos integrantes e da Ata 03 na rastreabilidade | Carlos Henrique Brasil de Souza, Pedro Teixeira Moriel Sanchez, Renan Pereira Reis | |
 
 <p align="center">Tabela 6: Histórico de versão.</p>
 
