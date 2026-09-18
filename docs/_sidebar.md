@@ -18,13 +18,13 @@
       - [1. Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md)
       - [2. Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemDinamica.md)
       - [3. IA Generativa](/Base/Relatórios/SubEquipe_02/IAGenerativa.md)
+      - [Iniciativas Extras](/Base/Relatórios/SubEquipe_02/IniciativasExtras.md)
     - O · SubEquipe 03
       - [1. Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_03/ModelagemEstatica.md)
       - [2. Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_03/ModelagemDinamica.md)
       - [3. IA Generativa](/Base/Relatórios/SubEquipe_03/IAGenerativa.md)
 
   - [Participações](/Base/1.2.ParticipacoesModelagem.md)
-  - [Iniciativas Extras](/Base/1.3.IniciativasExtras.md)
 
 - Atas de Reunião
   - [Reuniões Gerais](/Atas/Gerais.md)
