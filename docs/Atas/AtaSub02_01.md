@@ -4,7 +4,7 @@
 
 | Data | Horário de Início | Horário de Término | Local | Projeto | Redator |
 | :--: | :---------------: | :----------------: | :---: | :-----: | :-----: |
-| 11/09/2026 | — | — | Google Meet (online) | G4_ProjetoJogo | João Victor da Silva Batista de Farias |
+| 11/09/2026 | — | — | Whatsapp | G4_ProjetoJogo | João Victor da Silva Batista de Farias |
 
 <p align="center">Tabela 1: Identificação da reunião. Fonte: Autores, 2026.</p>
 
