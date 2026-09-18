@@ -14,7 +14,7 @@ A organização da Entrega 02 foi realizada a partir das reuniões da equipe, da
 
 Diferentemente da Entrega 01, **não foi utilizado um quadro Kanban nesta entrega**. O acompanhamento do trabalho ocorreu diretamente pelas issues, branches, commits e pull requests do repositório.
 
-Para o versionamento, foi adotado um fluxo inspirado no **GitHub Flow**: as alterações eram desenvolvidas em branches próprias, registradas por commits e submetidas à branch `main` por meio de pull requests. Os pull requests permitiram revisar as contribuições antes da integração e preservar o histórico das discussões e alterações realizadas.
+Para o versionamento, foi adotado um fluxo inspirado no **[GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow)**: as alterações eram desenvolvidas em branches próprias, registradas por commits e submetidas à branch `main` por meio de pull requests. Os pull requests permitiram revisar as contribuições antes da integração e preservar o histórico das discussões e alterações realizadas.
 
 ### Fluxo de Trabalho
 
@@ -115,13 +115,13 @@ Como melhoria para os próximos ciclos, recomenda-se criar as issues antes do in
 
 ## Referências
 
-GITHUB. **GitHub flow**. GitHub Docs. Disponível em: https://docs.github.com/en/get-started/using-github/github-flow. Acesso em: 17 set. 2026.
+GITHUB. **GitHub flow**. GitHub Docs. [Guia do fluxo](https://docs.github.com/en/get-started/using-github/github-flow). Acesso em: 17 set. 2026.
 
-GITHUB. **Planning and tracking work for your team or project**. GitHub Docs. Disponível em: https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project. Acesso em: 17 set. 2026.
+GITHUB. **Planning and tracking work for your team or project**. GitHub Docs. [Planejamento e acompanhamento](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project). Acesso em: 17 set. 2026.
 
-OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.1**. 2017. Disponível em: https://www.omg.org/spec/UML/2.5.1/PDF. Acesso em: 17 set. 2026.
+OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.1**. 2017. [Especificação](https://www.omg.org/spec/UML/2.5.1/PDF). Acesso em: 17 set. 2026.
 
-PLANTUML. **Activity Diagram (New Syntax)**. Disponível em: https://plantuml.com/activity-diagram-beta. Acesso em: 17 set. 2026.
+PLANTUML. **Activity Diagram (New Syntax)**. [Documentação](https://plantuml.com/activity-diagram-beta). Acesso em: 17 set. 2026.
 
 ## Nível de Contribuição dos Integrantes
 

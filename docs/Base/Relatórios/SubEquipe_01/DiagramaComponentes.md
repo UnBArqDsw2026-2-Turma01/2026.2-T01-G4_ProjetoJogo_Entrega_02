@@ -12,9 +12,9 @@ Representar a estrutura do sistema em componentes e evidenciar suas interfaces e
 
 O artefato foi produzido conforme a distribuição registrada na [Ata 01](/Atas/AtaSub01_01.md) e na [issue #5][issue]. O [Mapa Mental][mapa] orientou a identificação das mecânicas, e o [BPMN][bpmn] e o [diagrama de atividades](DiagramaAtividades.md) ajudaram a identificar os serviços necessários para executá-las. Na V2, as responsabilidades foram reorganizadas a partir dos RF01 a RF19 do [Subgrupo 03][rf].
 
-Os arquivos SVG e a fonte editável em arquivo draw.io foram construídos pelo site [draw.io](https://app.diagrams.net/). Informações sobre revisões e uso de IA estão registradas em [IA Generativa](IAGenerativa.md#yogi-nam-de-souza-barbosa). Os diagramas tomam como referência os slides de Milene Serrano (páginas 47 a 49), os [exemplos de componentes do UML Diagrams](https://www.uml-diagrams.org/component-diagrams.html) e a UML 2.5.1 (§§11.2, 11.6 e 22).
+Os arquivos SVG e a fonte editável em arquivo draw.io foram construídos pelo site [draw.io](https://app.diagrams.net/). Informações sobre revisões e uso de IA estão registradas em [IA Generativa](IAGenerativa.md#yogi-nam-de-souza-barbosa). Os diagramas tomam como referência os [slides de Milene Serrano][slides] (páginas 47 a 49), os [exemplos de componentes do UML Diagrams](https://www.uml-diagrams.org/component-diagrams.html) e a [UML 2.5.1][uml] (§§11.2, 11.6 e 22).
 
-A conferência da V2 examinou o sentido de cada interface fornecida/requerida, as delegações para as partes internas e a correspondência entre os serviços e os requisitos. O carrossel preserva a comparação visual; os commits no histórico permitem consultar as alterações de conteúdo.
+A conferência da V2 examinou o sentido de cada interface fornecida/requerida, as delegações para as partes internas e a correspondência entre os serviços e os requisitos. O carrossel preserva a comparação visual; os commits da [V1][v1] e da [V2][v2] permitem consultar as alterações de conteúdo.
 
 ## Conteúdo
 
@@ -45,26 +45,34 @@ Os quadrados representam portas; círculos e tomadas indicam interfaces fornecid
 
 A coordenação central reduz ligações diretas entre as mecânicas, mas exige cuidado para que o Controle da Partida não absorva regras de combate, compras ou inventário. Neste modelo, ele encaminha os dados necessários e incorpora os resultados ao progresso. O diagrama mostra essas dependências, mas não demonstra a ordem das chamadas nem como uma atualização é concluída antes do salvamento; essas questões dependem do detalhamento comportamental.
 
+### Relação com outros diagramas
+
+- O [Diagrama de Atividades](DiagramaAtividades.md#relação-com-os-componentes) dá contexto aos serviços: `Resolver combate por turnos` corresponde a `ICombate`, enquanto `Salvar progresso` corresponde a `ISalvamento`.
+- O [Diagrama de Classes](DiagramaClasses.md#classes-e-justificativa) detalha entidades como `Inventario`, `DiarioDoAventureiro` e `Combate`, associadas aos serviços desses componentes. Uma classe não equivale necessariamente a um componente, que pode reunir várias classes e regras.
+- O [Diagrama de Pacotes](DiagramaPacotes.md) organiza o módulo do jogador em camadas. Essa divisão complementa os subsistemas por mecânica apresentados aqui: a implementação de um serviço pode envolver entidades, casos de uso e persistência em pacotes distintos.
+
+O [Diagrama de Sequência do turno de combate][sequencia] permite comparar a ordem das chamadas com essa separação de responsabilidades. Na sequência, `Combate` solicita o registro de uma descoberta diretamente ao `DiarioDoAventureiro`; na V2 de componentes, o acesso ao Diário passa pelo Estado do Jogador, no subsistema Progressão. Os dois desenhos, portanto, ainda apresentam formas diferentes de coordenar essa atualização.
+
 ### Serviços das interfaces
 
 <div role="region" aria-label="Tabela 1" tabindex="0" style="overflow-x:auto;padding:0 6px 6px 0;">
 
 | Interface | Componente responsável | Serviço | Requisitos |
 |-----------|------------------------|---------|------------|
-| `IPartida` | Controle da Partida | Receber comandos da interface do jogador e coordenar o fluxo da sessão. | RF03 |
-| `IExploracao` | Exploração | Movimentar o jogador e processar os eventos associados à exploração do mundo. | RF01, RF02, RF04, RF10 |
-| `INPCs` | Interações com NPCs | Processar compras e iniciar missões secundárias. | RF14, RF15 |
-| `ICombate` | Combate em Turnos | Resolver ações de combate, calcular dano, alternar turnos e determinar vitória ou derrota. | RF05, RF06, RF07, RF13, RF16, RF17 |
-| `IMagias` | Magias | Determinar combinações e efeitos a partir dos elementos coletados pelo jogador. | RF05, RF09 |
-| `IProgresso` | Estado do Jogador | Manter estatísticas e missões e incorporar os resultados das mecânicas ao estado do jogador. | RF15, RF16; integração de RF08, RF11, RF12, RF18 e RF19 |
-| `IInventario` | Inventário | Administrar os itens e recursos mantidos pelo jogador. | RF14, RF18, RF19 |
-| `IDiario` | Diário do Aventureiro | Manter livros e magias descobertas e apresentar o enredo ou as combinações reveladas pelos livros. | RF08, RF11, RF12 |
-| `ISalvamento` | Salvamento | Gravar o progresso ao salvar e sair. | RF03 |
-| `ICatalogo` | Catálogo do Jogo | Fornecer definições utilizadas pelas mecânicas do jogo, como áreas, personagens, magias, itens e NPCs. | RF02, RF13, RF16, RF17 |
+| `IPartida` | Controle da Partida | Receber comandos da interface do jogador e coordenar o fluxo da sessão. | [RF03][rf] |
+| `IExploracao` | Exploração | Movimentar o jogador e processar os eventos associados à exploração do mundo. | [RF01, RF02, RF04, RF10][rf] |
+| `INPCs` | Interações com NPCs | Processar compras e iniciar missões secundárias. | [RF14, RF15][rf] |
+| `ICombate` | Combate em Turnos | Resolver ações de combate, calcular dano, alternar turnos e determinar vitória ou derrota. | [RF05, RF06, RF07, RF13, RF16, RF17][rf] |
+| `IMagias` | Magias | Determinar combinações e efeitos a partir dos elementos coletados pelo jogador. | [RF05, RF09][rf] |
+| `IProgresso` | Estado do Jogador | Manter estatísticas e missões e incorporar os resultados das mecânicas ao estado do jogador. | [RF15, RF16][rf]; integração de [RF08, RF11, RF12, RF18 e RF19][rf] |
+| `IInventario` | Inventário | Administrar os itens e recursos mantidos pelo jogador. | [RF14, RF18, RF19][rf] |
+| `IDiario` | Diário do Aventureiro | Manter livros e magias descobertas e apresentar o enredo ou as combinações reveladas pelos livros. | [RF08, RF11, RF12][rf] |
+| `ISalvamento` | Salvamento | Gravar o progresso ao salvar e sair. | [RF03][rf] |
+| `ICatalogo` | Catálogo do Jogo | Fornecer definições utilizadas pelas mecânicas do jogo, como áreas, personagens, magias, itens e NPCs. | [RF02, RF13, RF16, RF17][rf] |
 
 </div>
 
-<p align="center">Tabela 1: Interfaces da V2 e cobertura funcional. Fonte: requisitos do Subgrupo 03, organizados por Yogi Nam de Souza Barbosa com auxílio IA para linkar requisitos, 2026.</p>
+<p align="center">Tabela 1: Interfaces da V2 e cobertura funcional. Fonte: <a href="Base/Relatórios/SubEquipe_01/assets/referencias/requisitos-subgrupo03.txt" target="_blank" rel="noopener">requisitos do Subgrupo 03</a>, organizados por Yogi Nam de Souza Barbosa com auxílio IA para linkar requisitos, 2026.</p>
 
 ### Decisões e evidências
 
@@ -78,9 +86,9 @@ A coordenação central reduz ligações diretas entre as mecânicas, mas exige 
 
 ## Referências
 
-OBJECT MANAGEMENT GROUP. **UML 2.5.1**. 2017. Seções 11.2, 11.6 e 22. [Especificação](https://www.omg.org/spec/UML/2.5.1/PDF).
+OBJECT MANAGEMENT GROUP. **UML 2.5.1**. 2017. Seções 11.2, 11.6 e 22. [Especificação][uml].
 
-SERRANO, Milene. **Modelagem UML Estática**. Universidade de Brasília, [s. d.]. Páginas 47 a 49. [Slides](Base/Relatórios/SubEquipe_01/assets/componentes/referencias/modelagem-uml-estatica.pdf ':ignore').
+SERRANO, Milene. **Modelagem UML Estática**. Universidade de Brasília, [s. d.]. Páginas 47 a 49. [Slides][slides].
 
 SUBGRUPO 03. **BPMN**. 2026. [Exploração e combate][bpmn].
 
@@ -120,4 +128,6 @@ UML DIAGRAMS. **Component Diagrams**. [Notação e exemplos](https://www.uml-dia
 [v1]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/d1ddd713d22038daa1a9189cd8fc9cdbb1f6e30b
 [v2]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/e732f4816fe9ad4201b15d2704d0e76d0db94512
 [revisao-texto]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/9a82f35660010398255b7e17f3ab8099983cd509
-[base-evidencias]: Base/Relatórios/SubEquipe_01/assets/evidencias/README.md ':ignore'
+[sequencia]: Base/Relatórios/SubEquipe_01/assets/sequencia/sequencia.svg ':ignore'
+[slides]: Base/Relatórios/SubEquipe_01/assets/componentes/referencias/modelagem-uml-estatica.pdf ':ignore'
+[uml]: https://www.omg.org/spec/UML/2.5.1/PDF
