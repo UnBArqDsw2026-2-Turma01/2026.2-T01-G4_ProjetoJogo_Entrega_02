@@ -129,6 +129,6 @@ UML DIAGRAMS. **Activity Diagrams**. [Notação e exemplos](https://www.uml-diag
 [v1]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/d36316de57703613a2451c4a7f30de1b22358e40
 [v2]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/e732f4816fe9ad4201b15d2704d0e76d0db94512
 [revisao-texto]: https://github.com/UnBArqDsw2026-2-Turma01/2026.2-T01-G4_ProjetoJogo_Entrega_02/commit/9a82f35660010398255b7e17f3ab8099983cd509
-[sequencia]: Base/Relatórios/SubEquipe_01/assets/sequencia/sequencia.svg ':ignore'
+[sequencia]: DiagramaSequencia.md
 [slides]: Base/Relatórios/SubEquipe_01/assets/atividades/referencias/modelagem-uml-dinamica.pdf ':ignore'
 [uml]: https://www.omg.org/spec/UML/2.5.1/PDF

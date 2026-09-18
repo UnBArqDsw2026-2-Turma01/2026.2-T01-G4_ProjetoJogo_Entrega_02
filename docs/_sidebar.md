@@ -18,6 +18,7 @@
       - 2 . Modelagem Dinâmica na Notação UML
         - [Diagrama de Atividades](/Base/Relatórios/SubEquipe_01/DiagramaAtividades.md)
         - [Diagrama de Estados](/Base/Relatórios/SubEquipe_01/DiagramaEstados.md)
+        - [Diagrama de Sequência](/Base/Relatórios/SubEquipe_01/DiagramaSequencia.md)
       - [3. IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
       - [Metodologia GitHub](/Base/Relatórios/SubEquipe_01/MetodologiaGitHub.md)
       - [Melhorias no Site](/Base/Relatórios/SubEquipe_01/MelhoriasSite.md)

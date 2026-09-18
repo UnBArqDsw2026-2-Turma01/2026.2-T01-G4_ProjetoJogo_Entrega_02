@@ -55,6 +55,6 @@ UNB FCTE: ARQDSW. **Módulo de Modelagem**. [Material da disciplina][disciplina]
 
 <p align="center">Tabela 2: Histórico de versão.</p>
 
-[sequencia]: Base/Relatórios/SubEquipe_01/assets/sequencia/sequencia.svg ':ignore'
+[sequencia]: DiagramaSequencia.md
 [uml]: https://www.omg.org/spec/UML/2.5.1/PDF
 [disciplina]: https://sites.google.com/view/unb-fcte-arqdsw/módulos/módulo-modelagem?authuser=0

@@ -116,4 +116,4 @@ UML DIAGRAMS. **Class Diagrams**. [Notação e exemplos](https://www.uml-diagram
 
 [rf]: Base/Relatórios/SubEquipe_01/assets/referencias/requisitos-subgrupo03.txt ':ignore'
 [rf-iniciais]: Base/Relatórios/SubEquipe_01/assets/evidencias/anotacoes_manuais.txt ':ignore'
-[sequencia]: Base/Relatórios/SubEquipe_01/assets/sequencia/sequencia.svg ':ignore'
+[sequencia]: DiagramaSequencia.md
