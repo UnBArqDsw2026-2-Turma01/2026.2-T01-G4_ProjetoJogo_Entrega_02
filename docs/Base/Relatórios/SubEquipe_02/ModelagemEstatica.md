@@ -26,7 +26,7 @@ Segundo a IBM, os diagramas de classe são fundamentais para o processo de model
 
 ![Diagrama de Classe](../../../Assets/diagramaDeClasse.png)
 
-<p align="center">Figura 1: Modelo Estático na notação UML. Fonte: COSTA, João Igor (2026).</p>
+<p align="center">Figura 1: Modelo Estático na notação UML. Fonte: Elaboração própria (COSTA, João Igor, 2026).</p>
 
 Estes diagramas funcionam como representações abstratas da estrutura do sistema ou subsistema e são utilizados para:
 
@@ -80,13 +80,13 @@ A **versão 1.0** corresponde à renderização direta do código-fonte pelo edi
 
 ![Diagrama de Componentes - versão 1.0](../../../Assets/subgrupo02_diagrama_componentes.png)
 
-<p align="center">Figura 2: Diagrama de Componentes na notação UML (versão 1.0, gerada no PlantUML). Fonte: SILVA, Marcos (2026).</p>
+<p align="center">Figura 2: Diagrama de Componentes na notação UML (versão 1.0, gerada no PlantUML). Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 A **versão 1.1**, apresentada a seguir, é o resultado da importação desse mesmo código no Draw.io, com reorganização manual dos componentes e das setas, porém sem a presença de portas, pois o Draw.io não suporta nativamente esse elemento. Por manter a mesma semântica da versão anterior e oferecer melhor legibilidade, é a versão vigente do diagrama:
 
 ![Diagrama de Componentes - versão 1.1](../../../Assets/subgrupo02_diagrama_componentes_v2.png)
 
-<p align="center">Figura 3: Diagrama de Componentes na notação UML (versão 1.1, refinada no Draw.io). Fonte: SILVA, Marcos (2026).</p>
+<p align="center">Figura 3: Diagrama de Componentes na notação UML (versão 1.1, refinada no Draw.io). Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 #### Código-Fonte do Diagrama de Componentes
 
@@ -233,7 +233,7 @@ pJor_Save -down-( I_Persistencia : Serializa Progresso
 
 </details>
 
-<p align="center">Código 1: Código-fonte em PlantUML do Diagrama de Componentes. Fonte: SILVA, Marcos (2026).</p>
+<p align="center">Código 1: Código-fonte em PlantUML do Diagrama de Componentes. Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 ---
 
@@ -263,7 +263,7 @@ O diagrama pode ser lido de cima para baixo em quatro partes: **produção** (m�
 
 ![Diagrama de Implantação](../../../Assets/subgrupo02_diagrama_implantacao.png)
 
-<p align="center">Figura 4: Diagrama de Implantação do G4_ProjetoJogo na notação UML. Fonte: Marcelo (2026).</p>
+<p align="center">Figura 4: Diagrama de Implantação do G4_ProjetoJogo na notação UML. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 ---
 
@@ -283,7 +283,7 @@ O diagrama pode ser lido de cima para baixo em quatro partes: **produção** (m�
 | Cliente Steam | `<<executionEnvironment>>` | Nenhum | Processo local exigido pela Steamworks API; é ele que se comunica com os servidores da Steam. |
 | Serviços da Plataforma de Distribuição (Steamworks) | `<<device>>` | componentes Serviço de conquistas, Cloud save e Atualizações | Infraestrutura externa, representada como caixa-preta. |
 
-<p align="center">Tabela 1: Nós, estereótipos e artefatos do Diagrama de Implantação. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
+<p align="center">Tabela 1: Nós, estereótipos e artefatos do Diagrama de Implantação. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 #### Caminhos de comunicação e dependências
 
@@ -303,7 +303,7 @@ O diagrama pode ser lido de cima para baixo em quatro partes: **produção** (m�
 | GodotSteam | Cliente Steam | dependência `<<IPC local>>` | Chamadas à Steamworks API atendidas pelo cliente Steam em execução no PC. |
 | Cliente Steam | Steamworks | caminho de comunicação `<<HTTPS / TLS>>` | Conquistas, *cloud save* e atualizações, apenas quando há integração. |
 
-<p align="center">Tabela 2: Caminhos de comunicação e dependências do Diagrama de Implantação. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
+<p align="center">Tabela 2: Caminhos de comunicação e dependências do Diagrama de Implantação. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 #### Rastreabilidade com os artefatos da Entrega 01
 
@@ -318,7 +318,7 @@ O diagrama pode ser lido de cima para baixo em quatro partes: **produção** (m�
 | Ausência de servidor de jogo e de loja | Questionário Q10: rejeição a mecânicas *pay-to-win*; projeto *single-player*. |
 | GodotSteam, cliente Steam e Steamworks como opcionais | Questionário Q11: conquistas externas como incentivo de importância moderada. |
 
-<p align="center">Tabela 3: Rastreabilidade entre o Diagrama de Implantação e os artefatos da Entrega 01. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
+<p align="center">Tabela 3: Rastreabilidade entre o Diagrama de Implantação e os artefatos da Entrega 01. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 ## Referências
 
@@ -343,7 +343,7 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 |Marcelo de Araújo Lopes |     25%       |
 |João Victor da Silva Batista de Farias (revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
 
-<p align="center">Tabela 4: Contribuição dos integrantes.</p>
+<p align="center">Tabela 4: Contribuição dos integrantes. Fonte: Autores, 2026.</p>
 
 ## Histórico de Versão
 
@@ -356,6 +356,6 @@ OBJECT MANAGEMENT GROUP. **OMG Unified Modeling Language (OMG UML), Version 2.5.
 |  1.4   |17/09 | Adição do Diagrama de Implantação, com as tabelas de nós e artefatos, caminhos de comunicação e rastreabilidade | [Marcelo de Araújo Lopes](https://github.com/MatielloAL) |         |
 |  1.5   |17/09 | Adição da participação de João Victor (revisão geral e elicitação da lista de requisitos iniciais) | [João Victor](https://github.com/beyondmagic) |         |
 
-<p align="center">Tabela 5: Histórico de versão.</p>
+<p align="center">Tabela 5: Histórico de versão. Fonte: Autores, 2026.</p>
 
 Ver também: [Modelagem Dinâmica na Notação UML](ModelagemDinamica.md) · [IA Generativa](IAGenerativa.md)

@@ -54,7 +54,7 @@ Um diagrama de atividades para o sistema de *crafting* do projeto é particularm
 
 ![Diagrama de Atividade](../../../Assets/diagramaDeAtividade.png)
 
-<p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: COSTA, João Igor (2026).</p>
+<p align="center">Figura 1: Modelo Dinâmico na notação UML. Fonte: Elaboração própria (COSTA, João Igor, 2026).</p>
 
 #### Elementos Principais
 
@@ -90,7 +90,7 @@ O diagrama de comunicação é um diagrama de interação que exibe um conjunto 
 
 ![Diagrama de Comunicação completo](../../../Assets/subgrupo02_diagrama_comunicacao.png)
 
-<p align="center">Figura 1: Modelo Dinâmico na notação UML — visão geral das quatro interações. Fonte: SILVA, Marcos (2026).</p>
+<p align="center">Figura 1: Modelo Dinâmico na notação UML — visão geral das quatro interações. Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 ---
 
@@ -100,7 +100,7 @@ Este cenário representa o ciclo de um turno no sistema de batalha. O `:MotorDeB
 
 ![Interação Turno de Combate](../../../Assets/subgrupo02_diagrama_comunicacao_interacao1.png)
 
-<p align="center">Figura 2: Interação "Turno de Combate". Fonte: SILVA, Marcos (2026).</p>
+<p align="center">Figura 2: Interação "Turno de Combate". Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 | Nº | Mensagem | Origem | Destino |
 | :--- | :--- | :--- | :--- |
@@ -110,7 +110,7 @@ Este cenário representa o ciclo de um turno no sistema de batalha. O `:MotorDeB
 | 1.1.2 | `aplicaEfeitoNovaPocao()` | `:MisturaDeElementosQuimicos` | `:MotorDeBatalhaATB` |
 | 1.2 | `*: sincronizaTurnosEDanos()` | `:MotorDeBatalhaATB` | `:IADeInimigos` |
 
-<p align="center">Tabela 1: Mensagens da interação "Turno de Combate".</p>
+<p align="center">Tabela 1: Mensagens da interação "Turno de Combate". Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 ---
 
@@ -120,7 +120,7 @@ Este cenário detalha o sistema de *crafting* químico fora do combate. O jogado
 
 ![Interação Mistura e Descoberta](../../../Assets/subgrupo02_diagrama_comunicacao_interacao2.png)
 
-<p align="center">Figura 3: Interação "Mistura e Descoberta". Fonte: SILVA, Marcos (2026).</p>
+<p align="center">Figura 3: Interação "Mistura e Descoberta". Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 | Nº | Mensagem | Origem | Destino |
 | :--- | :--- | :--- | :--- |
@@ -130,7 +130,7 @@ Este cenário detalha o sistema de *crafting* químico fora do combate. O jogado
 | 1.3 | `[nova receita]: registraNovaReceita()` | `:MisturaDeElementosQuimicos` | `:LivroDoAventureiro` |
 | 1.3.1 | `serializaDescobertas()` | `:LivroDoAventureiro` | `:SistemaSalvar` |
 
-<p align="center">Tabela 2: Mensagens da interação "Mistura e Descoberta".</p>
+<p align="center">Tabela 2: Mensagens da interação "Mistura e Descoberta". Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 ---
 
@@ -140,7 +140,7 @@ Este cenário representa o modo de jogo do Coliseu, no qual o jogador aposta um 
 
 ![Interação Batalha no Coliseu](../../../Assets/subgrupo02_diagrama_comunicacao_interacao3.png)
 
-<p align="center">Figura 4: Interação "Batalha no Coliseu". Fonte: SILVA, Marcos (2026).</p>
+<p align="center">Figura 4: Interação "Batalha no Coliseu". Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 | Nº | Mensagem | Origem | Destino |
 | :--- | :--- | :--- | :--- |
@@ -151,7 +151,7 @@ Este cenário representa o modo de jogo do Coliseu, no qual o jogador aposta um 
 | 2.1 | `[se vitoria]: concedePremio()` | `:OColiseu` | `:GerenciadorDeInventario` |
 | 2.2 | `gatilhoDeSalvar()` | `:OColiseu` | `:SistemaSalvar` |
 
-<p align="center">Tabela 3: Mensagens da interação "Batalha no Coliseu".</p>
+<p align="center">Tabela 3: Mensagens da interação "Batalha no Coliseu". Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 ---
 
@@ -161,7 +161,7 @@ Este cenário descreve a compra de itens junto aos mercadores. O fluxo tem iníc
 
 ![Interação de Loja](../../../Assets/subgrupo02_diagrama_comunicacao_interacao4.png)
 
-<p align="center">Figura 5: Interação "Interação de Loja". Fonte: SILVA, Marcos (2026).</p>
+<p align="center">Figura 5: Interação "Interação de Loja". Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 | Nº | Mensagem | Origem | Destino |
 | :--- | :--- | :--- | :--- |
@@ -171,7 +171,7 @@ Este cenário descreve a compra de itens junto aos mercadores. O fluxo tem iníc
 | 1.1.2 | `[ouro suficiente]: debitaOuro()` | `:LojasMerchants` | `:MenuDeStatus` |
 | 1.1.3 | `transacaoItem()` | `:LojasMerchants` | `:GerenciadorDeInventario` |
 
-<p align="center">Tabela 4: Mensagens da interação "Interação de Loja".</p>
+<p align="center">Tabela 4: Mensagens da interação "Interação de Loja". Fonte: Elaboração própria (SILVA, Marcos Vinícius Gündel da, 2026).</p>
 
 
 ---
@@ -207,7 +207,7 @@ A máquina da sessão começa no Menu principal. A partir dele, o jogador inicia
 
 ![Diagrama de Estados da Sessão do G4_ProjetoJogo, Versão 1](../../../Assets/subgrupo02_diagrama_estados_sessao.png)
 
-<p align="center">Figura 6: Diagrama de Estados da Sessão de jogo. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
+<p align="center">Figura 6: Diagrama de Estados da Sessão de jogo. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 | Estado | Tipo | Atividades | Principais transições de saída |
 |--------|------|------------|--------------------------------|
@@ -225,7 +225,7 @@ A máquina da sessão começa no Menu principal. A partir dele, o jogador inicia
 | Game Over | simples | `entry / exibir derrota` | `tentarNovamente [save válido]` → Carregando Savepoint; `voltarAoMenu` → Menu principal |
 | Epílogo | simples | `do / apresentar desfecho da história linear` | `epilogoConcluido` → estado final |
 
-<p align="center">Tabela 5: Estados da sessão de jogo. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
+<p align="center">Tabela 5: Estados da sessão de jogo. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 Na **Bancada de mistura**, a transição `confirmar [2 slots preenchidos e reagentes disponíveis]` leva a Avaliando combinação, e o ponto de escolha decide o resultado: `[válida] / consumir reagentes, criar item e registrar receita nova no livro` ou `[inválida] / informar falha; aplicar regra de consumo definida`. Nos dois casos o jogador volta à seleção de reagentes, o que permite tentar outra combinação sem sair da bancada.
 
@@ -237,7 +237,7 @@ A máquina da Batalha começa em Preparando encontro. Um ponto de escolha define
 
 ![Diagrama de Estados da Batalha ATB do G4_ProjetoJogo, Versão 1](../../../Assets/subgrupo02_diagrama_estados_batalha.png)
 
-<p align="center">Figura 7: Diagrama de Estados da Batalha ATB. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
+<p align="center">Figura 7: Diagrama de Estados da Batalha ATB. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 | Origem | Destino | Evento [guarda] / efeito |
 |--------|---------|--------------------------|
@@ -263,7 +263,7 @@ A máquina da Batalha começa em Preparando encontro. Um ponto de escolha define
 | escolha de fuga | Encerrando com fuga | `[sucesso]` |
 | Encerrando com vitória, derrota ou fuga | estado final | `/ emitir batalhaEncerrada(resultado)` |
 
-<p align="center">Tabela 6: Transições da máquina de estados da Batalha ATB. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
+<p align="center">Tabela 6: Transições da máquina de estados da Batalha ATB. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 ---
 
@@ -284,7 +284,7 @@ A máquina da Batalha começa em Preparando encontro. Um ponto de escolha define
 | Encerrando com fuga e `manter inimigos sobreviventes no mapa` | Léxico L07: fuga bem-sucedida encerra a Batalha "sem Vitória nem Game Over"; BPMN frame 3. |
 | Epílogo | Léxico L14 (Zerar) e L31 (História Linear). |
 
-<p align="center">Tabela 7: Rastreabilidade entre os Diagramas de Estados e os artefatos da Entrega 01. Fonte: Elaboração própria (SubEquipe_02, 2026).</p>
+<p align="center">Tabela 7: Rastreabilidade entre os Diagramas de Estados e os artefatos da Entrega 01. Fonte: Elaboração própria (LOPES, Marcelo de Araújo, 2026).</p>
 
 ## Referências
 
@@ -305,7 +305,7 @@ IBM. **Diagramas de atividade**. IBM Documentation, 2021. Disponível em: <https
 |Marcelo de Araújo Lopes |     25%       |
 |João Victor da Silva Batista de Farias (revisão geral e elicitação da lista de requisitos iniciais) |     25%       |
 
-<p align="center">Tabela 8: Contribuição dos integrantes.</p>
+<p align="center">Tabela 8: Contribuição dos integrantes. Fonte: Autores, 2026.</p>
 
 ## Histórico de Versão
 
@@ -317,6 +317,6 @@ IBM. **Diagramas de atividade**. IBM Documentation, 2021. Disponível em: <https
 |  1.3   |17/09 | Adição dos Diagramas de Estados da sessão e da Batalha ATB, com as tabelas de estados, transições e rastreabilidade | [Marcelo de Araújo Lopes](https://github.com/MatielloAL) |         |
 |  1.4   |17/09 | Adição da participação de João Victor (revisão geral e elicitação da lista de requisitos iniciais) | [João Victor](https://github.com/beyondmagic) |         |
 
-<p align="center">Tabela 9: Histórico de versão.</p>
+<p align="center">Tabela 9: Histórico de versão. Fonte: Autores, 2026.</p>
 
 Ver também: [Modelagem Estática na Notação UML](ModelagemEstatica.md) · [IA Generativa](IAGenerativa.md)
