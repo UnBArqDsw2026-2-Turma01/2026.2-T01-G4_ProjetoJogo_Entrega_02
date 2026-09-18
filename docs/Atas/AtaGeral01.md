@@ -4,7 +4,7 @@
 
 | Data | Horário de Início | Horário de Término | Local | Projeto | Redator |
 | :--: | :---------------: | :----------------: | :---: | :-----: | :-----: |
-| 08/09/2026 | — | — | [Google Meet](https://meet.google.com/hjv-fmkz-npc) | G4_ProjetoJogo | João Victor da Silva Batista de Farias |
+| 08/09/2026 | 21:00 | 23:00 | [Google Meet](https://meet.google.com/hjv-fmkz-npc) | G4_ProjetoJogo | João Victor da Silva Batista de Farias |
 
 <p align="center">Tabela 1: Identificação da reunião. Fonte: Autores, 2026.</p>
 
