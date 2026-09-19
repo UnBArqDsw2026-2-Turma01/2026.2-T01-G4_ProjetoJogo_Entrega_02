@@ -20,6 +20,17 @@ A IA foi utilizada principalmente como instrumento de apoio à análise, geraç�
 
 ### Cibelly Lourenço Ferreira
 
+Na elaboração do [Diagrama de Classes](DiagramaClasses.md), utilizei IA Generativa como apoio nas seguintes atividades:
+
+- comparar os serviços listados na [tabela de interfaces do Diagrama de Componentes](DiagramaComponentes.md#serviços-das-interfaces) e o comportamento descrito no [Diagrama de Atividades](DiagramaAtividades.md) e no [Diagrama de Estados](DiagramaEstados.md) para inferir as classes de domínio, seus atributos e métodos;
+- discutir onde extrair uma superclasse (`Personagem`) sem introduzir uma hierarquia mais profunda do que os requisitos justificam;
+- decidir entre associação, agregação e composição para cada relacionamento, considerando o ciclo de vida das entidades envolvidas;
+- revisar a notação UML utilizada (multiplicidades, losangos de composição/agregação, setas de generalização);
+- apoiar a redação da documentação do artefato, incluindo a tabela de classes e a análise das incertezas de modelagem;
+- ajustar a paleta visual do diagrama para fundo branco, caixas claras e texto em preto, priorizando a legibilidade na renderização do GitHub.
+
+As sugestões não foram adotadas automaticamente: cada classe, atributo e relacionamento foi conferido contra os [requisitos do Subgrupo 03][rf] e as anotações da [reunião de 11/09](/Atas/AtaSub01_01.md) antes de ser incluído no diagrama, e os pontos sem respaldo direto na documentação foram registrados como inferências na seção de incertezas do próprio artefato.
+
 Na elaboração do [Diagrama de Sequência](DiagramaSequencia.md), utilizei IA Generativa como apoio nas seguintes atividades:
 
 - analisar a coerência do cenário do turno de combate com os [requisitos funcionais do MVP][rf], em especial os RF05, RF06 e RF07;
@@ -116,6 +127,7 @@ UML DIAGRAMS. **Component Diagrams**. [Notação e exemplos](https://www.uml-dia
 |  2.0   | 16/09/2026 | Inclusão do relato de Yogi sobre componentes e atividades, prompts, resultados aproveitados e rejeitados, commits. | Yogi Nam de Souza Barbosa |         |
 | 2.1 | 18/09/2026 | Inclusão do relato de Cibelly sobre classes, sequência e avaliação crítica da IA na tabela de lições aprendidas. | Cibelly Lourenço | |
 | 2.2 | 18/09/2026 | Inclusão da seção de Cibelly com o registro do uso de IA Generativa na elaboração e no refinamento do Diagrama de Sequência. | Cibelly Lourenço Ferreira | |
+| 2.3 | 18/09/2026 | Inclusão do relato de Cibelly sobre o uso de IA Generativa na elaboração do Diagrama de Classes. | Cibelly Lourenço Ferreira | |
 
 <p align="center">Tabela 4: Histórico de versão.</p>
 

@@ -12,7 +12,7 @@ Representar a estrutura estática do domínio do jogo em nível conceitual, evid
 
 O artefato foi produzido conforme a distribuição registrada na [Ata 01](/Atas/AtaSub01_01.md), na qual ficou definido que Cibelly seria responsável pelo Diagrama de Classes. Cada componente e cada serviço listado na [tabela de interfaces do Diagrama de Componentes](DiagramaComponentes.md#serviços-das-interfaces) foi analisado para identificar as classes de domínio que o realizam, e o [Diagrama de Atividades](DiagramaAtividades.md) e o [Diagrama de Estados](DiagramaEstados.md) foram usados para inferir métodos e o ciclo de vida do combate.
 
-O diagrama foi construído em [draw.io](https://app.diagrams.net/), seguindo o mesmo padrão visual (fundo preto, linhas e texto em branco, fonte monoespaçada) adotado pelos demais diagramas estáticos e dinâmicos da SubEquipe_01. Estão disponíveis a [fonte editável em draw.io](Base/Relatórios/SubEquipe_01/assets/classes/classes.drawio ':ignore') e o [SVG exportado](Base/Relatórios/SubEquipe_01/assets/classes/classes.svg ':ignore').
+O diagrama foi construído em [draw.io](https://app.diagrams.net/), com fundo branco, caixas de classes claras, linhas e texto em preto e fonte monoespaçada, priorizando a legibilidade na renderização do GitHub. Estão disponíveis a [fonte editável em draw.io](Base/Relatórios/SubEquipe_01/assets/classes/classes.drawio ':ignore') e o [SVG exportado](Base/Relatórios/SubEquipe_01/assets/classes/classes.svg ':ignore').
 
 Como a documentação do Subgrupo 01 não define um modelo de classes explícito, as classes, atributos e multiplicidades foram inferidos a partir dos artefatos citados; as inferências mais relevantes e as divergências encontradas entre os requisitos estão registradas na seção [Incertezas e decisões](#incertezas-e-decisões).
 
@@ -109,6 +109,7 @@ UML DIAGRAMS. **Class Diagrams**. [Notação e exemplos](https://www.uml-diagram
 | Versão | Data | Descrição | Autor(es) | Revisor |
 |:------:|:----:|-----------|-----------|---------|
 | 1.0 | 17/09/2026 | Inserção do diagrama de classes. | Cibelly | Yogi Nam de Souza Barbosa |
+| 1.1 | 18/09/2026 | Ajuste da paleta visual do diagrama (fundo branco, caixas claras e texto em preto) para padronizar a legibilidade na renderização do GitHub. | Cibelly | |
 
 </div>
 
