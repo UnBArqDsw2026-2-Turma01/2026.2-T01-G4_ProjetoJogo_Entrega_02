@@ -24,7 +24,7 @@
 .markdown-section .related-pages a { display: inline-block; padding: .25rem 0; }
 
 @media (max-width: 768px) {
-  .markdown-section .related-pages { padding-bottom: 32px; }
+  .markdown-section .related-pages { padding-bottom: 8px; }
   .markdown-section .related-pages ul { flex-direction: column; gap: .25rem; }
   .markdown-section .related-pages a {
     box-sizing: border-box;
@@ -32,6 +32,10 @@
     padding: .6rem 0;
     overflow-wrap: anywhere;
   }
+}
+
+.diagram-carousel-controls-bottom {
+  margin-top: 1rem;
 }
 
 .markdown-section .image-zoom-trigger img { cursor: zoom-in; }

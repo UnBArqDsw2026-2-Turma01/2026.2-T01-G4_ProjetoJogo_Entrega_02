@@ -54,7 +54,7 @@ Cada subgrupo é responsável por seu próprio relatório, contendo a entrega m�
 
 <p align="center">Tabela 2: Integrantes do Subgrupo 01.</p>
 
-Artefatos: [Diagrama de Componentes](/Base/Relatórios/SubEquipe_01/DiagramaComponentes.md) · [Diagrama de Atividades](/Base/Relatórios/SubEquipe_01/DiagramaAtividades.md) · [IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
+Artefatos: [Diagrama de Componentes](/Base/Relatórios/SubEquipe_01/DiagramaComponentes.md) · [Diagrama de Pacotes](/Base/Relatórios/SubEquipe_01/DiagramaPacotes.md) · [Diagrama de Classes](/Base/Relatórios/SubEquipe_01/DiagramaClasses.md) · [Diagrama de Atividades](/Base/Relatórios/SubEquipe_01/DiagramaAtividades.md) · [Diagrama de Estados](/Base/Relatórios/SubEquipe_01/DiagramaEstados.md) · [Diagrama de Sequências](/Base/Relatórios/SubEquipe_01/DiagramaSequencias.md) · [IA Generativa](/Base/Relatórios/SubEquipe_01/IAGenerativa.md)
 
 ### Subgrupo 02
 
@@ -67,7 +67,7 @@ Artefatos: [Diagrama de Componentes](/Base/Relatórios/SubEquipe_01/DiagramaComp
 
 <p align="center">Tabela 3: Integrantes do Subgrupo 02.</p>
 
-Artefatos: [Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md) · [Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemDinamica.md) · [IA Generativa](/Base/Relatórios/SubEquipe_02/IAGenerativa.md)
+Artefatos: [Modelagem Estática na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemEstatica.md) · [Modelagem Dinâmica na Notação UML](/Base/Relatórios/SubEquipe_02/ModelagemDinamica.md) · [IA Generativa](/Base/Relatórios/SubEquipe_02/IAGenerativa.md) · [Iniciativas Extras](/Base/Relatórios/SubEquipe_02/IniciativasExtras.md)
 
 ### Subgrupo 03
 
@@ -106,3 +106,17 @@ npx docsify-cli serve docs
 ```
 
 O site fica disponível em `http://localhost:3000`.
+
+## Vídeo da Apresentação
+
+Apresentação da Entrega 02, com os artefatos produzidos pelas três subequipes, o quadro de participações e os comentários sobre o trabalho em equipe.
+
+<div style="max-width:720px;margin:0 auto;">
+  <div style="position:relative;width:100%;padding-top:56.25%;">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/EAKD7sSNUJQ" title="Apresentação da Entrega 02 — G4_ProjetoJogo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<p align="center">Vídeo 1: Apresentação da Entrega 02. Fonte: Autores, 2026.</p>
+
+Caso o vídeo não carregue, acesse-o diretamente em <https://youtu.be/EAKD7sSNUJQ>.

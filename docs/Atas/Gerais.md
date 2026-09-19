@@ -35,7 +35,7 @@ Toda reunião é registrada em uma ata própria, seguindo o modelo definido em [
 
 | Ata | Data | Assunto | Redator | Link |
 |:---:|:----:|---------|---------|:----:|
-|     |      |         |         |      |
+| Geral 01 | 08/09/2026 | Apresentação em vídeo, revisão interna dos PRs e levantamento de requisitos por subequipe | [João Victor](https://github.com/beyondmagic) | [AtaGeral01](/Atas/AtaGeral01.md) |
 
 <p align="center">Tabela 2: Registro de reuniões.</p>
 
