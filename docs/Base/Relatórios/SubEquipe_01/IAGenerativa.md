@@ -18,6 +18,20 @@ A IA foi utilizada principalmente como instrumento de apoio à análise, geraç�
 
 ## Conteúdo
 
+### Cibelly Lourenço Ferreira
+
+Na elaboração do [Diagrama de Sequência](DiagramaSequencia.md), utilizei IA Generativa como apoio nas seguintes atividades:
+
+- analisar a coerência do cenário do turno de combate com os [requisitos funcionais do MVP][rf], em especial os RF05, RF06 e RF07;
+- organizar a ordem das interações entre `Jogador`, `Combate`, `Magia`, `Inimigo` e `Partida`;
+- verificar a notação UML do diagrama (lifelines, barras de ativação, mensagens síncronas e de retorno, fragmento `alt` e condição de guarda);
+- revisar a distribuição de responsabilidades entre os objetos, evitando concentrar a lógica em um único participante e preservando o encapsulamento da fraqueza elemental do inimigo;
+- melhorar a apresentação visual do diagrama, com fundo branco, espaçamento uniforme entre participantes e eliminação de sobreposições de texto;
+- simplificar o diagrama em uma segunda rodada: reduzir o número de participantes e de fragmentos combinados e renomear mensagens para uma forma mais direta, priorizando um resultado mais fácil de ler e apresentar;
+- apoiar a redação e o refinamento da documentação do artefato, incluindo as tabelas de participantes, de decisões de fluxo e de incertezas de modelagem.
+
+As sugestões não foram adotadas automaticamente. Conferi cada participante e cada mensagem contra o [Diagrama de Classes](DiagramaClasses.md) para manter a coerência conceitual mesmo após a simplificação; os pontos em que os nomes das mensagens foram simplificados em vez de seguir estritamente o modelo estático (por exemplo, a remoção do `DiarioDoAventureiro` e a renomeação de operações) foram assinalados na própria página do diagrama, em vez de alterar os artefatos existentes para acomodar o desenho.
+
 ### Yogi Nam de Souza Barbosa
 
 Durante a entrega, utilizei IA Generativa como apoio em diferentes etapas do trabalho:
@@ -101,6 +115,7 @@ UML DIAGRAMS. **Component Diagrams**. [Notação e exemplos](https://www.uml-dia
 |  1.0   | 12/09/2026 | Inclusão de lições aprendidas e uso de IA                                                                                                      | Gabriel Andrade Magioli   |         |
 |  2.0   | 16/09/2026 | Inclusão do relato de Yogi sobre componentes e atividades, prompts, resultados aproveitados e rejeitados, commits. | Yogi Nam de Souza Barbosa |         |
 | 2.1 | 18/09/2026 | Inclusão do relato de Cibelly sobre classes, sequência e avaliação crítica da IA na tabela de lições aprendidas. | Cibelly Lourenço | |
+| 2.2 | 18/09/2026 | Inclusão da seção de Cibelly com o registro do uso de IA Generativa na elaboração e no refinamento do Diagrama de Sequência. | Cibelly Lourenço Ferreira | |
 
 <p align="center">Tabela 4: Histórico de versão.</p>
 

@@ -1,97 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1422" viewBox="0 0 1180 1422" font-family="Courier New, monospace">
-<rect x="0" y="0" width="1180" height="1422" fill="#0D0D0D"/>
-<defs>
-  <marker id="arrowSolid" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto">
-    <path d="M0,0 L10,5 L0,10 z" fill="#FFFFFF"/>
-  </marker>
-  <marker id="arrowOpen" markerWidth="14" markerHeight="12" refX="11" refY="6" orient="auto">
-    <path d="M0,0 L11,6 L0,12" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-  </marker>
-</defs>
-<rect x="15.0" y="20" width="150" height="44" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.5"/>
-<text x="90" y="47.0" fill="#FFFFFF" font-size="13" text-anchor="middle">jogador : Jogador</text>
-<line x1="90" y1="64" x2="90" y2="1382" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="6,5"/>
-<rect x="205.0" y="20" width="150" height="44" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.5"/>
-<text x="280" y="47.0" fill="#FFFFFF" font-size="13" text-anchor="middle">partida : Partida</text>
-<line x1="280" y1="64" x2="280" y2="1382" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="6,5"/>
-<rect x="395.0" y="20" width="150" height="44" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.5"/>
-<text x="470" y="47.0" fill="#FFFFFF" font-size="13" text-anchor="middle">combate : Combate</text>
-<line x1="470" y1="64" x2="470" y2="1382" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="6,5"/>
-<rect x="585.0" y="20" width="150" height="44" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.5"/>
-<text x="660" y="47.0" fill="#FFFFFF" font-size="13" text-anchor="middle">magia : Magia</text>
-<line x1="660" y1="64" x2="660" y2="1382" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="6,5"/>
-<rect x="775.0" y="20" width="150" height="44" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.5"/>
-<text x="850" y="47.0" fill="#FFFFFF" font-size="13" text-anchor="middle">inimigo : Inimigo</text>
-<line x1="850" y1="64" x2="850" y2="1382" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="6,5"/>
-<rect x="975.0" y="20" width="150" height="44" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.5"/>
-<text x="1050" y="47.0" fill="#FFFFFF" font-size="13" text-anchor="middle">diario : DiarioDoAventureiro</text>
-<line x1="1050" y1="64" x2="1050" y2="1382" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="6,5"/>
-<rect x="465.0" y="164" width="10" height="1188" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="1"/>
-<rect x="275.0" y="124" width="10" height="1228" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="1"/>
-<rect x="655.0" y="190" width="10" height="582" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="1"/>
-<rect x="845.0" y="892" width="10" height="86" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="1"/>
-<rect x="1045.0" y="558" width="10" height="86" fill="#1A1A1A" stroke="#FFFFFF" stroke-width="1"/>
-<line x1="95" y1="110" x2="275" y2="110" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="185.0" y="102" fill="#FFFFFF" font-size="12.5" text-anchor="middle">processarComando(elementosSelecionados)</text>
-<line x1="285" y1="150" x2="465" y2="150" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="375.0" y="142" fill="#FFFFFF" font-size="12.5" text-anchor="middle">processarTurno(elementosSelecionados)</text>
-<line x1="475" y1="190" x2="655" y2="190" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="565.0" y="182" fill="#FFFFFF" font-size="12.5" text-anchor="middle">«create» new Magia(elementosSelecionados)</text>
-<line x1="655" y1="282" x2="475" y2="282" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="565.0" y="274" fill="#FFFFFF" font-size="12.5" text-anchor="middle">efeito</text>
-<line x1="475" y1="320" x2="845" y2="320" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="660.0" y="312" fill="#FFFFFF" font-size="12.5" text-anchor="middle">fraquezaElemental()</text>
-<line x1="845" y1="358" x2="475" y2="358" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="660.0" y="350" fill="#FFFFFF" font-size="12.5" text-anchor="middle">fraqueza</text>
-<polyline points="475,396 540,396 540,420 475,420" fill="none" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="548" y="412.0" fill="#FFFFFF" font-size="12.5">calcularDano(efeito, fraqueza)</text>
-<line x1="475" y1="454" x2="845" y2="454" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="660.0" y="446" fill="#FFFFFF" font-size="12.5" text-anchor="middle">aplicarDano(dano)</text>
-<line x1="845" y1="492" x2="475" y2="492" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="660.0" y="484" fill="#FFFFFF" font-size="12.5" text-anchor="middle">pontosDeVida atualizados</text>
-<line x1="475" y1="580" x2="1045" y2="580" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="760.0" y="572" fill="#FFFFFF" font-size="12.5" text-anchor="middle">registrarDescoberta(magia)</text>
-<line x1="1045" y1="618" x2="475" y2="618" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="760.0" y="610" fill="#FFFFFF" font-size="12.5" text-anchor="middle">ok</text>
-<line x1="655" y1="740" x2="475" y2="740" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="565.0" y="732" fill="#FFFFFF" font-size="12.5" text-anchor="middle">erro(combinação inexistente)</text>
-<line x1="465" y1="778" x2="285" y2="778" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="375.0" y="770" fill="#FFFFFF" font-size="12.5" text-anchor="middle">comando rejeitado</text>
-<rect x="380" y="236" width="750" height="576" fill="none" stroke="#FFFFFF" stroke-width="1.3"/>
-<polygon points="380,236 444,236 454,246 454,262 380,262" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.3"/>
-<text x="417.0" y="254.0" fill="#FFFFFF" font-size="12.5" font-weight="bold" text-anchor="middle">alt</text>
-<text x="464" y="254.0" fill="#FFFFFF" font-size="12.5">[combinação válida (elementos já coletados)]</text>
-<rect x="400" y="534" width="730" height="130" fill="none" stroke="#FFFFFF" stroke-width="1.3"/>
-<polygon points="400,534 464,534 474,544 474,560 400,560" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.3"/>
-<text x="437.0" y="552.0" fill="#FFFFFF" font-size="12.5" font-weight="bold" text-anchor="middle">opt</text>
-<text x="484" y="552.0" fill="#FFFFFF" font-size="12.5">[magia inédita]</text>
-<line x1="380" y1="694" x2="1130" y2="694" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,4"/>
-<text x="390" y="710" fill="#FFFFFF" font-size="12.5" font-style="italic">[combinação inválida (RF09)]</text>
-<line x1="475" y1="902" x2="845" y2="902" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="660.0" y="894" fill="#FFFFFF" font-size="12.5" text-anchor="middle">executarAtaque()</text>
-<line x1="845" y1="940" x2="475" y2="940" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="660.0" y="932" fill="#FFFFFF" font-size="12.5" text-anchor="middle">dano</text>
-<line x1="465" y1="978" x2="95" y2="978" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="280.0" y="970" fill="#FFFFFF" font-size="12.5" text-anchor="middle">aplicarDano(dano)</text>
-<line x1="95" y1="1016" x2="465" y2="1016" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="280.0" y="1008" fill="#FFFFFF" font-size="12.5" text-anchor="middle">pontosDeVida atualizados</text>
-<rect x="380" y="856" width="560" height="194" fill="none" stroke="#FFFFFF" stroke-width="1.3"/>
-<polygon points="380,856 444,856 454,866 454,882 380,882" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.3"/>
-<text x="417.0" y="874.0" fill="#FFFFFF" font-size="12.5" font-weight="bold" text-anchor="middle">loop</text>
-<text x="464" y="874.0" fill="#FFFFFF" font-size="12.5">[enquanto jogador e inimigo possuem vida]</text>
-<polyline points="475,1094 540,1094 540,1118 475,1118" fill="none" stroke="#FFFFFF" stroke-width="1.3" marker-end="url(#arrowSolid)"/>
-<text x="548" y="1110.0" fill="#FFFFFF" font-size="12.5">verificar possuiVida?()</text>
-<line x1="465" y1="1204" x2="285" y2="1204" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="375.0" y="1196" fill="#FFFFFF" font-size="12.5" text-anchor="middle">resultado(turno concluído)</text>
-<line x1="465" y1="1278" x2="285" y2="1278" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="375.0" y="1270" fill="#FFFFFF" font-size="12.5" text-anchor="middle">resultado(derrota)</text>
-<line x1="275" y1="1312" x2="95" y2="1312" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="6,4" marker-end="url(#arrowOpen)"/>
-<text x="185.0" y="1304" fill="#FFFFFF" font-size="12.5" text-anchor="middle">fim de jogo</text>
-<rect x="20" y="1158" width="540" height="184" fill="none" stroke="#FFFFFF" stroke-width="1.3"/>
-<polygon points="20,1158 84,1158 94,1168 94,1184 20,1184" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1.3"/>
-<text x="57.0" y="1176.0" fill="#FFFFFF" font-size="12.5" font-weight="bold" text-anchor="middle">alt</text>
-<text x="104" y="1176.0" fill="#FFFFFF" font-size="12.5">[jogador com vida]</text>
-<line x1="20" y1="1234" x2="560" y2="1234" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,4"/>
-<text x="30" y="1250" fill="#FFFFFF" font-size="12.5" font-style="italic">[jogador sem vida]</text>
-<text x="20" y="1406" fill="#B0B0B0" font-size="11">Figura: Diagrama de Sequência — Turno de Combate Elemental (SubEquipe_01). Fonte: Cibelly, 2026.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="688" viewBox="0 0 1180 688" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1180" height="688" fill="#FFFFFF"/>
+<defs><marker id="filled" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><path d="M0,0 L10,4.5 L0,9 z" fill="#3D4E63"/></marker><marker id="open" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto"><path d="M0,0.6 L10,5 L0,9.4" fill="none" stroke="#3D4E63" stroke-width="1.4"/></marker></defs>
+<line x1="110" y1="72" x2="110" y2="638" stroke="#B5C0CC" stroke-width="1.2" stroke-dasharray="6 6"/>
+<line x1="380" y1="72" x2="380" y2="638" stroke="#B5C0CC" stroke-width="1.2" stroke-dasharray="6 6"/>
+<line x1="620" y1="72" x2="620" y2="638" stroke="#B5C0CC" stroke-width="1.2" stroke-dasharray="6 6"/>
+<line x1="870" y1="72" x2="870" y2="638" stroke="#B5C0CC" stroke-width="1.2" stroke-dasharray="6 6"/>
+<line x1="1070" y1="72" x2="1070" y2="638" stroke="#B5C0CC" stroke-width="1.2" stroke-dasharray="6 6"/>
+<rect x="40" y="360" width="1100" height="198" rx="4" fill="none" stroke="#8496A6" stroke-width="1.3"/>
+<line x1="40" y1="416" x2="1140" y2="416" stroke="#8496A6" stroke-width="1.1" stroke-dasharray="6 6"/>
+<rect x="35.0" y="26" width="150" height="46" rx="4" fill="#F2F5F9" stroke="#3D4E63" stroke-width="1.3"/>
+<text x="110.0" y="55.0" font-size="15.0" fill="#22303F" text-anchor="middle" font-weight="600">Jogador</text>
+<rect x="305.0" y="26" width="150" height="46" rx="4" fill="#F2F5F9" stroke="#3D4E63" stroke-width="1.3"/>
+<text x="380.0" y="55.0" font-size="15.0" fill="#22303F" text-anchor="middle" font-weight="600">Combate</text>
+<rect x="545.0" y="26" width="150" height="46" rx="4" fill="#F2F5F9" stroke="#3D4E63" stroke-width="1.3"/>
+<text x="620.0" y="55.0" font-size="15.0" fill="#22303F" text-anchor="middle" font-weight="600">Magia</text>
+<rect x="795.0" y="26" width="150" height="46" rx="4" fill="#F2F5F9" stroke="#3D4E63" stroke-width="1.3"/>
+<text x="870.0" y="55.0" font-size="15.0" fill="#22303F" text-anchor="middle" font-weight="600">Inimigo</text>
+<rect x="995.0" y="26" width="150" height="46" rx="4" fill="#F2F5F9" stroke="#3D4E63" stroke-width="1.3"/>
+<text x="1070.0" y="55.0" font-size="15.0" fill="#22303F" text-anchor="middle" font-weight="600">Partida</text>
+<rect x="104.0" y="140.0" width="12" height="462.0" fill="#DCE6F0" stroke="#3D4E63" stroke-width="1.1"/>
+<rect x="374.0" y="140.0" width="12" height="462.0" fill="#DCE6F0" stroke="#3D4E63" stroke-width="1.1"/>
+<rect x="614.0" y="192.0" width="12" height="54.0" fill="#DCE6F0" stroke="#3D4E63" stroke-width="1.1"/>
+<rect x="381.0" y="240.0" width="12" height="40.0" fill="#DCE6F0" stroke="#3D4E63" stroke-width="1.1"/>
+<rect x="864.0" y="284.0" width="12" height="54.0" fill="#DCE6F0" stroke="#3D4E63" stroke-width="1.1"/>
+<rect x="864.0" y="434.0" width="12" height="54.0" fill="#DCE6F0" stroke="#3D4E63" stroke-width="1.1"/>
+<rect x="111.0" y="518.0" width="12" height="36.0" fill="#DCE6F0" stroke="#3D4E63" stroke-width="1.1"/>
+<path d="M40,360 h56 l14,14 v12 h-70 z" fill="#EEF2F6" stroke="#8496A6" stroke-width="1.2"/>
+<text x="49.0" y="379.0" font-size="13.0" fill="#22303F" text-anchor="start" font-weight="600">alt</text>
+<rect x="113.0" y="367.0" width="148.3" height="19.0" fill="#FFFFFF"/>
+<text x="118.0" y="379.0" font-size="13.0" fill="#51637A" text-anchor="start">[inimigo derrotado]</text>
+<rect x="47.0" y="422.0" width="141.0" height="19.0" fill="#FFFFFF"/>
+<text x="52.0" y="434.0" font-size="13.0" fill="#51637A" text-anchor="start">[inimigo com vida]</text>
+<line x1="116.0" y1="146.0" x2="372.0" y2="146.0" stroke="#3D4E63" stroke-width="1.4" marker-end="url(#filled)"/>
+<rect x="155.3" y="124.0" width="177.4" height="19.0" fill="#FFFFFF"/>
+<text x="244.0" y="136.0" font-size="13.0" fill="#22303F" text-anchor="middle">iniciarTurno(elementos)</text>
+<line x1="386.0" y1="198.0" x2="612.0" y2="198.0" stroke="#3D4E63" stroke-width="1.4" marker-end="url(#filled)"/>
+<rect x="395.7" y="176.0" width="206.6" height="19.0" fill="#FFFFFF"/>
+<text x="499.0" y="188.0" font-size="13.0" fill="#22303F" text-anchor="middle">identificarMagia(elementos)</text>
+<line x1="614.0" y1="238.0" x2="388.0" y2="238.0" stroke="#3D4E63" stroke-width="1.4" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<rect x="477.8" y="216.0" width="46.4" height="19.0" fill="#FFFFFF"/>
+<text x="501.0" y="228.0" font-size="13.0" fill="#22303F" text-anchor="middle" font-style="italic">magia</text>
+<path d="M393.0,246.0 h40 v26 h-36" fill="none" stroke="#3D4E63" stroke-width="1.4" marker-end="url(#filled)"/>
+<rect x="438.0" y="244.2" width="210.7" height="18.8" fill="#FFFFFF"/>
+<text x="443.0" y="256.0" font-size="12.8" fill="#22303F" text-anchor="start">calcularDano(magia, inimigo)</text>
+<line x1="386.0" y1="290.0" x2="862.0" y2="290.0" stroke="#3D4E63" stroke-width="1.4" marker-end="url(#filled)"/>
+<rect x="557.1" y="268.0" width="133.8" height="19.0" fill="#FFFFFF"/>
+<text x="624.0" y="280.0" font-size="13.0" fill="#22303F" text-anchor="middle">receberDano(dano)</text>
+<line x1="864.0" y1="330.0" x2="388.0" y2="330.0" stroke="#3D4E63" stroke-width="1.4" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<rect x="588.2" y="308.0" width="75.5" height="19.0" fill="#FFFFFF"/>
+<text x="626.0" y="320.0" font-size="13.0" fill="#22303F" text-anchor="middle" font-style="italic">vidaAtual</text>
+<line x1="386.0" y1="386.0" x2="1062.0" y2="386.0" stroke="#3D4E63" stroke-width="1.4" marker-end="url(#filled)"/>
+<rect x="628.0" y="364.0" width="192.0" height="19.0" fill="#FFFFFF"/>
+<text x="724.0" y="376.0" font-size="13.0" fill="#22303F" text-anchor="middle">finalizarCombate(vitoria)</text>
+<line x1="386.0" y1="440.0" x2="862.0" y2="440.0" stroke="#3D4E63" stroke-width="1.4" marker-end="url(#filled)"/>
+<rect x="568.0" y="418.0" width="111.9" height="19.0" fill="#FFFFFF"/>
+<text x="624.0" y="430.0" font-size="13.0" fill="#22303F" text-anchor="middle">contraAtacar()</text>
+<line x1="864.0" y1="480.0" x2="388.0" y2="480.0" stroke="#3D4E63" stroke-width="1.4" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<rect x="606.4" y="458.0" width="39.1" height="19.0" fill="#FFFFFF"/>
+<text x="626.0" y="470.0" font-size="13.0" fill="#22303F" text-anchor="middle" font-style="italic">dano</text>
+<line x1="374.0" y1="524.0" x2="118.0" y2="524.0" stroke="#3D4E63" stroke-width="1.4" marker-end="url(#filled)"/>
+<rect x="179.1" y="502.0" width="133.8" height="19.0" fill="#FFFFFF"/>
+<text x="246.0" y="514.0" font-size="13.0" fill="#22303F" text-anchor="middle">aplicarDano(dano)</text>
+<line x1="386.0" y1="594.0" x2="1062.0" y2="594.0" stroke="#3D4E63" stroke-width="1.4" marker-end="url(#filled)"/>
+<rect x="628.0" y="572.0" width="192.0" height="19.0" fill="#FFFFFF"/>
+<text x="724.0" y="584.0" font-size="13.0" fill="#22303F" text-anchor="middle">atualizarResultado(turno)</text>
+<text x="24.0" y="668.0" font-size="12.0" fill="#66788A" text-anchor="start">Figura: Diagrama de Sequência — turno de combate elemental (SubEquipe_01). Fonte: Cibelly Lourenço Ferreira, 2026.</text>
 </svg>
